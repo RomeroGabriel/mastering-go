@@ -1,0 +1,41 @@
+site_name: Mastering Go
+docs_dir: "doc"
+
+nav:
+  - Home: index.md
+  
+
+theme:
+  name: material
+  language: en
+  logo: images/go-logo.png
+  favicon: images/go-logo.png
+  palette:
+      scheme: slate
+      primary: white
+      accent: blue
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.tabs.instant
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - search
+
+markdown_extensions:
+  - footnotes
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
