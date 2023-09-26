@@ -3,7 +3,9 @@ docs_dir: "doc"
 
 nav:
   - Home: index.md
-  
+  - Basics:
+      - Go Paradigms: basics/go_paradigm.md
+      - Go CLI: basics/go_cli.md
 
 theme:
   name: material

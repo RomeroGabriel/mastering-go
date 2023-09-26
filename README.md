@@ -1,4 +1,4 @@
-# mastering-go :runner:
+# Mastering Go :runner:
 
 Gi Studies Wiki: A centralized repository offering a wealth of resources and insights for mastering Go programming.
 
