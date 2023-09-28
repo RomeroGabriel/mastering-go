@@ -6,7 +6,8 @@ nav:
   - Basics:
       - Go Paradigms: basics/go_paradigm.md
       - Go CLI: basics/go_cli.md
-      - Go Packages: basics/packages.md
+      - Packages: basics/packages.md
+      - Variables: basics/vars.md
 
 theme:
   name: material
