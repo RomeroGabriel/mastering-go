@@ -18,7 +18,7 @@
     
     
       
-        <title>Variables - Mastering Go</title>
+        <title>Variables and Data Types - Mastering Go</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#variables" class="md-skip">
+        <a href="#variables-and-data-types" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Variables
+              Variables and Data Types
             
           </span>
         </div>
@@ -375,7 +375,7 @@
           
   
   <span class="md-ellipsis">
-    Variables
+    Variables and Data Types
   </span>
   
 
@@ -386,7 +386,7 @@
         
   
   <span class="md-ellipsis">
-    Variables
+    Variables and Data Types
   </span>
   
 
@@ -410,6 +410,27 @@
         <li class="md-nav__item">
   <a href="#using-type" class="md-nav__link">
     Using type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrays" class="md-nav__link">
+    Arrays
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slices" class="md-nav__link">
+    Slices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maps" class="md-nav__link">
+    Maps
   </a>
   
 </li>
@@ -463,6 +484,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#arrays" class="md-nav__link">
+    Arrays
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slices" class="md-nav__link">
+    Slices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maps" class="md-nav__link">
+    Maps
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -478,11 +520,11 @@
                   
 
 
-<h1 id="variables">Variables</h1>
+<h1 id="variables-and-data-types">Variables and Data Types</h1>
 <p>In Go, <code>variables and constants are strongly typed</code>. To declare a constant, you use the <code>const</code> keyword, and for variables, you use <code>var</code>.</p>
 <p>Go can also <code>automatically infer variable types</code>, providing various syntaxes for declaring variables and constants, as shown below.</p>
-<div class="admonition example">
-<p class="admonition-title">Simple package example</p>
+<details class="example">
+<summary>Simple vars example</summary>
 <p><div class="language-bash highlight"><span class="filename">run command</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>go<span class="w"> </span>run<span class="w"> </span>src/variables/*
 </span></code></pre></div>
 <div class="language-go highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
@@ -515,7 +557,7 @@
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>Full<span class="w"> </span>declaration:<span class="w"> </span>A
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>Short<span class="w"> </span>hand:<span class="w"> </span>B
 </span></code></pre></div></p>
-</div>
+</details>
 <details class="example">
 <summary>Checking Default Infered Types</summary>
 <p><div class="language-bash highlight"><span class="filename">run command</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>go<span class="w"> </span>run<span class="w"> </span>variables/infer_types.go<span class="w"> </span>
@@ -556,8 +598,8 @@
 </details>
 <h2 id="using-type">Using type</h2>
 <p>In Go the <code>type</code> keyword is used to <code>define custom data types</code>. These custom types can be based on existing types, making it a versatile feature in the language.</p>
-<div class="admonition example">
-<p class="admonition-title">Using type</p>
+<details class="example">
+<summary>Using type</summary>
 <p><div class="language-bash highlight"><span class="filename">run command</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>go<span class="w"> </span>run<span class="w"> </span>variables/using_type.go
 </span></code></pre></div>
 <div class="language-go highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
@@ -571,7 +613,141 @@
 </span></code></pre></div>
 <div class="language-bash highlight"><span class="filename">output</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>custom_id<span class="w"> </span>value:<span class="w"> </span>e96d759e-dc59-4394-9feb-79c8bf4130c9
 </span></code></pre></div></p>
+</details>
+<h2 id="arrays">Arrays</h2>
+<p>In Go, an array is a <code>fixed-size collection of elements of the same type</code>. Arrays are declared with a specific size, and that <code>size cannot be changed after the array is created</code>.</p>
+<details class="example">
+<summary>Example</summary>
+<p><div class="language-bash highlight"><span class="filename">run command</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>go<span class="w"> </span>run<span class="w"> </span>variables/arrays.go
+</span></code></pre></div>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">myArray</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="kt">int</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="nx">myArray</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span><span class="nx">myArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">20</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">myArray</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">myArray</span><span class="p">)</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">myArray</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Value stored in %d index is %d\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">)</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">    </span><span class="nx">initArray</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cherry&quot;</span><span class="p">}</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">initArray</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Value stored in %d index is %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">)</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-bash highlight"><span class="filename">output</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="m">0</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="o">[</span><span class="m">0</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="o">]</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Value<span class="w"> </span>stored<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span><span class="w"> </span>index<span class="w"> </span>is<span class="w"> </span><span class="m">0</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>Value<span class="w"> </span>stored<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>index<span class="w"> </span>is<span class="w"> </span><span class="m">10</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>Value<span class="w"> </span>stored<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>index<span class="w"> </span>is<span class="w"> </span><span class="m">20</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>Value<span class="w"> </span>stored<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span><span class="w"> </span>index<span class="w"> </span>is<span class="w"> </span>apple
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>Value<span class="w"> </span>stored<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>index<span class="w"> </span>is<span class="w"> </span>banana
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>Value<span class="w"> </span>stored<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>index<span class="w"> </span>is<span class="w"> </span>cherry
+</span></code></pre></div></p>
+</details>
+<h2 id="slices">Slices</h2>
+<p>In Go, a slice is a <code>more versatile and dynamic alternative to arrays</code>. Slices are like views into an underlying array, allowing you to work with a portion of an a<code>rray without specifying a fixed size</code>. Slices allow you to perform operations like appending elements, slicing (creating sub-slices), and growing dynamically.</p>
+<p>Slices also have a <code>length and capacity</code> (the maximum number of elements it can hold without reallocation). Use the <code>len()</code> and <code>cap()</code> functions to get these values.</p>
+<details class="example">
+<summary>Example</summary>
+<p><div class="language-bash highlight"><span class="filename">run command</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>go<span class="w"> </span>run<span class="w"> </span>variables/slices.go
+</span></code></pre></div>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="nx">my_slice</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">}</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Full slice: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">my_slice</span><span class="p">)</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">    </span><span class="nx">first_three_elem</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">my_slice</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;First 3 elements: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">first_three_elem</span><span class="p">)</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;my_slice    = len=%d cap=%d %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">my_slice</span><span class="p">),</span><span class="w"> </span><span class="nb">cap</span><span class="p">(</span><span class="nx">my_slice</span><span class="p">),</span><span class="w"> </span><span class="nx">my_slice</span><span class="p">)</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">    </span><span class="nx">none_value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">my_slice</span><span class="p">[:</span><span class="mi">0</span><span class="p">]</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;none_value  = len=%d cap=%d %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">none_value</span><span class="p">),</span><span class="w"> </span><span class="nb">cap</span><span class="p">(</span><span class="nx">none_value</span><span class="p">),</span><span class="w"> </span><span class="nx">none_value</span><span class="p">)</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">    </span><span class="nx">first_four</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">my_slice</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;first_four  = len=%d cap=%d %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">first_four</span><span class="p">),</span><span class="w"> </span><span class="nb">cap</span><span class="p">(</span><span class="nx">first_four</span><span class="p">),</span><span class="w"> </span><span class="nx">first_four</span><span class="p">)</span>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">    </span><span class="nx">skip_two_first</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">my_slice</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;last_two    = len=%d cap=%d %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">skip_two_first</span><span class="p">),</span><span class="w"> </span><span class="nb">cap</span><span class="p">(</span><span class="nx">skip_two_first</span><span class="p">),</span><span class="w"> </span><span class="nx">skip_two_first</span><span class="p">)</span>
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">    </span><span class="nx">my_slice</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">my_slice</span><span class="p">,</span><span class="w"> </span><span class="mi">70</span><span class="p">)</span>
+</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;my_slice with 70: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">my_slice</span><span class="p">)</span>
+</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;my_slice    = len=%d cap=%d %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">my_slice</span><span class="p">),</span><span class="w"> </span><span class="nb">cap</span><span class="p">(</span><span class="nx">my_slice</span><span class="p">),</span><span class="w"> </span><span class="nx">my_slice</span><span class="p">)</span>
+</span><span id="__span-13-22"><a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-bash highlight"><span class="filename">output</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Full<span class="w"> </span>slice:<span class="w">  </span><span class="o">[</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">40</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="m">60</span><span class="o">]</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>First<span class="w"> </span><span class="m">3</span><span class="w"> </span>elements:<span class="w">  </span><span class="o">[</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="o">]</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nv">my_slice</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="nv">len</span><span class="o">=</span><span class="m">6</span><span class="w"> </span><span class="nv">cap</span><span class="o">=</span><span class="m">6</span><span class="w"> </span><span class="o">[</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">40</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="m">60</span><span class="o">]</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="nv">none_value</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nv">len</span><span class="o">=</span><span class="m">0</span><span class="w"> </span><span class="nv">cap</span><span class="o">=</span><span class="m">6</span><span class="w"> </span><span class="o">[]</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="nv">first_four</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nv">len</span><span class="o">=</span><span class="m">4</span><span class="w"> </span><span class="nv">cap</span><span class="o">=</span><span class="m">6</span><span class="w"> </span><span class="o">[</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">40</span><span class="o">]</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="nv">last_two</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="nv">len</span><span class="o">=</span><span class="m">4</span><span class="w"> </span><span class="nv">cap</span><span class="o">=</span><span class="m">4</span><span class="w"> </span><span class="o">[</span><span class="m">30</span><span class="w"> </span><span class="m">40</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="m">60</span><span class="o">]</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>my_slice<span class="w"> </span>with<span class="w"> </span><span class="m">70</span>:<span class="w">  </span><span class="o">[</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">40</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="m">60</span><span class="w"> </span><span class="m">70</span><span class="o">]</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="nv">my_slice</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="nv">len</span><span class="o">=</span><span class="m">7</span><span class="w"> </span><span class="nv">cap</span><span class="o">=</span><span class="m">12</span><span class="w"> </span><span class="o">[</span><span class="m">10</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">40</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="m">60</span><span class="w"> </span><span class="m">70</span><span class="o">]</span>
+</span></code></pre></div></p>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Remember that slices are based on arrays, so they can change in size dynamically. <code>If the underlying array runs out of capacity, a new larger array is allocated, and the data is copied over</code>.
+When added 70 in the example aboce, notice that the <code>slice's capacity increases to 12 instead of 7</code>. This happens because Go, when it needs to increase capacity, <code>doubles the original size</code>. Doubling the capacity of the underlying array allows for more elements to be added in the future without frequent reallocations.
+<code>In the case of very large slices, this can consume more memory than necessary</code>. So, when you anticipate working with a large slice, it's a <code>good practice to initialize the slice with a size closer to the maximum you expect to use to minimize unnecessary memory consumption</code>.</p>
 </div>
+<h2 id="maps">Maps</h2>
+<p>Maps in Go are a versatile data structure used to store <code>key-value pairs</code>. They are <code>similar to dictionaries or hash tables</code> in other programming languages. A key feature of maps is their ability to provide fast and efficient lookups for values based on their associated keys.</p>
+<p>Remember that maps are <code>reference types</code>, so when you pass a map to a function or assign it to another variable, you're working with a reference to the same underlying data structure.</p>
+<details class="example">
+<summary>Example</summary>
+<p><div class="language-bash highlight"><span class="filename">run command</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>go<span class="w"> </span>run<span class="w"> </span>variables/maps.go
+</span></code></pre></div>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">    </span><span class="nx">empty_map</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">{}</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">empty_map</span><span class="p">)</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">    </span><span class="nx">empty_make</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">)</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">empty_make</span><span class="p">)</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">    </span><span class="nx">map_works_salary</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="s">&quot;Gabriel&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Renato Augusto&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3000</span><span class="p">}</span>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">    </span><span class="nx">map_works_salary</span><span class="p">[</span><span class="s">&quot;Cassio&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">3000</span>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">    </span><span class="nx">gabriel_salary</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">map_works_salary</span><span class="p">[</span><span class="s">&quot;Gabriel&quot;</span><span class="p">]</span>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Init map_works_salary: %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">map_works_salary</span><span class="p">)</span>
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Gabriel salary: %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">gabriel_salary</span><span class="p">)</span>
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>
+</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="w">    </span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">exists</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">map_works_salary</span><span class="p">[</span><span class="s">&quot;Yuri Alberto&quot;</span><span class="p">]</span>
+</span><span id="__span-16-18"><a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">exists</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-19"><a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Yuri Alberto salary: %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">)</span>
+</span><span id="__span-16-20"><a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-21"><a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="w">        </span><span class="nx">map_works_salary</span><span class="p">[</span><span class="s">&quot;Yuri Alberto&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">3000</span>
+</span><span id="__span-16-22"><a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a><span class="w">        </span><span class="nx">yuri_salary</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">map_works_salary</span><span class="p">[</span><span class="s">&quot;Yuri Alberto&quot;</span><span class="p">]</span>
+</span><span id="__span-16-23"><a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Yuri Alberto salary: %v\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">yuri_salary</span><span class="p">)</span>
+</span><span id="__span-16-24"><a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-16-25"><a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a>
+</span><span id="__span-16-26"><a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a><span class="w">    </span><span class="nb">delete</span><span class="p">(</span><span class="nx">map_works_salary</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Gabriel&quot;</span><span class="p">)</span>
+</span><span id="__span-16-27"><a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;After delete Gabriel: %v\n\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">map_works_salary</span><span class="p">)</span>
+</span><span id="__span-16-28"><a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a>
+</span><span id="__span-16-29"><a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">map_works_salary</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-30"><a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Player: %v, Salaray: %d\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">)</span>
+</span><span id="__span-16-31"><a id="__codelineno-16-31" name="__codelineno-16-31" href="#__codelineno-16-31"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-16-32"><a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-bash highlight"><span class="filename">output</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>map<span class="o">[]</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>map<span class="o">[]</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>Init<span class="w"> </span>map_works_salary:<span class="w"> </span>map<span class="o">[</span>Cassio:3000<span class="w"> </span>Gabriel:100<span class="w"> </span>Renato<span class="w"> </span>Augusto:3000<span class="o">]</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>Gabriel<span class="w"> </span>salary:<span class="w"> </span><span class="m">100</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>Yuri<span class="w"> </span>Alberto<span class="w"> </span>salary:<span class="w"> </span><span class="m">3000</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>After<span class="w"> </span>delete<span class="w"> </span>Gabriel:<span class="w"> </span>map<span class="o">[</span>Cassio:3000<span class="w"> </span>Renato<span class="w"> </span>Augusto:3000<span class="w"> </span>Yuri<span class="w"> </span>Alberto:3000<span class="o">]</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>Player:<span class="w"> </span>Renato<span class="w"> </span>Augusto,<span class="w"> </span>Salaray:<span class="w"> </span><span class="m">3000</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>Player:<span class="w"> </span>Cassio,<span class="w"> </span>Salaray:<span class="w"> </span><span class="m">3000</span>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>Player:<span class="w"> </span>Yuri<span class="w"> </span>Alberto,<span class="w"> </span>Salaray:<span class="w"> </span><span class="m">3000</span>
+</span></code></pre></div></p>
+</details>
 
 
 
