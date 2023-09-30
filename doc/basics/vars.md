@@ -107,3 +107,30 @@ Slices also have a `length and capacity` (the maximum number of elements it can 
     Remember that slices are based on arrays, so they can change in size dynamically. `If the underlying array runs out of capacity, a new larger array is allocated, and the data is copied over`.
     When added 70 in the example aboce, notice that the `slice's capacity increases to 12 instead of 7`. This happens because Go, when it needs to increase capacity, `doubles the original size`. Doubling the capacity of the underlying array allows for more elements to be added in the future without frequent reallocations.
     `In the case of very large slices, this can consume more memory than necessary`. So, when you anticipate working with a large slice, it's a `good practice to initialize the slice with a size closer to the maximum you expect to use to minimize unnecessary memory consumption`.
+
+## Maps
+
+Maps in Go are a versatile data structure used to store `key-value pairs`. They are `similar to dictionaries or hash tables` in other programming languages. A key feature of maps is their ability to provide fast and efficient lookups for values based on their associated keys.
+
+Remember that maps are `reference types`, so when you pass a map to a function or assign it to another variable, you're working with a reference to the same underlying data structure.
+
+??? example
+
+    ```bash title="run command"
+    go run variables/maps.go
+    ```
+    ```go
+    --8<-- "src/variables/maps.go"
+    ```
+    ```bash title="output"
+    map[]
+    map[]
+    Init map_works_salary: map[Cassio:3000 Gabriel:100 Renato Augusto:3000]
+    Gabriel salary: 100
+    Yuri Alberto salary: 3000
+    After delete Gabriel: map[Cassio:3000 Renato Augusto:3000 Yuri Alberto:3000]
+
+    Player: Renato Augusto, Salaray: 3000
+    Player: Cassio, Salaray: 3000
+    Player: Yuri Alberto, Salaray: 3000
+    ```
