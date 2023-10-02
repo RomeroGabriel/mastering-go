@@ -8,6 +8,8 @@ nav:
       - Go CLI: basics/go_cli.md
       - Packages: basics/packages.md
       - Variables and Data Types: basics/vars.md
+  - Functions:
+      - Basic: functions/index.md
 
 theme:
   name: material
