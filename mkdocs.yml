@@ -10,6 +10,7 @@ nav:
       - Variables and Data Types: basics/vars.md
   - Functions:
       - Basic: functions/index.md
+  - Structs: structs.md
 
 theme:
   name: material

@@ -1,0 +1,59 @@
+# Structs
+
+In Go, `structs are composite data types used to group together variables (fields) under a single data structure`. They are similar to classes in other languages, but `Go doesn't have classes in the traditional sense`.
+
+You define a struct using the `type` keyword, followed by the `name of the struct` and a set of field declarations within curly braces. To `create an instance` of a struct, you can use the `struct's name followed by curly braces and provide values for its fields`.
+
+??? example
+
+    ```bash title="run command"
+    go run structs/basic.go
+    ```
+    ```go
+    --8<-- "src/structs/basic.go"
+    ```
+    ```bash title="output"
+    Create object person, from Person struct: {Gabriel 100}
+    ```
+
+## Anonymous Structs
+
+Anonymous Structs are structs without a defined name, often used for `temporary data structures`.
+
+??? example
+
+    ```bash title="run command"
+    go run structs/anonymous.go
+    ```
+    ```go
+    --8<-- "src/structs/anonymous.go"
+    ```
+    ```bash title="output"
+    Create object from an anonymous structs : {10 20}
+    X : 10
+    Y : 20
+    ```
+
+## Composing Structs
+
+In Go, you can `embed one struct within another`, creating a composition of structs. This is `similar to inheritance` in other languages.
+
+??? example
+
+    ```bash title="run command"
+    go run structs/composing.go
+    ```
+    ```go
+    --8<-- "src/structs/composing.go"
+    ```
+    ```bash title="output"
+    Person: {Gabriel 100 {Corinthians} {Knicks}}
+    Person name: Gabriel, Clube: {Corinthians}
+    Person name: Gabriel, Clube: Corinthians
+    Person name: Gabriel, Clube: Corinthians
+    Person name: Gabriel, Clube: {Knicks}
+    Person name: Gabriel, Clube: Corinthians
+    ```
+??? tip "Composing x Property, and Accessing Properties"
+    In the given example, it's evident that the `Person struct is composed of a Team` and `has a property named PersonTeam of type Team`. The key distinction here is that when using the abbreviation `person.TeamName`, it returns the value of the composition, not the property.
+    In Go, `you can directly access the properties of a composed struct`.
