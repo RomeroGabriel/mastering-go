@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../go_paradigm/">
+        <link rel="prev" href="../structs/">
       
-      
-        <link rel="next" href="../packages/">
       
       
       <link rel="icon" href="../../images/go-logo.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Go CLI - Mastering Go</title>
+        <title>Interface - Mastering Go</title>
       
     
     
@@ -71,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#go-cli" class="md-skip">
+        <a href="#interface" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Go CLI
+              Interface
             
           </span>
         </div>
@@ -183,13 +181,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../go_paradigm/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../basics/go_paradigm/" class="md-tabs__link">
           
   
   Basics
@@ -221,11 +217,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../structs/structs/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../structs/" class="md-tabs__link">
           
   
   Structs
@@ -297,8 +295,6 @@
       
   
   
-    
-  
   
     
     
@@ -308,12 +304,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -327,7 +323,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Basics
@@ -340,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../go_paradigm/" class="md-nav__link">
+      <a href="../../basics/go_paradigm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -358,29 +354,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Go CLI
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../basics/go_cli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -389,53 +365,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#go-environment-command" class="md-nav__link">
-    Go Environment Command
-  </a>
-  
-    <nav class="md-nav" aria-label="Go Environment Command">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gopath" class="md-nav__link">
-    GOPATH
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gomodcache" class="md-nav__link">
-    GOMODCACHE
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -447,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../packages/" class="md-nav__link">
+      <a href="../../basics/packages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -467,7 +396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vars/" class="md-nav__link">
+      <a href="../../basics/vars/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -558,6 +487,8 @@
       
   
   
+    
+  
   
     
     
@@ -567,12 +498,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -586,7 +517,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Structs
@@ -599,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../structs/structs/" class="md-nav__link">
+      <a href="../structs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -617,9 +548,18 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../structs/interface/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -628,6 +568,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -660,41 +601,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#go-environment-command" class="md-nav__link">
-    Go Environment Command
-  </a>
-  
-    <nav class="md-nav" aria-label="Go Environment Command">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gopath" class="md-nav__link">
-    GOPATH
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gomodcache" class="md-nav__link">
-    GOMODCACHE
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -708,59 +614,54 @@
                   
 
 
-<h1 id="go-cli">Go CLI</h1>
-<h2 id="go-environment-command">Go Environment Command</h2>
-<p>Lists all Go <code>environment variables</code>.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>go<span class="w"> </span>env
-</span></code></pre></div>
+<h1 id="interface">Interface</h1>
+<p>In Go, interfaces are a powerful and flexible way to <code>define sets of methods that types must implement</code>. <code>They allow you to write functions and methods that can work with various types, as long as those types satisfy the interface contract</code>. Interfaces support methods but <code>not properties or fields</code>.</p>
+<p>To declare an interface, <code>you list the method signatures that types must implement</code>. <code>Any type that has methods matching these signatures implicitly implements the interface</code>. To implement an interface, <code>a type needs to provide method implementations that match the method signatures in the interface</code>. If a type has all the required methods, <code>it implicitly satisfies the interface</code>. Interfaces <code>promote polymorphism and decoupling of code</code>.</p>
 <details class="example">
-<summary>go env output</summary>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">GO111MODULE</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nv">GOARCH</span><span class="o">=</span><span class="s1">&#39;amd64&#39;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nv">GOBIN</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nv">GOCACHE</span><span class="o">=</span><span class="s1">&#39;/home/gabriel/.cache/go-build&#39;</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nv">GOENV</span><span class="o">=</span><span class="s1">&#39;/home/gabriel/.config/go/env&#39;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nv">GOEXE</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nv">GOEXPERIMENT</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nv">GOFLAGS</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="nv">GOHOSTARCH</span><span class="o">=</span><span class="s1">&#39;amd64&#39;</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="nv">GOHOSTOS</span><span class="o">=</span><span class="s1">&#39;linux&#39;</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="nv">GOINSECURE</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nv">GOMODCACHE</span><span class="o">=</span><span class="s1">&#39;/home/gabriel/go/pkg/mod&#39;</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nv">GONOPROXY</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="nv">GONOSUMDB</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="nv">GOOS</span><span class="o">=</span><span class="s1">&#39;linux&#39;</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="nv">GOPATH</span><span class="o">=</span><span class="s1">&#39;/home/gabriel/go&#39;</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="nv">GOPRIVATE</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="nv">GOPROXY</span><span class="o">=</span><span class="s1">&#39;https://proxy.golang.org,direct&#39;</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="nv">GOROOT</span><span class="o">=</span><span class="s1">&#39;/usr/local/go&#39;</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="nv">GOSUMDB</span><span class="o">=</span><span class="s1">&#39;sum.golang.org&#39;</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="nv">GOTMPDIR</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="nv">GOTOOLCHAIN</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="nv">GOTOOLDIR</span><span class="o">=</span><span class="s1">&#39;/usr/local/go/pkg/tool/linux_amd64&#39;</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="nv">GOVCS</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="nv">GOVERSION</span><span class="o">=</span><span class="s1">&#39;go1.21.1&#39;</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="nv">GCCGO</span><span class="o">=</span><span class="s1">&#39;gccgo&#39;</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="nv">GOAMD64</span><span class="o">=</span><span class="s1">&#39;v1&#39;</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="nv">AR</span><span class="o">=</span><span class="s1">&#39;ar&#39;</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="nv">CC</span><span class="o">=</span><span class="s1">&#39;gcc&#39;</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="nv">CXX</span><span class="o">=</span><span class="s1">&#39;g++&#39;</span>
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="nv">CGO_ENABLED</span><span class="o">=</span><span class="s1">&#39;1&#39;</span>
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="nv">GOMOD</span><span class="o">=</span><span class="s1">&#39;/dev/null&#39;</span>
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="nv">GOWORK</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="nv">CGO_CFLAGS</span><span class="o">=</span><span class="s1">&#39;-O2 -g&#39;</span>
-</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="nv">CGO_CPPFLAGS</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="nv">CGO_CXXFLAGS</span><span class="o">=</span><span class="s1">&#39;-O2 -g&#39;</span>
-</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="nv">CGO_FFLAGS</span><span class="o">=</span><span class="s1">&#39;-O2 -g&#39;</span>
-</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="nv">CGO_LDFLAGS</span><span class="o">=</span><span class="s1">&#39;-O2 -g&#39;</span>
-</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="nv">PKG_CONFIG</span><span class="o">=</span><span class="s1">&#39;pkg-config&#39;</span>
-</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="nv">GOGCCFLAGS</span><span class="o">=</span><span class="s1">&#39;-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build4097433368=/tmp/go-build -gno-record-gcc-switches&#39;</span>
+<summary>Example</summary>
+<p><div class="language-bash highlight"><span class="filename">run command</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>go<span class="w"> </span>run<span class="w"> </span>structs/interfaces.go
 </span></code></pre></div>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Shape</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nx">Area</span><span class="p">()</span><span class="w"> </span><span class="kt">float64</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Circle</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nx">Radius</span><span class="w"> </span><span class="kt">float64</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">}</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">c</span><span class="w"> </span><span class="nx">Circle</span><span class="p">)</span><span class="w"> </span><span class="nx">Area</span><span class="p">()</span><span class="w"> </span><span class="kt">float64</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mf">3.14</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">Radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">Radius</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">}</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Rectangle</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="nx">Width</span><span class="w">  </span><span class="kt">float64</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="nx">Height</span><span class="w"> </span><span class="kt">float64</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="p">}</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">r</span><span class="w"> </span><span class="nx">Rectangle</span><span class="p">)</span><span class="w"> </span><span class="nx">Area</span><span class="p">()</span><span class="w"> </span><span class="kt">float64</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">Width</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">Height</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="p">}</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="kd">func</span><span class="w"> </span><span class="nx">printArea</span><span class="p">(</span><span class="nx">s</span><span class="w"> </span><span class="nx">Shape</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">    </span><span class="nx">area</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">s</span><span class="p">.</span><span class="nx">Area</span><span class="p">()</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Area: %.2f\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">area</span><span class="p">)</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="p">}</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">    </span><span class="nx">c</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Circle</span><span class="p">{</span><span class="nx">Radius</span><span class="p">:</span><span class="w"> </span><span class="mf">5.0</span><span class="p">}</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">    </span><span class="nx">r</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Rectangle</span><span class="p">{</span><span class="nx">Width</span><span class="p">:</span><span class="w"> </span><span class="mf">4.0</span><span class="p">,</span><span class="w"> </span><span class="nx">Height</span><span class="p">:</span><span class="w"> </span><span class="mf">6.0</span><span class="p">}</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">    </span><span class="nx">printArea</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">    </span><span class="nx">printArea</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-bash highlight"><span class="filename">output</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Area:<span class="w"> </span><span class="m">78</span>.50
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Area:<span class="w"> </span><span class="m">24</span>.00
+</span></code></pre></div></p>
 </details>
-<h3 id="gopath">GOPATH</h3>
-<p><code>GOPATH</code> is a variable that <code>defines the root of your workspace</code>. It stores your code base and all the files necessary for your development. <code>It also contains the binaries of your compilations and the libraries used.</code></p>
-<h3 id="gomodcache">GOMODCACHE</h3>
-<p><code>GOMODCACHE</code> is related to <code>Go module management</code>, which is used for handling dependencies. It is <code>typically a subfolder within your GOPATH</code>.</p>
 
 
 
