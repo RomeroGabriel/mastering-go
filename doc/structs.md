@@ -57,3 +57,38 @@ In Go, you can `embed one struct within another`, creating a composition of stru
 ??? tip "Composing x Property, and Accessing Properties"
     In the given example, it's evident that the `Person struct is composed of a Team` and `has a property named PersonTeam of type Team`. The key distinction here is that when using the abbreviation `person.TeamName`, it returns the value of the composition, not the property.
     In Go, `you can directly access the properties of a composed struct`.
+
+## Struct Methods
+
+In Go, `structs can have methods associated with them`. These methods are `functions that operate on instances of the struct`, and they enable you to define behavior specific to the struct type.
+
+??? example
+
+    ```bash title="run command"
+    go run structs/methods.go
+    ```
+    ```go
+    --8<-- "src/structs/methods.go"
+    ```
+    ```bash title="output"
+    Area: 78.5
+    ```
+
+### Pointer Receivers
+
+`Pointer receivers can modify the state of the struct directly`. Using a pointer receiver allows you to `change the state` of an instance directly.
+
+??? example
+
+    ```bash title="run command"
+    go run structs/methods_pointer.go
+    ```
+    ```go
+    --8<-- "src/structs/methods_pointer.go"
+    ```
+    ```bash title="output"
+    Area: 78.5
+    Circle change? {5}
+    Area: 78.5
+    Circle change? {100}
+    ```
