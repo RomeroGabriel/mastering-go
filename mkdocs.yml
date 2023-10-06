@@ -10,7 +10,9 @@ nav:
       - Variables and Data Types: basics/vars.md
   - Functions:
       - Basic: functions/index.md
-  - Structs: structs.md
+  - Structs: 
+      - Basic: structs/structs.md
+      - Interface: structs/interface.md
 
 theme:
   name: material
