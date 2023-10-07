@@ -13,6 +13,7 @@ nav:
   - Structs: 
       - Basic: structs/structs.md
       - Interface: structs/interface.md
+  - Pointers: pointers.md
 
 theme:
   name: material
