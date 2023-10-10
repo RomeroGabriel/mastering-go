@@ -92,3 +92,25 @@ In Go, `structs can have methods associated with them`. These methods are `funct
     Area: 78.5
     Circle change? {100}
     ```
+
+### Pointers Constructors
+
+In Go, when you create a constructor function for a struct, `it typically returns a reference to the newly created struct`. With this technique, `any modification made to the reference returned by the constructor will affect all places that use that reference. This can be quite powerful, especially when managing resources like database connections`.
+
+??? example
+
+    ```bash title="run command"
+    go run structs/constructor_pointer.go
+    ```
+    ```go
+    --8<-- "src/structs/constructor_pointer.go"
+    ```
+    ```bash title="output"
+    Query 1 executed **nice connection!*** true
+    Query 2 executed **nice connection!*** true
+    Query 3 executed **nice connection!*** true
+    Closing the DB conncetion  **nice connection!***
+    Query 1 executed **nice connection!*** false
+    Query 2 executed **nice connection!*** false
+    Query 3 executed **nice connection!*** false
+    ```
