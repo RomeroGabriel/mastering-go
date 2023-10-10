@@ -110,7 +110,7 @@ In Go, when you create a constructor function for a struct, `it typically return
     Query 2 executed **nice connection!*** true
     Query 3 executed **nice connection!*** true
     Closing the DB conncetion  **nice connection!***
-    Query 1 executed **nice connection!*** false
+    Query 1 executed **nice connection!*** true
     Query 2 executed **nice connection!*** false
     Query 3 executed **nice connection!*** false
     ```
