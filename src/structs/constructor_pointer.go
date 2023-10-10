@@ -21,18 +21,19 @@ func (conn *DbConnection) Close() {
 
 func main() {
 	dbConn := NewDbConnection("**nice connection!***")
-	performQuery1(dbConn)
+	dbConnValue := *dbConn
+	performQuery1(dbConnValue)
 	performQuery2(dbConn)
 	performQuery3(dbConn)
 
 	dbConn.Close()
 
-	performQuery1(dbConn)
+	performQuery1(dbConnValue)
 	performQuery2(dbConn)
 	performQuery3(dbConn)
 }
 
-func performQuery1(conn *DbConnection) {
+func performQuery1(conn DbConnection) {
 	fmt.Println("Query 1 executed", conn.str_conn, conn.isOpen)
 }
 
