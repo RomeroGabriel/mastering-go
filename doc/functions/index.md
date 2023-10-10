@@ -4,6 +4,8 @@
 
 The `func` keyword introduces a function definition, followed by the function name and a list of formal parameters enclosed in parentheses. Functions can take zero or more parameters. Parameters are declared with their type. `When function parameters share the same type, you can declare the type once for all of them`.
 
+When you pass `parameters to a function, they are typically passed by copy`. This means that a copy of the value is made, and `any changes you make to the parameter within the function do not affect the original value outside of the function`. To change the parameters passed, use [pointers](../pointers.md#pointers) and [pointers receivers](../structs/structs.md#pointer-receivers).
+
 ??? example
 
     ```bash title="run command"
