@@ -14,6 +14,7 @@ nav:
       - Basic: structs/structs.md
       - Interface: structs/interface.md
   - Pointers: pointers.md
+  - Generics: generics.md
 
 theme:
   name: material
