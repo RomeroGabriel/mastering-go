@@ -236,6 +236,40 @@
   
 
       
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../pointers/" class="md-tabs__link">
+        
+  
+    
+  
+  Pointers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../generics/" class="md-tabs__link">
+        
+  
+    
+  
+  Generics
+
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -432,6 +466,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#go-mod" class="md-nav__link">
+    Go mod
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -451,7 +492,7 @@
         
   
   <span class="md-ellipsis">
-    Packages
+    Packages and Modules
   </span>
   
 
@@ -640,6 +681,44 @@
   
 
     
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pointers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pointers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../generics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -693,6 +772,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#go-mod" class="md-nav__link">
+    Go mod
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -711,8 +797,11 @@
 <h1 id="go-cli">Go CLI</h1>
 <h2 id="go-environment-command">Go Environment Command</h2>
 <p>Lists all Go <code>environment variables</code>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>go<span class="w"> </span>env
 </span></code></pre></div>
+</div>
 <details class="example">
 <summary>go env output</summary>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">GO111MODULE</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
@@ -761,6 +850,13 @@
 <p><code>GOPATH</code> is a variable that <code>defines the root of your workspace</code>. It stores your code base and all the files necessary for your development. <code>It also contains the binaries of your compilations and the libraries used.</code></p>
 <h3 id="gomodcache">GOMODCACHE</h3>
 <p><code>GOMODCACHE</code> is related to <code>Go module management</code>, which is used for handling dependencies. It is <code>typically a subfolder within your GOPATH</code>.</p>
+<h2 id="go-mod">Go mod</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>go<span class="w"> </span>mod<span class="w"> </span>init<span class="w"> </span>example.com/module
+</span></code></pre></div>
+</div>
+<p>This command <code>initializes a new module with the specified name</code>. You can then <code>add dependencies to the module using the go get command and manage the module's requirements through the go.mod file</code>.</p>
 
 
 
