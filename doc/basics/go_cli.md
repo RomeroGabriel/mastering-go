@@ -4,9 +4,11 @@
 
 Lists all Go `environment variables`.
 
-```bash
-go env
-```
+!!! info
+
+    ```bash
+    go env
+    ```
 
 ??? example "go env output"
 
@@ -60,3 +62,13 @@ go env
 ### GOMODCACHE
 
 `GOMODCACHE` is related to `Go module management`, which is used for handling dependencies. It is `typically a subfolder within your GOPATH`.
+
+## Go mod
+
+!!! info
+
+    ```bash
+    go mod init example.com/module
+    ```
+
+This command `initializes a new module with the specified name`. You can then `add dependencies to the module using the go get command and manage the module's requirements through the go.mod file`.
