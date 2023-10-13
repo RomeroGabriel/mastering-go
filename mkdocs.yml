@@ -6,7 +6,7 @@ nav:
   - Basics:
       - Go Paradigms: basics/go_paradigm.md
       - Go CLI: basics/go_cli.md
-      - Packages: basics/packages.md
+      - Packages and Modules: basics/packages.md
       - Variables and Data Types: basics/vars.md
   - Functions:
       - Basic: functions/index.md
