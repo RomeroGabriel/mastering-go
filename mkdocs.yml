@@ -8,6 +8,7 @@ nav:
       - Go CLI: basics/go_cli.md
       - Packages and Modules: basics/packages.md
       - Variables and Data Types: basics/vars.md
+      - Control Flow: basics/control_flow.md
   - Functions:
       - Basic: functions/index.md
   - Structs: 
