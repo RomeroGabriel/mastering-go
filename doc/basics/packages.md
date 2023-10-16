@@ -21,6 +21,10 @@ Every `.go file begins with the package command`, and the `package's name should
         I'm on the same directory than main, so my package has to be main
     ```
 
+### Installing Packages
+
+See [Go Get](go_cli.md#go-get) and [Go Mod TIDY](go_cli.md#go-mod-tidy).
+
 ## Modules
 
 In Go, a `module is a collection of related Go packages that are versioned together as a single unit`. Modules are the key component of the Go module system, `introduced to manage package dependencies and versioning`.
