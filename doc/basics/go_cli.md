@@ -105,3 +105,85 @@ It is also used to update and manage dependencies in your GOPATH. Some helpful s
 1. `-d`: Download the package's source code but do not install it.
 1. `-t`: Also download the packages needed to run tests.
 1. `-v`: Enable verbose output to see the package being fetched and installed.
+
+## Go Build
+
+The `go build` command is used to compile packages and dependencies `into an executable binary file`. This command compiles the Go source files in the current directory and creates an executable binary file.
+
+Building a `single file` in Go can be done by simply using the `go build filename.go` command followed by the name of the file. This command will `generate an executable binary based on the contents of the specified filename.go source file`. For `projects  that utilize the go.mod file` can be achieved by running the go build `command in the root directory of the project`. This command automatically builds the project, resolving dependencies defined in the go.mod file.
+
+!!! info
+
+    ```bash title="just one file"
+    go build filename.go
+    ```
+    ```bash title="for projects"
+    go build
+    ```
+
+### Variables to Build
+
+In Go, `GOOS` is an environment variable that specifies the `target operating system for code compilation`. The `GOARCH` is an environment variable that specifies the `target architecture for code compilation`. To find out the possibilities for `GOOS` and `GOARCH`, use [go tool dist list](#go-tool-dist-list). Is good start a new
+
+!!! info
+
+    ```bash
+    GOOS=[target-OS] GOARCH=[target-architecture] go build
+    ```
+
+## Go Tool
+
+## Go Tool dist list
+
+In order to find out what operating systems and platforms are available for building executables, you can use the dist tool.
+
+!!! info
+
+    ```bash
+    go tool dist list
+    ```
+??? example "Output"
+    aix/ppc64
+    android/386
+    android/amd64
+    android/arm
+    android/arm64
+    darwin/amd64
+    darwin/arm64
+    dragonfly/amd64
+    freebsd/386
+    freebsd/amd64
+    freebsd/arm
+    freebsd/arm64
+    illumos/amd64
+    ios/amd64
+    ios/arm64
+    js/wasm
+    linux/386
+    linux/amd64
+    linux/arm
+    linux/arm64
+    linux/mips
+    linux/mips64
+    linux/mips64le
+    linux/mipsle
+    linux/ppc64
+    linux/ppc64le
+    linux/riscv64
+    linux/s390x
+    netbsd/386
+    netbsd/amd64
+    netbsd/arm
+    netbsd/arm64
+    openbsd/386
+    openbsd/amd64
+    openbsd/arm
+    openbsd/arm64
+    openbsd/mips64
+    plan9/386
+    plan9/amd64
+    plan9/arm
+    solaris/amd64
+    windows/386
+    windows/amd64
+    windows/arm
