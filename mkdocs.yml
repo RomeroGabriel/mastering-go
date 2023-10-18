@@ -16,6 +16,7 @@ nav:
       - Interface: structs/interface.md
   - Pointers: pointers.md
   - Generics: generics.md
+  - HTTP, Network, etc: https_network/basic.md
 
 theme:
   name: material
