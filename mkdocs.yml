@@ -9,6 +9,7 @@ nav:
       - Packages and Modules: basics/packages.md
       - Variables and Data Types: basics/vars.md
       - Control Flow: basics/control_flow.md
+      - Handle Files: basics/handle_files.md
   - Functions:
       - Basic: functions/index.md
   - Structs: 
