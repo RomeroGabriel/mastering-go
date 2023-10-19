@@ -116,3 +116,19 @@ In Go, when you create a constructor function for a struct, `it typically return
     ```
 
 ## Structs Tags
+
+Struct tags are `annotations that can be added to the fields of a struct to provide additional information or metadata about the field`. Struct tags are `typically used to describe how the struct fields should be encoded or decoded to and from other formats, such as JSON, XML, or other data serialization formats`. They play a crucial role in mapping Go data structures to external formats, enabling seamless data interchange between different systems or languages.
+
+??? example
+    1. Struct tags are added to each field to `specify the corresponding JSON field names`. For example, the json:"name" tag indicates that the Name field should be encoded as "name" in JSON.
+    1. The `omitempty` option in the json:"address,omitempty" tag indicates that the Address `field should be omitted from the JSON output if it is empty`.
+
+    ```bash title="run command"
+    go run src/structs/tags.go
+    ```
+    ```go
+    --8<-- "src/structs/tags.go"
+    ```
+    ```bash title="output"
+    JSON Data: {"name":"Gabriel","age":25}
+    ```
