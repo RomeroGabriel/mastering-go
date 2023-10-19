@@ -114,3 +114,5 @@ In Go, when you create a constructor function for a struct, `it typically return
     Query 2 executed **nice connection!*** false
     Query 3 executed **nice connection!*** false
     ```
+
+## Structs Tags
