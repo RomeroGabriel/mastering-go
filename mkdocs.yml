@@ -17,7 +17,10 @@ nav:
       - Interface: structs/interface.md
   - Pointers: pointers.md
   - Generics: generics.md
-  - HTTP, Network, etc: https_network/basic.md
+  - HTTP, Network, etc: 
+      - API: https_network/api.md
+      - HTTP Request: https_network/request.md
+      - JSON: https_network/json.md
   - Projects: 
       - Get Address: projects/get_br_zipcode.md
 

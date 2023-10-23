@@ -1,8 +1,8 @@
-# HTTP Server
+# API
 
 You can create an HTTP server using the `net/http` package, allowing you to handle HTTP requests and responses.
 
-!! example
+!!! example
 
     ```bash title="run command"
     go run src/http/basic_server.go
