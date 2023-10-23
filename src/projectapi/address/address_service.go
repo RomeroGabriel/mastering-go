@@ -1,8 +1,7 @@
-package main
+package address
 
 import (
 	"encoding/json"
-	"fmt"
 	"io"
 	"net/http"
 )
@@ -20,18 +19,18 @@ type Address struct {
 	Siafi       string `json:"siafi"`
 }
 
-func main() {
-	zip_codes := []string{"08295005", "03087000", "17509180"}
-	for _, code := range zip_codes {
-		url := "https://viacep.com.br/ws/" + code + "/json"
-		req, err := http.Get(url)
-		if err != nil {
-			fmt.Println(err)
-		}
-		defer req.Body.Close()
-		res, _ := io.ReadAll(req.Body)
-		var address Address
-		json.Unmarshal(res, &address)
-		fmt.Println(address)
+func GetAddress(zipcode string) (*Address, error) {
+	url := "https://viacep.com.br/ws/" + zipcode + "/json"
+	req, err := http.Get(url)
+	if err != nil {
+		return nil, err
 	}
+	defer req.Body.Close()
+	res, _ := io.ReadAll(req.Body)
+	var address Address
+	err = json.Unmarshal(res, &address)
+	if err != nil {
+		return nil, err
+	}
+	return &address, nil
 }

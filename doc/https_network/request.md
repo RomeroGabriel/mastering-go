@@ -13,3 +13,7 @@
     ```bash title="output"
     GOOGLE PAGE IN STRING
     ```
+
+## Examples
+
+1. [Get Address - Basic API](../projects/get_br_zipcode.md#get-address---basic-api)

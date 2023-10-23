@@ -17,3 +17,7 @@ You can create an HTTP server using the `net/http` package, allowing you to hand
     Hello World!
     Hello World from anonymous_func!
     ```
+
+## Examples
+
+1. [Get Address - Basic API](../projects/get_br_zipcode.md#get-address---basic-api)
