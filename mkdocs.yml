@@ -22,6 +22,7 @@ nav:
       - File Server: https_network/file_server.md
       - HTTP Request: https_network/request.md
       - JSON: https_network/json.md
+      - Templates: https_network/templates.md
   - Projects: 
       - Get Address: projects/get_br_zipcode.md
 
