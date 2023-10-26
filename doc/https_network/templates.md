@@ -18,34 +18,56 @@ When you use `template.Must`, it helps `simplify error handling when parsing tem
     ```bash title="output"
     Hello, Gabriel
     ************
+        <p>All Users:</p>
+        <h1>Hello, Gabriel!</h1>
+        <p>Age: 15</p>
+        <h1>Hello, Cassio!</h1>
+        <p>Age: 40</p>
+            <p>Adult User</p>
+        <h1>Hello, Yuri!</h1>
+        <p>Age: 20</p>
+            <p>Adult User</p>
+        <h1>Hello, Lucas!</h1>
+        <p>Age: 17</p>
+    ```
+
+## Compose Templates
+
+You can compose templates by defining reusable parts and embedding them within other templates. This helps in creating modular and maintainable templates.
+
+!!! example
+
+    ```bash title="run command"
+    go run src/templates/compose_template.go
+    curl localhost:8080
+    ```
+    ```go
+    --8<-- "src/templates/compose_template.go"
+    ```
+    ```bash title="output"
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
     <head>
-            <title>User Profile</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Persons</title>
     </head>
-        <body>
+    <body>
             <p>All Users:</p>
-            
-                <h1>Hello, Gabriel!</h1>
-                <p>Age: 15</p>
-                
-            
-                <h1>Hello, Cassio!</h1>
-                <p>Age: 40</p>
-                
-                    <p>Adult User</p>
-                
-            
-                <h1>Hello, Yuri!</h1>
-                <p>Age: 20</p>
-                
-                    <p>Adult User</p>
-                
-            
-                <h1>Hello, Lucas!</h1>
-                <p>Age: 17</p>
-                
-            
-        </body>
+            <h1>Hello, Gabriel!</h1>
+            <p>Age: 15</p>
+            <h1>Hello, Cassio!</h1>
+            <p>Age: 40</p>
+                <p>Adult User</p>
+            <h1>Hello, Yuri!</h1>
+            <p>Age: 20</p>
+                <p>Adult User</p>
+            <h1>Hello, Lucas!</h1>
+            <p>Age: 17</p>
+            <div>
+            <p>A nice footer here!</p>
+        </div>
+    </body>
     </html>
     ```

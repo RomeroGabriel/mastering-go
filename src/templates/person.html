@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>User Profile</title>
-</head>
-    <body>
-        <p>All Users:</p>
-        {{ range . }}
-            <h1>Hello, {{ .Name }}!</h1>
-            <p>Age: {{ .Age }}</p>
-            {{ if gt .Age 18 }}
-                <p>Adult User</p>
-            {{ end }}
+    <p>All Users:</p>
+    {{ range . }}
+        <h1>Hello, {{ .Name }}!</h1>
+        <p>Age: {{ .Age }}</p>
+        {{ if gt .Age 18 }}
+            <p>Adult User</p>
         {{ end }}
-    </body>
-</html>
+    {{ end }}
