@@ -71,3 +71,33 @@ You can compose templates by defining reusable parts and embedding them within o
     </body>
     </html>
     ```
+
+## Passing Functions
+
+You can define and use functions with the `Funcs field of the template` to perform various operations on data. The `FuncMap` type is used to define a map of template functions.
+
+!!! example
+
+    ```bash title="run command"
+    go run src/templates/passing_func.go
+    ```
+    ```go
+    --8<-- "src/templates/passing_func.go"
+    ```
+    ```bash title="output"
+    <p>All Users:</p>
+        <h1>Hello, Dear Gabriel!</h1>
+        <p>Age: 15</p>
+        <h1>Hello, Dear Cassio!</h1>
+        <p>Age: 40</p>
+            <p>ADULT USER: CASSIO</p>
+        <h1>Hello, Dear Yuri!</h1>
+        <p>Age: 20</p>
+            <p>ADULT USER: YURI</p>
+        <h1>Hello, Dear Lucas!</h1>
+        <p>Age: 17</p>
+    ```
+
+## References
+
+1. [Go - Template Documentation](https://pkg.go.dev/html/template)

@@ -1,0 +1,8 @@
+    <p>All Users:</p>
+    {{ range . }}
+        <h1>Hello, {{ .Name | printName }}!</h1>
+        <p>Age: {{ .Age }}</p>
+        {{ if gt .Age 18 }}
+            <p>ADULT USER: {{ .Name | upperString  }}</p>
+        {{ end }}
+    {{ end }}
