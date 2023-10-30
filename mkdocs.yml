@@ -17,6 +17,7 @@ nav:
       - Interface: structs/interface.md
   - Pointers: pointers.md
   - Generics: generics.md
+  - Context: context.md
   - HTTP, Network, etc: 
       - API: https_network/api.md
       - File Server: https_network/file_server.md
