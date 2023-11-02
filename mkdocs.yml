@@ -24,6 +24,8 @@ nav:
       - HTTP Request: https_network/request.md
       - JSON: https_network/json.md
       - Templates: https_network/templates.md
+  - Databases:
+      - Basic: db/basic.md
   - Projects: 
       - Get Address: projects/get_br_zipcode.md
 
