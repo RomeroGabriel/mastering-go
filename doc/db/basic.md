@@ -10,6 +10,14 @@ The `sql.Open` function is used to `open a database specified by its driver name
 
 The `db.Prepare` function is used to `create a prepared statement for later queries or executions`. Prepared statements are advantageous when you need to execute the same or similar SQL statements repeatedly with high efficiency.
 
+## QueryRow
+
+The `QueryRow` method is used to `execute a query that is expected to return at most one row`.
+
+## Scan
+
+The `Scan` method is then used to  `read the values from the current row into variables`. This method expects a list of destination variables as arguments, which it fills with the values from the columns in the result set.
+
 ## Code example
 
 !!! example
