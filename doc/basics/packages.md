@@ -29,7 +29,7 @@ See [Go Get](go_cli.md#go-get) and [Go Mod TIDY](go_cli.md#go-mod-tidy).
 
 In Go, a `module is a collection of related Go packages that are versioned together as a single unit`. Modules are the key component of the Go module system, `introduced to manage package dependencies and versioning`.
 
-A Go module typically consists of one or more Go packages, a`long with a go.mod file that defines the module's requirements and dependencies`. The go.mod file keeps track of the module's dependencies, versions, and the other modules it requires.
+A Go module typically consists of one or more Go packages, `along with a go.mod file that defines the module's requirements and dependencies`. The go.mod file keeps track of the module's dependencies, versions, and the other modules it requires.
 
 To create a new module in Go, you can use the [go mod init](go_cli.md#go-mod) command followed by the name of the module.
 
