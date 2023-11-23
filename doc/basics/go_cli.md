@@ -82,7 +82,7 @@ This is a command that `ensures that the go.mod file matches the source code in 
 !!! info
 
     ```bash
-    go mod tydi
+    go mod tidy
     ```
 
 `Make sure that you have initialized Go modules in your project (with go mod init) before running the go mod tidy command`. This ensures that the go.mod file exists in the root of your project directory.
