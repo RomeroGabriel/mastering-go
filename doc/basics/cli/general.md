@@ -63,30 +63,6 @@ Lists all Go `environment variables`.
 
 `GOMODCACHE` is related to `Go module management`, which is used for handling dependencies. It is `typically a subfolder within your GOPATH`.
 
-## Go Mod
-
-### Go Mod Init
-
-!!! info
-
-    ```bash
-    go mod init example.com/module
-    ```
-
-This command `initializes a new module with the specified name`. You can then `add dependencies to the module using the go get command and manage the module's requirements through the go.mod file`.
-
-### Go Mod TIDY
-
-This is a command that `ensures that the go.mod file matches the source code in the module`. `It adds any missing and removes any unused module dependencies`, keeping the go.mod file clean and ensuring that it accurately reflects the actual dependencies needed for your project.
-
-!!! info
-
-    ```bash
-    go mod tidy
-    ```
-
-`Make sure that you have initialized Go modules in your project (with go mod init) before running the go mod tidy command`. This ensures that the go.mod file exists in the root of your project directory.
-
 ## Go Get
 
 To install packages in Go, you can use the `go get command followed by the package name`.

@@ -5,7 +5,9 @@ nav:
   - Home: index.md
   - Basics:
       - Go Paradigms: basics/go_paradigm.md
-      - Go CLI: basics/go_cli.md
+      - Go CLI:
+        - CLI General: basics/cli/general.md
+        - go mod: basics/cli/go_mod.md
       - Packages and Modules: basics/packages.md
       - Variables and Data Types: basics/vars.md
       - Control Flow: basics/control_flow.md
