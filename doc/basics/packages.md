@@ -23,7 +23,7 @@ Every `.go file begins with the package command`, and the `package's name should
 
 ### Installing Packages
 
-See [Go Get](go_cli.md#go-get) and [Go Mod TIDY](go_cli.md#go-mod-tidy).
+See [Go Get](cli/general.md#go-get) and [Go Mod TIDY](cli/go_mod.md#go-mod-tidy).
 
 ## Modules
 
@@ -31,7 +31,7 @@ In Go, a `module is a collection of related Go packages that are versioned toget
 
 A Go module typically consists of one or more Go packages, `along with a go.mod file that defines the module's requirements and dependencies`. The go.mod file keeps track of the module's dependencies, versions, and the other modules it requires.
 
-To create a new module in Go, you can use the [go mod init](go_cli.md#go-mod) command followed by the name of the module.
+To create a new module in Go, you can use the [go mod init](cli/go_mod.md#go-mod-init) command followed by the name of the module.
 
 !!! note "Public and Private Access"
     In Go, the concept of `public and private access is determined by the first letter's case of a variable or function name`. If the first letter of an identifier is in `uppercase`, it is `exported and can be accessed from other packages`. On the other hand, if the first letter is `lowercase`, the identifier is considered `unexported and can only be accessed within the same package`.

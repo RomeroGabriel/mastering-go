@@ -23,7 +23,29 @@ This is a command that `ensures that the go.mod file matches the source code in 
     go mod tidy
     ```
 
-`Make sure that you have initialized Go modules in your project (with go mod init) before running the go mod tidy command`. This ensures that the go.mod file exists in the root of your project directory.
+`Make sure that you have initialized Go modules in your project (with go mod init) before running the go mod tidy command`. This ensures that the go.mod file exists in the root of your project directory. There more complex edits that can be found running `go help mod edit` or checking the [documentation](https://go.dev/ref/mod#go-mod-edit).
+
+## go mod edit
+
+The `go mod edit` command allows you to `make changes to the module's requirements and dependencies`.
+
+!!! example
+
+    ```bash
+    go mod edit -require=example.com/module@v1.2.3
+    ```
+    ```bash title="remove a requirement"
+    go mod edit -droprequire=example.com/module
+    ```
+
+!!! warning "go mod edit -replace"
+    The `go mod edit --replace` command in Go is used to add or update a replace directive in the go.mod file.
+
+    ```bash
+    go mod edit --replace=example.com/module=../local/module
+    ```
+
+    `HOWEVER, it's recommended to utilize workspaces, as go mod edit may encounter limitations outside the local environment`.
 
 ## References
 
