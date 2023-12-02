@@ -25,6 +25,16 @@ This is a command that `ensures that the go.mod file matches the source code in 
 
 `Make sure that you have initialized Go modules in your project (with go mod init) before running the go mod tidy command`. This ensures that the go.mod file exists in the root of your project directory. There more complex edits that can be found running `go help mod edit` or checking the [documentation](https://go.dev/ref/mod#go-mod-edit).
 
+### go mod tydy -e
+
+The `-e` flag, causes `go mod tidy to attempt to proceed despite errors encountered while loading packages`.
+
+!!! example
+
+    ```bash
+    go mod tidy -e
+    ```
+
 ## go mod edit
 
 The `go mod edit` command allows you to `make changes to the module's requirements and dependencies`.
