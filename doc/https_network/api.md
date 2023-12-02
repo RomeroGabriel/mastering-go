@@ -21,3 +21,4 @@ You can create an HTTP server using the `net/http` package, allowing you to hand
 ## Examples
 
 1. [Get Address - Basic API](../projects/get_br_zipcode.md#get-address---basic-api)
+1. [Following the Standards for API](https://github.com/RomeroGabriel/go-api-standards)
