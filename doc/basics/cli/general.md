@@ -109,7 +109,7 @@ In Go, `GOOS` is an environment variable that specifies the `target operating sy
 
 ## Go Tool
 
-## Go Tool dist list
+### Go Tool dist list
 
 In order to find out what operating systems and platforms are available for building executables, you can use the dist tool.
 
@@ -147,6 +147,32 @@ In order to find out what operating systems and platforms are available for buil
     windows/arm
 
     ...
+
+## Go Work
+
+To create a workspace, you can use the `go work init` command with a list of module directories as space-separated arguments.
+
+!!! example
+
+    ```bash
+    go work init module1 module2 ...
+    ```
+
+The `go work use -r` command can be used to recursively add directories in the argument directory with a go.mod file to your workspace
+
+!!! example
+
+    ```bash
+    go work use -r
+    ```
+
+To add modules to the workspace, you can run `go work use` or manually edit the `go.work` file.
+
+!!! example
+
+    ```bash
+    go work use [moddir]
+    ```
 
 ## Refereces
 
