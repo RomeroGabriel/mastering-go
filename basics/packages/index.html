@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../go_cli/">
+        <link rel="prev" href="../cli/go_mod/">
       
       
         <link rel="next" href="../vars/">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Packages and Modules - Mastering Go</title>
+        <title>Packages, Modules and Workspaces - Mastering Go</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#packages-and-modules" class="md-skip">
+        <a href="#packages-modules-and-workspaces" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Packages and Modules
+              Packages, Modules and Workspaces
             
           </span>
         </div>
@@ -464,16 +464,80 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../go_cli/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Go CLI
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Go CLI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/general/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CLI General
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/go_mod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    go mod
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -498,7 +562,7 @@
           
   
   <span class="md-ellipsis">
-    Packages and Modules
+    Packages, Modules and Workspaces
   </span>
   
 
@@ -509,7 +573,7 @@
         
   
   <span class="md-ellipsis">
-    Packages and Modules
+    Packages, Modules and Workspaces
   </span>
   
 
@@ -553,6 +617,13 @@
         <li class="md-nav__item">
   <a href="#modules" class="md-nav__link">
     Modules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workspaces" class="md-nav__link">
+    Workspaces
   </a>
   
 </li>
@@ -1181,6 +1252,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#workspaces" class="md-nav__link">
+    Workspaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -1202,7 +1280,7 @@
                   
 
 
-<h1 id="packages-and-modules">Packages and Modules</h1>
+<h1 id="packages-modules-and-workspaces">Packages, Modules and Workspaces</h1>
 <h2 id="packages">Packages</h2>
 <p>Every <code>.go file begins with the package command</code>, and the <code>package's name should match the directory in which the file resides</code>. The exceptions to this rule are <code>package main</code> and <code>package test</code> which serve as the entry points for applications and tests, respectively. <code>Packages within the same directory should share the same package name. Anything within the same package can be accessed and utilized</code>.</p>
 <details class="example">
@@ -1229,11 +1307,11 @@
 </span></code></pre></div></p>
 </details>
 <h3 id="installing-packages">Installing Packages</h3>
-<p>See <a href="../go_cli/#go-get">Go Get</a> and <a href="../go_cli/#go-mod-tidy">Go Mod TIDY</a>.</p>
+<p>See <a href="../cli/general/#go-get">Go Get</a> and <a href="../cli/go_mod/#go-mod-tidy">Go Mod TIDY</a>.</p>
 <h2 id="modules">Modules</h2>
 <p>In Go, a <code>module is a collection of related Go packages that are versioned together as a single unit</code>. Modules are the key component of the Go module system, <code>introduced to manage package dependencies and versioning</code>.</p>
-<p>A Go module typically consists of one or more Go packages, a<code>long with a go.mod file that defines the module's requirements and dependencies</code>. The go.mod file keeps track of the module's dependencies, versions, and the other modules it requires.</p>
-<p>To create a new module in Go, you can use the <a href="../go_cli/#go-mod">go mod init</a> command followed by the name of the module.</p>
+<p>A Go module typically consists of one or more Go packages, <code>along with a go.mod file that defines the module's requirements and dependencies</code>. The go.mod file keeps track of the module's dependencies, versions, and the other modules it requires.</p>
+<p>To create a new module in Go, you can use the <a href="../cli/go_mod/#go-mod-init">go mod init</a> command followed by the name of the module.</p>
 <div class="admonition note">
 <p class="admonition-title">Public and Private Access</p>
 <p>In Go, the concept of <code>public and private access is determined by the first letter's case of a variable or function name</code>. If the first letter of an identifier is in <code>uppercase</code>, it is <code>exported and can be accessed from other packages</code>. On the other hand, if the first letter is <code>lowercase</code>, the identifier is considered <code>unexported and can only be accessed within the same package</code>.</p>
@@ -1325,6 +1403,10 @@
 </span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>Full<span class="w"> </span>Car<span class="w"> </span>Years<span class="w"> </span>Old:<span class="w">  </span><span class="m">3</span>
 </span></code></pre></div></p>
 </details>
+<h2 id="workspaces">Workspaces</h2>
+<p>Introduced in Go 1.18, Go Workspaces allow developers to <code>work on multiple modules simultaneously without having to edit go.mod files for each module</code>. Each module within a workspace is treated as a main module when resolving dependencies.</p>
+<p>To create a workspace, is necessary to execute <a href="../cli/general/#go-work">go work init</a> command. This will create a <code>go.work</code> file. The <code>go.work</code> file has <code>use</code> and <code>replace</code> directives that <code>override the individual go.mod files</code>, so there is no need to edit each <code>go.mod</code> file individually. The <code>use</code> directive adds a module on disk to the set of main modules in a workspace, while the <code>replace</code> directive replaces the contents of a specific version of a module, or all versions of a module, with contents found elsewhere.</p>
+<p><code>Workspaces are flexible and support a variety of workflows</code>. For example, you can add a feature to an upstream module and use it in your own module, work with multiple interdependent modules in the same repository, or switch between different dependency configurations.</p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://goexpert.fullcycle.com.br/curso/">Go Expert - FullCycle</a></li>
