@@ -124,12 +124,12 @@ Goroutines and threads are `both used for concurrent execution of code`, but the
     `Goroutines are managed by the Go runtime`, which uses a technique known as [m:n scheduling](https://en.wikipedia.org/wiki/Thread_(computing)#M:N_(hybrid_threading)), `where m goroutines are executed using n operating system threads using multiplexing`. This means that `the Go scheduler is not invoked periodically by a hardware timer`, but implicitly by certain Go language constructs. `Because it doesn’t need a switch to kernel context, rescheduling a goroutine is much cheaper than rescheduling a thread`.
 
     ??? example
-        For example, when a goroutine calls `time.Sleep` or `blocks` in a channel or mutex operation, the scheduler puts it to sleep and runs another goroutine until it is time to wake the first one up.
+        For example, when a goroutine calls `time.Sleep` or `blocks` in a [channel](channels.md#channels) or mutex operation, the scheduler puts it to sleep and runs another goroutine until it is time to wake the first one up.
 
     On the other hand, `threads are managed by the operating system`. Every few milliseconds, a hardware timer interrupts the processor, which causes a kernel function called the scheduler to be invoked. `This function suspends the currently executing thread and saves its registers in memory`, looks over the list of threads and decides which one should run next, restores that thread’s registers from memory, then resumes the execution of that thread. `Because OS threads are scheduled by the kernel, passing control from one thread to another requires a full context switch, which is a slow operation`.
 
 !!! note "Communication Medium"
-    Goroutines enhance communication through the use of a `channel` and `sync package` which provides a wait group function. `Threads do not have a clear communication medium`. In multiple threads executing, `communication is made through memory location`.
+    Goroutines enhance communication through the use of a [channel](channels.md#channels) and `sync package` which provides a wait group function. `Threads do not have a clear communication medium`. In multiple threads executing, `communication is made through memory location`.
 
 !!! note "Infrastructure Dependency"
     `Goroutines are not hardware dependent`, meaning they can be executed independently of any infrastructure. `Threads, are ardware dependent`.
@@ -138,7 +138,7 @@ Goroutines and threads are `both used for concurrent execution of code`, but the
     Goroutines are executed in a `stack of 2kb (kilobytes)`, which `grows gradually` and is `destroyed once execution is done/completed`. Threads also execute in a stack, but they require at least a minimum of `1 megabyte` to execute, and `stack size is fixed`. Thus, stack management is easier with goroutines compared to threads.
 
 !!! note "Latency During Program Execution"
-    `Goroutines communicate with each other through channels`, thus low latency is experienced from one channel to another. In threads, since there is no communication medium between one thread to another, communication takes place with high latency.
+    `Goroutines communicate with each other through` [channels](channels.md#channels), thus low latency is experienced from one channel to another. In threads, since there is no communication medium between one thread to another, communication takes place with high latency.
 
 ## References
 

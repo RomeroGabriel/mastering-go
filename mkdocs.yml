@@ -29,6 +29,7 @@ nav:
   - Multithreading:
         - Go Routines: multithreading/go_routines.md
         - Race Condition: multithreading/race_condition.md
+        - Channels: multithreading/channels.md
   - Databases:
       - Basic: db/basic.md
   - Projects: 
