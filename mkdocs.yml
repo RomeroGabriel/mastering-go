@@ -28,6 +28,7 @@ nav:
       - Templates: https_network/templates.md
   - Multithreading:
         - Go Routines: multithreading/go_routines.md
+        - Race Condition: multithreading/race_condition.md
   - Databases:
       - Basic: db/basic.md
   - Projects: 
