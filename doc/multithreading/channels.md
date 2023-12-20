@@ -54,6 +54,37 @@ You can use the `range` keyword to `read values from a channel until it's closed
     ping 2
     ```
 
+??? example "Range with WaitGroup"
+
+    ```bash title="run command"
+    go run src/multithereading/range_waitgroup.go
+    ```
+    ```go
+    --8<-- "src/multithereading/range_waitgroup.go"
+    ```
+    ```bash title="output"
+    Publishing value :0
+    Publishing value :1
+    Subscribe value: :0
+    Subscribe value: :1
+    Publishing value :2
+    Publishing value :3
+    Subscribe value: :2
+    Subscribe value: :3
+    Publishing value :4
+    Publishing value :5
+    Subscribe value: :4
+    Subscribe value: :5
+    Publishing value :6
+    Publishing value :7
+    Subscribe value: :6
+    Subscribe value: :7
+    Publishing value :8
+    Publishing value :9
+    Subscribe value: :8
+    Subscribe value: :9
+    ```
+
 ## References
 
 1. [Channels](https://golangbot.com/channels/)
