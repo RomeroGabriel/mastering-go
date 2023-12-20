@@ -119,6 +119,37 @@ You can use the `range` keyword to `read values from a channel until it's closed
     Subscribe value: :9
     ```
 
+## Examples
+
+??? example "Fake Load Balancer"
+
+    ```bash title="run command"
+    go run src/multithereading/fake_loadbalancer.go
+    ```
+    ```go
+    --8<-- "src/multithereading/fake_loadbalancer.go"
+    ```
+    ```bash title="output"
+    ...
+    Worked 9 received 1926
+    Worked 903 received 1997
+    Worked 975 received 1971
+    Worked 765 received 1942
+    Worked 274 received 1839
+    Worked 763 received 1856
+    Worked 914 received 1860
+    Worked 915 received 1864
+    Worked 702 received 1877
+    Worked 981 received 1898
+    Worked 797 received 1879
+    Worked 774 received 1853
+    Worked 798 received 1882
+    Worked 320 received 1275
+    Worked 434 received 1276
+    Worked 108 received 1073
+    Worked 530 received 1277
+    ```
+
 ## References
 
 1. [Channels](https://golangbot.com/channels/)
