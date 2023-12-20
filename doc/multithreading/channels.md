@@ -16,6 +16,40 @@ You can create a channel using the `make` function. `Channels are typed by the v
     Hello Word!
     ```
 
+## Channel Directions
+
+In Go, channels can be created with a `specific direction`, which can be either `send-only`, `receive-only`, or `bidirectional`. This feature allows you to `enforce certain restrictions on how a channel can be used`, which can help prevent errors and make your code easier to understand.
+
+!!! example "Send-Only Channels"
+    Syntax: `chan<-`.
+
+    ```go
+    ch := make(chan<- int) // Send-only channel
+    ch <- 42 // Sending data
+    ```
+
+!!! example "Receive-Only Channels"
+    Syntax: `<-chan`
+
+    ```go
+    ch := make(<-chan int) // Receive-only channel
+    data := <-ch // Receiving data
+    ```
+
+??? example "Full Example"
+
+    ```bash title="run command"
+    go run src/multithereading/channel_directions.go
+    ```
+    ```go
+    --8<-- "src/multithereading/channel_directions.go"
+    ```
+    ```bash title="output"
+    Corinthians
+    ```
+
+The Bidirectional channel is denoted by the `chan` syntax, `without any direction indicator`.
+
 ## Buffered Channels
 
 By default, sends and receives `block until both the sender and receiver are ready`. However, you can `create a buffered channel that can hold a certain number of values before blocking`. For example, to create a buffered channel that can hold up to 2 strings. In this case, the `send operation won't block until the channel's buffer is full, and the receive operation won't block until the channel's buffer is empty`.
@@ -89,3 +123,4 @@ You can use the `range` keyword to `read values from a channel until it's closed
 
 1. [Channels](https://golangbot.com/channels/)
 1. [How to use Go channels](https://blog.logrocket.com/how-use-go-channels/)
+1. [Golang: Channel Directions](https://towardsdev.com/golang-channel-directions-607637e9edac)
