@@ -30,6 +30,7 @@ nav:
         - Go Routines: multithreading/go_routines.md
         - Race Condition: multithreading/race_condition.md
         - Channels: multithreading/channels.md
+        - Select: multithreading/select.md
   - Databases:
       - Basic: db/basic.md
   - Projects: 
