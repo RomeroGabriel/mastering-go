@@ -42,6 +42,38 @@ Analyze the coverage profile using the `go tool cover` command. `This command ca
     --8<-- "src/testing/coverage.html"
     ```
 
+## Benchmarking
+
+You can also write `benchmark tests` in Go, which `measure the performance of a function or program`. It allows you to identify `potential areas for optimization` and `understand the impact of the changes you make to your code`. The `testing` package in Go provides support for benchmarking, which is done by creating `functions with a specific signature that takes a pointer to testing.B as its only argument`.
+
+To `run` the benchmark, use the `go test` command with the `-bench` flag.
+
+??? example
+
+    This command will generate an `HTML report` and write it to a file named `coverage.html`. You can then open this file in a web browser to view the coverage report.
+
+    ```bash
+    go test -bench=.
+    # OR go test -bench=. -count 5 -run=^# -benchtime=5s
+    ```
+    ```go
+    --8<-- "src/testing/tax_bench.go"
+    ```
+    ```go
+    --8<-- "src/testing/tax_bench_test.go"
+    ```
+    ```bash title="output"
+    goos: linux
+    goarch: amd64
+    pkg: tax
+    cpu: Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz
+    BenchmarkCalculateTax-8         1000000000               0.2814 ns/op
+    BenchmarkCalculateTax2-8            1084           1109872 ns/op
+    PASS
+    ok      tax     1.629s
+    ```
+
 ## Reference
 
 1. [Go testing](https://pkg.go.dev/testing)
+1. [How To Write Unit Tests in Go](https://www.digitalocean.com/community/tutorials/how-to-write-unit-tests-in-go-using-go-test-and-the-testing-package)
