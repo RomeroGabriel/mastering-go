@@ -121,6 +121,8 @@ You can use the `range` keyword to `read values from a channel until it's closed
 
 ## Examples
 
+1. [Api Race Challenge](https://github.com/RomeroGabriel/go-api-race)
+
 ??? example "Fake Load Balancer"
 
     ```bash title="run command"

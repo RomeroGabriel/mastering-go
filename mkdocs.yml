@@ -31,6 +31,7 @@ nav:
         - Race Condition: multithreading/race_condition.md
         - Channels: multithreading/channels.md
         - Select: multithreading/select.md
+  - Testing: testing/index.md
   - Databases:
       - Basic: db/basic.md
   - Projects: 
