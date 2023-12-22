@@ -73,7 +73,30 @@ To `run` the benchmark, use the `go test` command with the `-bench` flag.
     ok      tax     1.629s
     ```
 
+## Fuzzing
+
+Fuzzing is a type of automated testing which `continuously manipulates inputs to a program to find bugs`. Fuzzing uses `coverage guidance to intelligently walk through the code being fuzzed to find and report failures to the user`. It can reach `edge cases` which humans often miss, making fuzz testing particularly valuable for `finding security exploits and vulnerabilities`.
+
+    ```bash
+    go test -fuzz=. -fuzztime=5s
+    ```
+    ```go
+    --8<-- "src/testing/tax.go"
+    ```
+    ```go
+    --8<-- "src/testing/tax_fuzz_test.go"
+    ```
+    ```bash title="output"
+    fuzz: elapsed: 0s, gathering baseline coverage: 0/8 completed
+    fuzz: elapsed: 0s, gathering baseline coverage: 8/8 completed, now fuzzing with 8 workers
+    fuzz: elapsed: 3s, execs: 89077 (29688/sec), new interesting: 0 (total: 8)
+    fuzz: elapsed: 5s, execs: 150973 (29952/sec), new interesting: 0 (total: 8)
+    PASS
+    ok      tax     5.073s
+    ```
+
 ## Reference
 
 1. [Go testing](https://pkg.go.dev/testing)
 1. [How To Write Unit Tests in Go](https://www.digitalocean.com/community/tutorials/how-to-write-unit-tests-in-go-using-go-test-and-the-testing-package)
+1. [Go Fuzzing](https://go.dev/doc/security/fuzz/)
