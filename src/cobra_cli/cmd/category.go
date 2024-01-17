@@ -17,4 +17,5 @@ and usage of using your command.`,
 func init() {
 	// add to rootCmd
 	rootCmd.AddCommand(categoryCmd)
+	categoryCmd.PersistentFlags().String("name", "", "Name of the category")
 }

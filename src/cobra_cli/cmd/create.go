@@ -19,4 +19,5 @@ and usage of using your command.`,
 func init() {
 	// add to categoryCmd
 	categoryCmd.AddCommand(createCmd)
+	createCmd.Flags().String("created_type", "", "The Category type to be created")
 }

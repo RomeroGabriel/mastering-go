@@ -38,24 +38,6 @@ For each command added, a new file in `cmd` folder will be created.
 
     Once you've defined the add command, you can access it via the command line by typing `yourApplicationName add`.
 
-### Add Arguments to a Command
-
-Arguments in Cobra CLI are `values that can be passed to commands`. They are typically used to provide input data to the command.
-
-??? example
-
-    ```go linenums="1" hl_lines="24-31 37-41"
-    --8<-- "src/cobra_cli/cmd/testCommand.go"
-    ```
-    ```bash
-    $ go run main.go testCommand -t "Salve o Corinthians"
-    salve o corinthians
-    ```
-    ```bash
-    $ go run main.go testCommand -t "Salve o Corinthians" -u
-    SALVE O CORINTHIANS
-    ```
-
 ### Subcommands
 
 `Subcommands are commands that are part of other commands`. They allow you to create complex command structures in your CLI application, making it easier to manage and navigate. To create a nested command in Cobra, you `first define the parent command, then add the nested command to it`.
@@ -103,8 +85,76 @@ Arguments in Cobra CLI are `values that can be passed to commands`. They are typ
     list called
     ```
 
+## Arguments/Flags
+
+Arguments in Cobra CLI are `values that can be passed to commands`. They are typically used to provide input data to the command. `Arguments are used to modify the behavior of a command`. They can be both `global` and `local`.
+
+??? example
+
+    ```go linenums="1" hl_lines="13 24-30 37-41"
+    --8<-- "src/cobra_cli/cmd/testCommand.go"
+    ```
+    ```bash
+    $ go run main.go testCommand -t "Salve o Corinthians"
+    salve o corinthians
+    $ go run main.go testCommand -t "Salve o Corinthians" -u
+    SALVE O CORINTHIANS
+    ```
+
+### Local and Global Flags
+
+??? example "Local"
+    A flag associated with a specific command.
+
+    ```go linenums="1" hl_lines="22"
+    --8<-- "src/cobra_cli/cmd/create.go"
+    ```
+    ```bash linenums="1" hl_lines="9"
+    $ go run main.go category create -h
+    A longer description that spans multiple lines and likely contains examples
+    and usage of using your command.
+
+    Usage:
+    cobra_cli_example category create [flags]
+
+    Flags:
+        --created_type string   The Category type to be created
+    -h, --help                  help for create
+
+    Global Flags:
+        --name string   Name of the category
+    ```
+
+??? example "Global"
+
+    ```go linenums="1" hl_lines="20"
+    --8<-- "src/cobra_cli/cmd/category.go"
+    ```
+    ```bash linenums="1" hl_lines="15"
+    $ go run main.go category
+    A longer description that spans multiple lines and likely contains examples
+    and usage of using your command.
+
+    Usage:
+    cobra_cli_example category [flags]
+    cobra_cli_example category [command]
+
+    Available Commands:
+    create      A brief description of your command
+    list        A brief description of your command
+
+    Flags:
+    -h, --help          help for category
+        --name string   Name of the category
+
+    Use "cobra_cli_example category [command] --help" for more information about a command.
+    ```
+
+A flag persistent across multiple commands.
+
 ## References
 
 1. [Cobra GitHub](https://github.com/spf13/cobra)
+1. [Cobra](https://cobra.dev/)
 
 <!-- https://www.phind.com/search?cache=wcz892kngyj1ntr5s2vjk4eo -->

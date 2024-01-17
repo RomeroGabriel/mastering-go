@@ -10,7 +10,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// testCommandCmd represents the testCommand command
+var text string
 var testCommandCmd = &cobra.Command{
 	Use:   "testCommand",
 	Short: "A brief description of your command",
@@ -21,7 +21,6 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		text, _ := cmd.Flags().GetString("text")
 		upperCommand, _ := cmd.Flags().GetBool("uppercase")
 
 		if upperCommand == true {
@@ -35,7 +34,7 @@ to quickly create a Cobra application.`,
 
 func init() {
 	rootCmd.AddCommand(testCommandCmd)
-	testCommandCmd.Flags().StringP("text", "t", "", "Text to print")
+	testCommandCmd.Flags().StringVarP(&text, "text", "t", "", "Text to print")
 	testCommandCmd.MarkFlagRequired("text")
 
 	testCommandCmd.Flags().BoolP("uppercase", "u", false, "Should print in uppercase")
