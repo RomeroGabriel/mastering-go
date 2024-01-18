@@ -172,5 +172,3 @@ Cobra does not natively support hooks, but you can achieve similar functionality
 
 1. [Cobra GitHub](https://github.com/spf13/cobra)
 1. [Cobra](https://cobra.dev/)
-
-<!-- https://www.phind.com/search?cache=wcz892kngyj1ntr5s2vjk4eo -->
