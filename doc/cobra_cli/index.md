@@ -152,6 +152,22 @@ Arguments in Cobra CLI are `values that can be passed to commands`. They are typ
 
 A flag persistent across multiple commands.
 
+## Hooks
+
+Cobra does not natively support hooks, but you can achieve similar functionality using the `RunE`, `PreRun`, `PreRunE`, `PostRun`, and `PostRunE` functions. These functions allow you to specify what happens before and after a command runs.
+
+??? example
+
+    ```go linenums="1" hl_lines="14-22"
+    --8<-- "src/cobra_cli/cmd/hookCmd.go"
+    ```
+    ```bash linenums="1"
+    $ go run main.go hookCmd
+    PRE RUN
+    hookCmd called
+    POST RUN
+    ```
+
 ## References
 
 1. [Cobra GitHub](https://github.com/spf13/cobra)
