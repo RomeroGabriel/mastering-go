@@ -35,6 +35,7 @@ nav:
   - Databases:
       - Basic: db/basic.md
       - Migrations: db/migrations.md
+      - SQLX Library: db/sqlx.md
   - Cobra CLI: cobra_cli/index.md
   - Projects: 
       - Get Address: projects/get_br_zipcode.md
