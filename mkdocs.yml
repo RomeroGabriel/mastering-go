@@ -8,7 +8,7 @@ nav:
         - cli/general.md
         - go mod: cli/go_mod.md
     - Fundamentals of Go Programming:
-        - Variables and Data Types: basics/vars.md
+        - Variables and Data Types: fundamentals/vars.md
         - Logic and Control Structures: basics/control_flow.md
         - Functions:
             - Basic: functions/index.md

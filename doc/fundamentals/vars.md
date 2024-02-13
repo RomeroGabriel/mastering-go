@@ -1,73 +1,46 @@
 # Variables and Data Types
 
-In Go, `variables and constants are strongly typed`. To declare a constant, you use the `const` keyword, and for variables, you use `var`.
+In Go, `variables and constants are strongly typed`. To declare a constant, you use the `const` keyword, and for variables, you use `var`. Go can also `automatically infer variable types`, providing various syntaxes for declaring variables and constants, as shown below.
 
-Go can also `automatically infer variable types`, providing various syntaxes for declaring variables and constants, as shown below.
-
-??? example "Simple vars example"
+!!! example "Simple vars example"
 
     ```bash title="run command"
-    go run src/variables/*
-    ```
-    ```go
-    --8<-- "src/variables/basic.go"
-    ```
-    ```bash title="output"
+    $ go run src/fundamentals/vars/basic.go
     Starting basic variables
-    Print A const: I'm a constant
-    Print B var: false
+    Print A const:  I'm a constant
+    Print B var:  false
     NOTICE: B was infer as false
 
-    Different ways to declare a variable:
-    Full declaration: A
+    Different ways to declare a variable: 
+    Full declaration:  A
     Short hand: B
     ```
+    ```go
+    --8<-- "src/fundamentals/vars/basic.go"
+    ```
 
-??? example "Checking Default Infered Types"
+!!! example "Checking Default Infered Types"
 
     ```bash title="run command"
-    go run variables/infer_types.go 
+    $ go run src/fundamentals/vars/infer_types.go
+    bool: false
+    int: 0
+    string: 
+    float32: 0
+    float64: 0
     ```
     ```go
-    --8<-- "src/variables/infer_types.go"
-    ```
-    ```bash title="output"
-    bool false
-    int 0
-    string 
-    float32 +0.000000e+000
-    float64 +0.000000e+000
-    ```
-
-## Using type
-
-In Go the `type` keyword is used to `define custom data types`. These custom types can be based on existing types, making it a versatile feature in the language.
-
-??? example "Using type"
-
-    ```bash title="run command"
-    go run variables/using_type.go
-    ```
-    ```go
-    --8<-- "src/variables/using_type.go"
-    ```
-    ```bash title="output"
-    custom_id value: e96d759e-dc59-4394-9feb-79c8bf4130c9
+    --8<-- "src/fundamentals/vars/infer_types.go"
     ```
 
 ## Arrays
 
 In Go, an array is a `fixed-size collection of elements of the same type`. Arrays are declared with a specific size, and that `size cannot be changed after the array is created`.
 
-??? example
+!!! example
 
     ```bash title="run command"
-    go run variables/arrays.go
-    ```
-    ```go
-    --8<-- "src/variables/arrays.go"
-    ```
-    ```bash title="output"
+    $ go run src/fundamentals/vars/arrays.go
     0
     [0 10 20]
     Value stored in 0 index is 0
@@ -76,6 +49,9 @@ In Go, an array is a `fixed-size collection of elements of the same type`. Array
     Value stored in 0 index is apple
     Value stored in 1 index is banana
     Value stored in 2 index is cherry
+    ```
+    ```go
+    --8<-- "src/fundamentals/vars/arrays.go"
     ```
 
 ## Slices
@@ -133,4 +109,20 @@ Remember that maps are `reference types`, so when you pass a map to a function o
     Player: Renato Augusto, Salaray: 3000
     Player: Cassio, Salaray: 3000
     Player: Yuri Alberto, Salaray: 3000
+    ```
+
+## Using type
+
+In Go the `type` keyword is used to `define custom data types`. These custom types can be based on existing types, making it a versatile feature in the language.
+
+??? example "Using type"
+
+    ```bash title="run command"
+    go run variables/using_type.go
+    ```
+    ```go
+    --8<-- "src/variables/using_type.go"
+    ```
+    ```bash title="output"
+    custom_id value: e96d759e-dc59-4394-9feb-79c8bf4130c9
     ```
