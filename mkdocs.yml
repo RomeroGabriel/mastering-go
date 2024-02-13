@@ -2,46 +2,46 @@ site_name: Mastering Go
 docs_dir: "doc"
 
 nav:
-  - Home: index.md
-  - Basics:
-      - Go Paradigms: basics/go_paradigm.md
-      - Go CLI:
+    - Home:
+        - index.md
+    - CLI Commands:
         - CLI General: basics/cli/general.md
         - go mod: basics/cli/go_mod.md
-      - Packages, Modules and Workspaces: basics/packages.md
-      - Variables and Data Types: basics/vars.md
-      - Control Flow: basics/control_flow.md
-      - Handle Files: basics/handle_files.md
-  - Functions:
-      - Basic: functions/index.md
-  - Structs: 
-      - Basic: structs/structs.md
-      - Interface: structs/interface.md
-  - Pointers: pointers.md
-  - Generics: generics.md
-  - Context: context.md
-  - HTTP, Network, etc: 
-      - API: https_network/api.md
-      - File Server: https_network/file_server.md
-      - HTTP Request: https_network/request.md
-      - JSON: https_network/json.md
-      - Templates: https_network/templates.md
-  - Multithreading:
+    - Fundamentals of Go Programming:
+        - Variables and Data Types: basics/vars.md
+        - Logic and Control Structures: basics/control_flow.md
+        - Functions:
+            - Basic: functions/index.md
+        - Handle Files: basics/handle_files.md
+        - Packages, Modules and Workspaces: basics/packages.md
+        - Structs: 
+            - Basic: structs/structs.md
+            - Interface: structs/interface.md
+        - Pointers: pointers.md
+        - Generics: generics.md
+    - Context: context.md
+    - Network: 
+        - API: https_network/api.md
+        - File Server: https_network/file_server.md
+        - HTTP Request: https_network/request.md
+        - JSON: https_network/json.md
+        - Templates: https_network/templates.md
+    - Multithreading:
         - Go Routines: multithreading/go_routines.md
         - Race Condition: multithreading/race_condition.md
         - Channels: multithreading/channels.md
         - Select: multithreading/select.md
-  - Testing: testing/index.md
-  - Databases:
-      - Basic: db/basic.md
-      - Migrations: db/migrations.md
-      - SQLX Library: db/sqlx.md
-  - Cobra CLI: cobra_cli/index.md
-  - Projects: 
-      - Get Address: projects/get_br_zipcode.md
-  - Patterns: 
-      - Dependency Injection:
-        - Wire: di/wire.md
+    - Testing: testing/index.md
+    - Databases:
+        - Basic: db/basic.md
+        - Migrations: db/migrations.md
+        - SQLX Library: db/sqlx.md
+    - Cobra CLI: cobra_cli/index.md
+    - Projects: 
+        - Get Address: projects/get_br_zipcode.md
+    - Patterns: 
+        - Dependency Injection:
+            - Wire: di/wire.md
 
 theme:
   name: material
@@ -50,12 +50,19 @@ theme:
   favicon: images/go-logo.png
   palette:
       scheme: slate
-      primary: white
-      accent: blue
+      primary: blue
+      accent: white
   features:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.tabs.instant
+    - navigation.instant
+    - navigation.sections
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.expand
+    - toc.integrate
     - content.code.copy
     - content.code.annotate
 
@@ -75,5 +82,5 @@ markdown_extensions:
   - pymdownx.superfences
   - attr_list
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
