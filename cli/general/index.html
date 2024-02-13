@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../../go_paradigm/">
+        <link rel="prev" href="../..">
       
       
         <link rel="next" href="../go_mod/">
       
       
-      <link rel="icon" href="../../../images/go-logo.png">
+      <link rel="icon" href="../../images/go-logo.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.2">
     
     
       
-        <title>CLI General - Mastering Go</title>
+        <title>Go's CLI - Mastering Go</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.d451bc0e.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d451bc0e.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a5377069.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a5377069.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -61,7 +61,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="white" data-md-color-accent="blue">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="white">
   
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#go-cli" class="md-skip">
+        <a href="#gos-cli" class="md-skip">
           Skip to content
         </a>
       
@@ -87,9 +87,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Mastering Go" class="md-header__button md-logo" aria-label="Mastering Go" data-md-component="logo">
+    <a href="../.." title="Mastering Go" class="md-header__button md-logo" aria-label="Mastering Go" data-md-component="logo">
       
-  <img src="../../../images/go-logo.png" alt="logo">
+  <img src="../../images/go-logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CLI General
+              Go's CLI
             
           </span>
         </div>
@@ -167,16 +167,19 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
   
     
   
   Home
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -189,10 +192,12 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../go_paradigm/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
-  Basics
+    
+  
+  CLI Commands
 
         </a>
       </li>
@@ -207,28 +212,12 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../functions/" class="md-tabs__link">
+        <a href="../../basics/vars/" class="md-tabs__link">
           
   
-  Functions
-
-        </a>
-      </li>
     
   
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../structs/structs/" class="md-tabs__link">
-          
-  
-  Structs
+  Fundamentals of Go Programming
 
         </a>
       </li>
@@ -241,41 +230,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../pointers/" class="md-tabs__link">
-        
-  
-    
-  
-  Pointers
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../generics/" class="md-tabs__link">
-        
-  
-    
-  
-  Generics
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../context/" class="md-tabs__link">
+      <a href="../../context/" class="md-tabs__link">
         
   
     
@@ -294,10 +249,12 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../https_network/api/" class="md-tabs__link">
+        <a href="../../https_network/api/" class="md-tabs__link">
           
   
-  HTTP, Network, etc
+    
+  
+  Network
 
         </a>
       </li>
@@ -312,8 +269,10 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../multithreading/go_routines/" class="md-tabs__link">
+        <a href="../../multithreading/go_routines/" class="md-tabs__link">
           
+  
+    
   
   Multithreading
 
@@ -328,7 +287,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../testing/" class="md-tabs__link">
+      <a href="../../testing/" class="md-tabs__link">
         
   
     
@@ -347,8 +306,10 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../db/basic/" class="md-tabs__link">
+        <a href="../../db/basic/" class="md-tabs__link">
           
+  
+    
   
   Databases
 
@@ -363,7 +324,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../cobra_cli/" class="md-tabs__link">
+      <a href="../../cobra_cli/" class="md-tabs__link">
         
   
     
@@ -382,8 +343,10 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../projects/get_br_zipcode/" class="md-tabs__link">
+        <a href="../../projects/get_br_zipcode/" class="md-tabs__link">
           
+  
+    
   
   Projects
 
@@ -406,8 +369,10 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../di/wire/" class="md-tabs__link">
+        <a href="../../di/wire/" class="md-tabs__link">
           
+  
+    
   
   Patterns
 
@@ -446,11 +411,13 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Mastering Go" class="md-nav__button md-logo" aria-label="Mastering Go" data-md-component="logo">
+    <a href="../.." title="Mastering Go" class="md-nav__button md-logo" aria-label="Mastering Go" data-md-component="logo">
       
-  <img src="../../../images/go-logo.png" alt="logo">
+  <img src="../../images/go-logo.png" alt="logo">
 
     </a>
     Mastering Go
@@ -463,16 +430,56 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Home
   </span>
   
 
-      </a>
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -485,6 +492,12 @@
   
   
     
+    
+      
+        
+      
+        
+      
     
     
     
@@ -504,7 +517,7 @@
             
   
   <span class="md-ellipsis">
-    Basics
+    CLI Commands
   </span>
   
 
@@ -514,65 +527,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Basics
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../go_paradigm/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Go Paradigms
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Go CLI
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            Go CLI
+            CLI Commands
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -595,7 +550,7 @@
           
   
   <span class="md-ellipsis">
-    CLI General
+    Go's CLI
   </span>
   
 
@@ -606,7 +561,7 @@
         
   
   <span class="md-ellipsis">
-    CLI General
+    Go's CLI
   </span>
   
 
@@ -628,70 +583,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#go-environment-command" class="md-nav__link">
-    Go Environment Command
+  <a href="#go-env" class="md-nav__link">
+    go env
   </a>
-  
-    <nav class="md-nav" aria-label="Go Environment Command">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gopath" class="md-nav__link">
-    GOPATH
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gomodcache" class="md-nav__link">
-    GOMODCACHE
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#go-get" class="md-nav__link">
-    Go Get
+    go get
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#go-build" class="md-nav__link">
-    Go Build
+    go build
   </a>
-  
-    <nav class="md-nav" aria-label="Go Build">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#variables-to-build" class="md-nav__link">
-    Variables to Build
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#go-tool" class="md-nav__link">
-    Go Tool
+    go tool
   </a>
   
-    <nav class="md-nav" aria-label="Go Tool">
+    <nav class="md-nav" aria-label="go tool">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#go-tool-dist-list" class="md-nav__link">
-    Go Tool dist list
+    go tool dist list
   </a>
   
 </li>
@@ -703,7 +625,7 @@
       
         <li class="md-nav__item">
   <a href="#go-work" class="md-nav__link">
-    Go Work
+    go work
   </a>
   
 </li>
@@ -750,27 +672,65 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
-    <li class="md-nav__item">
-      <a href="../../packages/" class="md-nav__link">
+    
+    
+      
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
   
   <span class="md-ellipsis">
-    Packages, Modules and Workspaces
+    Fundamentals of Go Programming
   </span>
   
 
-      </a>
-    </li>
-  
-
-              
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fundamentals of Go Programming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -778,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vars/" class="md-nav__link">
+      <a href="../../basics/vars/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -798,11 +758,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../control_flow/" class="md-nav__link">
+      <a href="../../basics/control_flow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Control Flow
+    Logic and Control Structures
   </span>
   
 
@@ -817,8 +777,68 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../functions/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../handle_files/" class="md-nav__link">
+      <a href="../../basics/handle_files/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -832,63 +852,17 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    Functions
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Functions
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
               
                 
   
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/" class="md-nav__link">
+      <a href="../../basics/packages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Basic
+    Packages, Modules and Workspaces
   </span>
   
 
@@ -898,19 +872,18 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
+              
+                
   
   
   
     
+    
+      
+        
+      
+        
+      
     
     
     
@@ -923,10 +896,12 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -937,8 +912,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
             <span class="md-nav__icon md-icon"></span>
             Structs
           </label>
@@ -950,7 +925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../structs/structs/" class="md-nav__link">
+      <a href="../../structs/structs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -970,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../structs/interface/" class="md-nav__link">
+      <a href="../../structs/interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -990,14 +965,15 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
     <li class="md-nav__item">
-      <a href="../../../pointers/" class="md-nav__link">
+      <a href="../../pointers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1009,14 +985,15 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
     <li class="md-nav__item">
-      <a href="../../../generics/" class="md-nav__link">
+      <a href="../../generics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1028,6 +1005,14 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
@@ -1035,7 +1020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../context/" class="md-nav__link">
+      <a href="../../context/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1055,6 +1040,18 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
     
@@ -1066,24 +1063,26 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   <span class="md-ellipsis">
-    HTTP, Network, etc
+    Network
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            HTTP, Network, etc
+            Network
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1093,7 +1092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../https_network/api/" class="md-nav__link">
+      <a href="../../https_network/api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1113,7 +1112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../https_network/file_server/" class="md-nav__link">
+      <a href="../../https_network/file_server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1133,7 +1132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../https_network/request/" class="md-nav__link">
+      <a href="../../https_network/request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1153,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../https_network/json/" class="md-nav__link">
+      <a href="../../https_network/json/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../https_network/templates/" class="md-nav__link">
+      <a href="../../https_network/templates/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1201,6 +1200,16 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
     
@@ -1212,10 +1221,12 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1226,8 +1237,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Multithreading
           </label>
@@ -1239,7 +1250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../multithreading/go_routines/" class="md-nav__link">
+      <a href="../../multithreading/go_routines/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1259,7 +1270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../multithreading/race_condition/" class="md-nav__link">
+      <a href="../../multithreading/race_condition/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1279,7 +1290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../multithreading/channels/" class="md-nav__link">
+      <a href="../../multithreading/channels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1299,7 +1310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../multithreading/select/" class="md-nav__link">
+      <a href="../../multithreading/select/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1326,7 +1337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../testing/" class="md-nav__link">
+      <a href="../../testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1346,6 +1357,14 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+    
     
     
     
@@ -1357,10 +1376,12 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1371,8 +1392,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Databases
           </label>
@@ -1384,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/basic/" class="md-nav__link">
+      <a href="../../db/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1404,7 +1425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/migrations/" class="md-nav__link">
+      <a href="../../db/migrations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1424,7 +1445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../db/sqlx/" class="md-nav__link">
+      <a href="../../db/sqlx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1451,7 +1472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cobra_cli/" class="md-nav__link">
+      <a href="../../cobra_cli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1471,6 +1492,10 @@
   
     
     
+      
+        
+      
+    
     
     
     
@@ -1482,10 +1507,12 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1496,8 +1523,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             Projects
           </label>
@@ -1509,7 +1536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projects/get_br_zipcode/" class="md-nav__link">
+      <a href="../../projects/get_br_zipcode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1537,6 +1564,10 @@
   
     
     
+      
+        
+      
+    
     
     
     
@@ -1548,10 +1579,12 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
         
           
-          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1562,8 +1595,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_14">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Patterns
           </label>
@@ -1576,18 +1609,27 @@
   
     
     
+      
+        
+      
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_1" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_1" >
         
           
-          <label class="md-nav__link" for="__nav_14_1" id="__nav_14_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1598,8 +1640,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_14_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1">
             <span class="md-nav__icon md-icon"></span>
             Dependency Injection
           </label>
@@ -1611,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../di/wire/" class="md-nav__link">
+      <a href="../../di/wire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1647,120 +1689,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#go-environment-command" class="md-nav__link">
-    Go Environment Command
-  </a>
-  
-    <nav class="md-nav" aria-label="Go Environment Command">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gopath" class="md-nav__link">
-    GOPATH
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gomodcache" class="md-nav__link">
-    GOMODCACHE
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#go-get" class="md-nav__link">
-    Go Get
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#go-build" class="md-nav__link">
-    Go Build
-  </a>
-  
-    <nav class="md-nav" aria-label="Go Build">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#variables-to-build" class="md-nav__link">
-    Variables to Build
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#go-tool" class="md-nav__link">
-    Go Tool
-  </a>
-  
-    <nav class="md-nav" aria-label="Go Tool">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#go-tool-dist-list" class="md-nav__link">
-    Go Tool dist list
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#go-work" class="md-nav__link">
-    Go Work
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#refereces" class="md-nav__link">
-    Refereces
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1769,16 +1697,36 @@
                   
 
 
-<h1 id="go-cli">Go CLI</h1>
-<h2 id="go-environment-command">Go Environment Command</h2>
+<h1 id="gos-cli">Go's CLI</h1>
+<p>Go's Command Line Interface (CLI) <code>refers to the set of tools and utilities provided by the Go</code> programming language that developers can use directly from the terminal or command prompt. The Go CLI is designed to be straightforward and efficient, allowing developers to perform common tasks quickly and with minimal configuration. It's an integral part of the Go ecosystem, enabling rapid development and deployment of Go applications.</p>
+<p>These tools facilitate various tasks such as <code>compiling code</code>, <code>managing dependencies</code>, <code>running tests</code>, and more. Here's a brief overview:</p>
+<ul>
+<li><a href="#go-build">go build</a>: Compiles Go source files into executable binaries.</li>
+<li><a href="#go-get">go get</a>: Downloads and installs packages and dependencies required for a Go project.</li>
+<li><a href="../go_mod/#go-mod">go mod</a>: Manages module dependencies for Go projects, which includes tasks like initializing modules, adding requirements, and tidying up dependencies.</li>
+<li><a href="#go-env">go env</a>: Lists all Go environment variables.</li>
+<li>go run: Compiles and runs Go programs without explicitly creating an executable file.</li>
+<li>go test: Executes unit tests within Go packages to ensure code correctness.</li>
+<li>go fmt: Automatically formats Go source code according to the official style guidelines.</li>
+<li>go vet: Analyzes Go source code for potential issues that may not necessarily prevent compilation but could lead to bugs or unidiomatic code.</li>
+<li>go doc: Generates documentation for Go packages in various formats.</li>
+<li>go list: Lists all the packages named by the import paths, one per line.</li>
+</ul>
+<h2 id="go-env">go env</h2>
 <p>Lists all Go <code>environment variables</code>.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>go<span class="w"> </span>env
+<div class="admonition abstract">
+<p class="admonition-title">go env</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>go<span class="w"> </span>env
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nv">GO111MODULE</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nv">GOARCH</span><span class="o">=</span><span class="s1">&#39;amd64&#39;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nv">GOBIN</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nv">GOCACHE</span><span class="o">=</span><span class="s1">&#39;/home/gabriel/.cache/go-build&#39;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nv">GOENV</span><span class="o">=</span><span class="s1">&#39;/home/gabriel/.config/go/env&#39;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nv">GOEXE</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>...
 </span></code></pre></div>
-</div>
 <details class="example">
-<summary>go env output</summary>
+<summary>full output</summary>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">GO111MODULE</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nv">GOARCH</span><span class="o">=</span><span class="s1">&#39;amd64&#39;</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nv">GOBIN</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
@@ -1821,89 +1769,130 @@
 </span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="nv">GOGCCFLAGS</span><span class="o">=</span><span class="s1">&#39;-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build4097433368=/tmp/go-build -gno-record-gcc-switches&#39;</span>
 </span></code></pre></div>
 </details>
-<h3 id="gopath">GOPATH</h3>
-<p><code>GOPATH</code> is a variable that <code>defines the root of your workspace</code>. It stores your code base and all the files necessary for your development. <code>It also contains the binaries of your compilations and the libraries used.</code></p>
-<h3 id="gomodcache">GOMODCACHE</h3>
-<p><code>GOMODCACHE</code> is related to <code>Go module management</code>, which is used for handling dependencies. It is <code>typically a subfolder within your GOPATH</code>.</p>
-<h2 id="go-get">Go Get</h2>
-<p>To install packages in Go, you can use the <code>go get command followed by the package name</code>.</p>
-<p><code>Make sure that you have initialized Go modules in your project (with go mod init) before running the go get command</code>. This ensures that the go.mod file exists in the root of your project directory.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>go<span class="w"> </span>get<span class="w"> </span><span class="o">[</span>packages<span class="o">]</span>
-</span></code></pre></div>
 </div>
-<p>It is also used to update and manage dependencies in your GOPATH. Some helpful subcommands you can use with go get:</p>
+<div class="admonition info">
+<p class="admonition-title">GOPATH variable</p>
+<p><code>GOPATH</code> is a variable that <code>defines the root of your workspace</code>. It stores your code base and all the files necessary for your development. <code>It also contains the binaries of your compilations and the libraries used.</code></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">GOMODCACHE variable</p>
+<p><code>GOMODCACHE</code> is related to <code>Go module management</code>, which is used for handling dependencies. It is <code>typically a subfolder within your GOPATH</code>.</p>
+</div>
+<h2 id="go-get">go get</h2>
+<p>To install packages in Go, you can use the <code>go get command followed by the package name</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Module Initialized</p>
+<p><code>Make sure that you have initialized Go modules in your project</code> (<a href="../go_mod/#go-mod-init">with go mod init</a>) <code>before running the go get command</code>. This ensures that the go.mod file exists in the root of your project directory.</p>
+</div>
+<p>It is also used to update and manage dependencies in your <code>GOPATH</code>. Some helpful subcommands you can use with go get:</p>
 <ol>
 <li><code>-u</code>: Update the package and install the latest version;</li>
 <li><code>-d</code>: Download the package's source code but do not install it.</li>
 <li><code>-t</code>: Also download the packages needed to run tests.</li>
 <li><code>-v</code>: Enable verbose output to see the package being fetched and installed.</li>
 </ol>
-<h2 id="go-build">Go Build</h2>
-<p>The <code>go build</code> command is used to compile packages and dependencies <code>into an executable binary file</code>. This command compiles the Go source files in the current directory and creates an executable binary file.</p>
-<p>Building a <code>single file</code> in Go can be done by simply using the <code>go build filename.go</code> command followed by the name of the file. This command will <code>generate an executable binary based on the contents of the specified filename.go source file</code>. For <code>projects  that utilize the go.mod file</code> can be achieved by running the go build <code>command in the root directory of the project</code>. This command automatically builds the project, resolving dependencies defined in the go.mod file.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p><div class="language-bash highlight"><span class="filename">just one file</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>go<span class="w"> </span>build<span class="w"> </span>filename.go
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>go<span class="w"> </span>get<span class="w"> </span>github.com/google/uuid
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>$<span class="w"> </span>go<span class="w"> </span>get<span class="w"> </span>github.com/google/uuid@1.0.0<span class="w"> </span><span class="c1"># version 1.0.0</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>$<span class="w"> </span>go<span class="w"> </span>get<span class="w"> </span>github.com/google/uuid@abcdef1234567890<span class="w"> </span><span class="c1"># commit hash abcdef1234567890</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>$<span class="w"> </span>go<span class="w"> </span>get<span class="w"> </span>-u<span class="w"> </span>github.com/google/uuid
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>$<span class="w"> </span>go<span class="w"> </span>get<span class="w"> </span>-d<span class="w"> </span>github.com/google/uuid
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>$<span class="w"> </span>go<span class="w"> </span>get<span class="w"> </span>-t<span class="w"> </span>github.com/google/uuid
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>$<span class="w"> </span>go<span class="w"> </span>get<span class="w"> </span>-v<span class="w"> </span>github.com/google/uuid
 </span></code></pre></div>
-<div class="language-bash highlight"><span class="filename">for projects</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>go<span class="w"> </span>build
-</span></code></pre></div></p>
 </div>
-<h3 id="variables-to-build">Variables to Build</h3>
-<p>In Go, <code>GOOS</code> is an environment variable that specifies the <code>target operating system for code compilation</code>. The <code>GOARCH</code> is an environment variable that specifies the <code>target architecture for code compilation</code>. To find out the possibilities for <code>GOOS</code> and <code>GOARCH</code>, use <a href="#go-tool-dist-list">go tool dist list</a>. Is good start a new</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
+<h2 id="go-build">go build</h2>
+<p>The <code>go build</code> command is used to compile packages and dependencies <code>into an executable binary file</code>. This command compiles the Go source files in the current directory and creates an executable binary file.</p>
+<p>Building a <code>single file</code> in Go can be done by simply using the <code>go build filename.go</code> command followed by the name of the file. This command will <code>generate an executable binary based on the contents of the specified filename.go source file</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Building a single file</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>go<span class="w"> </span>build<span class="w"> </span>filename.go
+</span></code></pre></div>
+</div>
+<p>For <code>projects  that utilize the go.mod file</code> can be achieved by running the go build <code>command in the root directory of the project</code>. This command automatically builds the project, resolving dependencies defined in the <code>go.mod</code> file.</p>
+<div class="admonition example">
+<p class="admonition-title">Building a project</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>go<span class="w"> </span>build
+</span></code></pre></div>
+</div>
+<p>When building the code is possible to configure behaviors to build the code. <code>Build variables</code> are environment variables that influence the behavior of the <code>go build</code> command. <code>They allow you to customize the build process</code>, define build constraints, and pass additional flags to the compiler. Here's a concise summary of Build Variables.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Some of variables</p>
+<ol>
+<li><code>GOARCH</code>: Specifies the target architecture for the binary, such as amd64, arm, 386, etc.</li>
+<li><code>GOOS</code>: Defines the target operating system, like linux, windows, darwin (macOS), etc.</li>
+<li><code>GOROOT</code>: Sets the location of the Go standard library and tools.</li>
+<li><code>GOPATH</code>: Specifies the workspace directory where Go looks for source code and dependencies.</li>
+<li><code>CGO_ENABLED</code>: Controls whether cgo is enabled for cross-compilation. Set to 1 to enable, 0 to disable.</li>
+<li><code>GO111MODULE</code>: Determines the module mode for the current build. Can be set to on, off, or auto.</li>
+<li><code>GOFLAGS</code>: Allows passing additional flags to the go build command.</li>
+<li><code>GOBIN</code>: Defines the directory where compiled executables are placed.</li>
+<li><code>GOPROXY</code>: Specifies the URL of the proxy server for downloading modules.</li>
+<li><code>GOMOD</code>: Used to point to a specific go.mod file when building a module.</li>
+<li><code>GODEBUG</code>: Enables debugging output for certain runtime components.</li>
+</ol>
+</div>
+<p>In Go, <code>GOOS</code> is an environment variable that specifies the <code>target operating system for code compilation</code>. The <code>GOARCH</code> is an environment variable that specifies the <code>target architecture for code compilation</code>. To find out the possibilities for <code>GOOS</code> and <code>GOARCH</code>, use <a href="#go-tool-dist-list">go tool dist list</a>.</p>
+<p>To find out the available values for operating system and platform, checkout <a href="#go-tool-dist-list">go tool dist list</a></p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">GOOS</span><span class="o">=[</span>target-OS<span class="o">]</span><span class="w"> </span><span class="nv">GOARCH</span><span class="o">=[</span>target-architecture<span class="o">]</span><span class="w"> </span>go<span class="w"> </span>build
 </span></code></pre></div>
 </div>
-<h2 id="go-tool">Go Tool</h2>
-<h3 id="go-tool-dist-list">Go Tool dist list</h3>
-<p>In order to find out what operating systems and platforms are available for building executables, you can use the dist tool.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>go<span class="w"> </span>tool<span class="w"> </span>dist<span class="w"> </span>list
+<h2 id="go-tool">go tool</h2>
+<p><code>go tool</code> is a suite of command-line tools included with the Go programming language distribution. <code>These tools are designed to assist developers in various aspects of software development, including code analysis, testing, performance profiling, and more</code>. The <code>go tool</code> command itself is a <code>meta-command</code> that provides access to several subcommands, each serving a distinct purpose.</p>
+<p>Here's a brief description of some commonly used <code>go tool</code> subcommands:</p>
+<ul>
+<li><code>go tool compile</code>: Compiles Go source files into object files.</li>
+<li><code>go tool link</code>: Links object files together to produce an executable binary.</li>
+<li><code>go tool nm</code>: Lists the symbols from object files.</li>
+<li><code>go tool objdump</code>: Displays information from object files.</li>
+<li><code>go tool trace</code>: Visualizes execution traces of Go programs.</li>
+<li><code>go tool pprof</code>: Analyzes and visualizes performance profiles of Go programs.</li>
+<li><code>go tool cover</code>: Provides code coverage analysis for Go tests.</li>
+<li><code>go tool vet</code>: Reports suspicious constructs in Go source code.</li>
+<li><code>go tool yacc</code>: Generates parsers from yacc-like grammar files.</li>
+<li><code>go tool pack</code>: Packs object files into archive files.</li>
+<li><code>go tool cgo</code>: Handles C code generation and linking for programs that use cgo.</li>
+</ul>
+<p>Each of these tools is specialized for a particular task and can be used individually or in combination with other tools to achieve complex development workflows. The <code>go tool</code> suite is an essential part of the Go ecosystem, providing powerful functionality that complements the core features of the language and its standard library.</p>
+<h3 id="go-tool-dist-list">go tool dist list</h3>
+<p>List all operating systems and platforms are available for building executables.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$<span class="w"> </span>go<span class="w"> </span>tool<span class="w"> </span>dist<span class="w"> </span>list
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>android/386
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>android/arm
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>android/arm64
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>...
 </span></code></pre></div>
 </div>
-<details class="example">
-<summary>Example</summary>
-<p>android/386</p>
-<p>android/arm</p>
-<p>android/arm64</p>
-<p>darwin/amd64</p>
-<p>darwin/arm64</p>
-<p>ios/amd64</p>
-<p>ios/arm64</p>
-<p>linux/386</p>
-<p>linux/amd64</p>
-<p>linux/arm</p>
-<p>windows/386</p>
-<p>windows/amd64</p>
-<p>windows/arm</p>
-<p>...</p>
+<h2 id="go-work">go work</h2>
+<p>Go 1.18 adds workspace mode to Go, which lets you <code>work on multiple modules simultaneously</code> without having to edit go.mod files for each module. <code>Each module within a workspace is treated as a main module when resolving dependencies</code>. With Go workspaces, <code>you control all your dependencies using a go.work file in the root of your workspace directory</code>. The go.work file has use and replace directives that override the individual go.mod files, <code>so there is no need to edit each go.mod file individually</code>.</p>
+<details class="note">
+<summary>Before workpaces</summary>
+<p>Previously, <code>to add a feature to one module and use it in another module, you needed to either publish the changes to the first module, or edit the go.mod file of the dependent module with a replace directive for your local, unpublished module changes</code>. In order to publish without errors, you had to remove the replace directive from the dependent module’s go.mod file after you published the local changes to the first module.</p>
 </details>
-<h2 id="go-work">Go Work</h2>
-<p>To create a workspace, you can use the <code>go work init</code> command with a list of module directories as space-separated arguments.</p>
 <div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>go<span class="w"> </span>work<span class="w"> </span>init<span class="w"> </span>module1<span class="w"> </span>module2<span class="w"> </span>...
+<p class="admonition-title">Creating a workspace</p>
+<p>To create a workspace, you can use the <code>go work init</code> command with a list of module directories as space-separated arguments. The workspace <code>doesn’t need to contain the modules you’re working with</code>. The init command creates a <code>go.work</code> file that lists modules in the workspace. If you run go work init without arguments, the command creates an empty workspace.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$<span class="w"> </span>go<span class="w"> </span>work<span class="w"> </span>init<span class="w"> </span>module1<span class="w"> </span>module2<span class="w"> </span>...
 </span></code></pre></div>
 </div>
-<p>The <code>go work use -r</code> command can be used to recursively add directories in the argument directory with a go.mod file to your workspace</p>
 <div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>go<span class="w"> </span>work<span class="w"> </span>use<span class="w"> </span>-r
-</span></code></pre></div>
-</div>
+<p class="admonition-title">Add modules to a workspace</p>
 <p>To add modules to the workspace, you can run <code>go work use</code> or manually edit the <code>go.work</code> file.</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>go<span class="w"> </span>work<span class="w"> </span>use<span class="w"> </span><span class="o">[</span>moddir<span class="o">]</span>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>go<span class="w"> </span>work<span class="w"> </span>use<span class="w"> </span><span class="o">[</span>moddir<span class="o">]</span>
+</span></code></pre></div>
+The <code>go work use -r</code> command can be used to recursively add directories in the argument directory with a <code>go.mod</code> file to your workspace</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>go<span class="w"> </span>work<span class="w"> </span>use<span class="w"> </span>-r<span class="w"> </span>.
 </span></code></pre></div>
 </div>
 <h2 id="refereces">Refereces</h2>
 <ul>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-build-go-executables-for-multiple-platforms-on-ubuntu-20-04">How To Build Go Executables for Multiple Platforms on Ubuntu 20.04</a></li>
+<li><a href="https://go.dev/doc/tutorial/workspaces">Tutorial: Getting started with multi-module workspaces</a></li>
 </ul>
 
 
@@ -1916,6 +1905,12 @@
           
           
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
         
       </main>
       
@@ -1942,10 +1937,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tabs.instant", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tabs.instant", "navigation.instant", "navigation.sections", "navigation.path", "navigation.indexes", "navigation.top", "navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.726fbb30.min.js"></script>
+      <script src="../../assets/javascripts/bundle.726fbb30.min.js"></script>
       
     
   </body>
