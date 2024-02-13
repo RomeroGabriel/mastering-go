@@ -68,7 +68,7 @@ To create a new module in Go, you can use the [go mod init](../cli/go_mod.md#go-
 
 Introduced in Go 1.18, Go Workspaces allow developers to `work on multiple modules simultaneously without having to edit go.mod files for each module`. Each module within a workspace is treated as a main module when resolving dependencies.
 
-To create a workspace, is necessary to execute [go work init](cli/general.md#go-work) command. This will create a `go.work` file. The `go.work` file has `use` and `replace` directives that `override the individual go.mod files`, so there is no need to edit each `go.mod` file individually. The `use` directive adds a module on disk to the set of main modules in a workspace, while the `replace` directive replaces the contents of a specific version of a module, or all versions of a module, with contents found elsewhere.
+To create a workspace, is necessary to execute [go work init](../cli/general.md#go-work) command. This will create a `go.work` file. The `go.work` file has `use` and `replace` directives that `override the individual go.mod files`, so there is no need to edit each `go.mod` file individually. The `use` directive adds a module on disk to the set of main modules in a workspace, while the `replace` directive replaces the contents of a specific version of a module, or all versions of a module, with contents found elsewhere.
 
 `Workspaces are flexible and support a variety of workflows`. For example, you can add a feature to an upstream module and use it in your own module, work with multiple interdependent modules in the same repository, or switch between different dependency configurations.
 
