@@ -5,8 +5,8 @@ nav:
     - Home:
         - index.md
     - CLI Commands:
-        - CLI General: basics/cli/general.md
-        - go mod: basics/cli/go_mod.md
+        - cli/general.md
+        - go mod: cli/go_mod.md
     - Fundamentals of Go Programming:
         - Variables and Data Types: basics/vars.md
         - Logic and Control Structures: basics/control_flow.md
