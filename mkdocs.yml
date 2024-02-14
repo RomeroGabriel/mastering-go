@@ -8,10 +8,16 @@ nav:
         - cli/general.md
         - go mod: cli/go_mod.md
     - Fundamentals of Go Programming:
+        - Variables and Constants Declaration: fundamentals/vars.md
+        - Data Types:
+            - Array: fundamentals/data_types/array.md
         - Variables and Data Types: fundamentals/vars.md
+        # But example handle arrays, slice, dict, tecnicas etc
         - Logic and Control Structures: basics/control_flow.md
+        # Add more examples
         - Functions:
             - Basic: functions/index.md
+            ## High-Order Functions,Closures, First-class function
         - Handle Files: basics/handle_files.md
         - Packages, Modules and Workspaces: basics/packages.md
         - Structs: 

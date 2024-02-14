@@ -33,27 +33,6 @@ In Go, `variables and constants are strongly typed`. To declare a constant, you 
     --8<-- "src/fundamentals/vars/infer_types.go"
     ```
 
-## Arrays
-
-In Go, an array is a `fixed-size collection of elements of the same type`. Arrays are declared with a specific size, and that `size cannot be changed after the array is created`.
-
-!!! example
-
-    ```bash title="run command"
-    $ go run src/fundamentals/vars/arrays.go
-    0
-    [0 10 20]
-    Value stored in 0 index is 0
-    Value stored in 1 index is 10
-    Value stored in 2 index is 20
-    Value stored in 0 index is apple
-    Value stored in 1 index is banana
-    Value stored in 2 index is cherry
-    ```
-    ```go
-    --8<-- "src/fundamentals/vars/arrays.go"
-    ```
-
 ## Slices
 
 In Go, a slice is a `more versatile and dynamic alternative to arrays`. Slices are like views into an underlying array, allowing you to work with a portion of an a`rray without specifying a fixed size`. Slices allow you to perform operations like appending elements, slicing (creating sub-slices), and growing dynamically.
