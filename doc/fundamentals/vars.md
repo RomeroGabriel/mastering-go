@@ -33,36 +33,6 @@ In Go, `variables and constants are strongly typed`. To declare a constant, you 
     --8<-- "src/fundamentals/vars/infer_types.go"
     ```
 
-## Slices
-
-In Go, a slice is a `more versatile and dynamic alternative to arrays`. Slices are like views into an underlying array, allowing you to work with a portion of an a`rray without specifying a fixed size`. Slices allow you to perform operations like appending elements, slicing (creating sub-slices), and growing dynamically.
-
-Slices also have a `length and capacity` (the maximum number of elements it can hold without reallocation). Use the `len()` and `cap()` functions to get these values.
-
-??? example
-
-    ```bash title="run command"
-    go run variables/slices.go
-    ```
-    ```go
-    --8<-- "src/variables/slices.go"
-    ```
-    ```bash title="output"
-    Full slice:  [10 20 30 40 50 60]
-    First 3 elements:  [10 20 30]
-    my_slice        = len=6 cap=6 [10 20 30 40 50 60]
-    none_value      = len=0 cap=6 []
-    first_four      = len=4 cap=6 [10 20 30 40]
-    last_two        = len=4 cap=4 [30 40 50 60]
-    my_slice with 70:  [10 20 30 40 50 60 70]
-    my_slice        = len=7 cap=12 [10 20 30 40 50 60 70]
-    ```
-
-!!! warning
-    Remember that slices are based on arrays, so they can change in size dynamically. `If the underlying array runs out of capacity, a new larger array is allocated, and the data is copied over`.
-    When added 70 in the example aboce, notice that the `slice's capacity increases to 12 instead of 7`. This happens because Go, when it needs to increase capacity, `doubles the original size`. Doubling the capacity of the underlying array allows for more elements to be added in the future without frequent reallocations.
-    `In the case of very large slices, this can consume more memory than necessary`. So, when you anticipate working with a large slice, it's a `good practice to initialize the slice with a size closer to the maximum you expect to use to minimize unnecessary memory consumption`.
-
 ## Maps
 
 Maps in Go are a versatile data structure used to store `key-value pairs`. They are `similar to dictionaries or hash tables` in other programming languages. A key feature of maps is their ability to provide fast and efficient lookups for values based on their associated keys.

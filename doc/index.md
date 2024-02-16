@@ -1,4 +1,4 @@
-# Mastering :fontawesome-brands-golang:
+# Welcome
 
 A particular but not private repository to centralize all studies about Go and a few famous Go's libraries. It's kind my own documentation about the language. :notebook_with_decorative_cover:
 

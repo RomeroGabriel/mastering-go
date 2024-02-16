@@ -1,6 +1,6 @@
 # Array
 
-In Go, an array is a **`fixed-size collection of elements of the same type`**. Arrays are declared with a specific size, and that **`size cannot be changed after the array is created`**. Arrays are useful when planning the detailed layout of memory and `sometimes can help avoid allocation`, but primarily they are a building block for [slices](../vars.md#slices). **`If you pass an array to a function, it will receive a copy of the array`**, not a pointer to it. The `size of an array is part of its type`, so the types [10]int and [20]int are distinct.
+In Go, an array is a **`fixed-size collection of elements of the same type`**. Arrays are declared with a specific size, and that **`size cannot be changed after the array is created`**. Arrays are useful when planning the detailed layout of memory and `sometimes can help avoid allocation`, but primarily they are a building block for [slices](../vars.md#slices). The `size of an array is part of its type`, so the types [10]int and [20]int are distinct.
 
 !!! example
 
@@ -17,6 +17,25 @@ In Go, an array is a **`fixed-size collection of elements of the same type`**. A
     ```
     ```go
     --8<-- "src/fundamentals/data_types/arrays.go"
+    ```
+
+## As Function Params
+
+A function can receive an array by **`specifying the array's type and size`** in the function's parameter list. When you pass an array to a function, **`Go passes the entire array by value`**, which means the function receives a copy of the array.
+
+If you want to pass an array to a function and have the function modify the original array, you would need to pass a pointer to the array instead. However, **`arrays in Go are not addressable`**, so you cannot take the address of an array directly. Instead, you would typically use a [slices](../vars.md#slices), which is a reference to an underlying array and can be passed by reference.
+
+!!! example
+
+    ```bash title="run command"
+    $ go run src/fundamentals/data_types/array_params.go
+    Inital myArray:  [1 2 3 4]
+    Memory allocated for myArray: 0xc000018180
+    Memory allocated for data: 0xc0000181e0
+    After call func Slice:  [1 2 3 4]
+    ```
+    ```go
+    --8<-- "src/fundamentals/data_types/array_params.go"
     ```
 
 ## Slicing an Array

@@ -7,10 +7,11 @@ nav:
     - CLI Commands:
         - cli/general.md
         - go mod: cli/go_mod.md
-    - Fundamentals of Go Programming:
+    - Fundamentals:
         - Variables and Constants Declaration: fundamentals/vars.md
         - Data Types:
             - Array: fundamentals/data_types/array.md
+            - Slice: fundamentals/data_types/slice.md
         - Variables and Data Types: fundamentals/vars.md
         # But example handle arrays, slice, dict, tecnicas etc
         - Logic and Control Structures: basics/control_flow.md
@@ -27,6 +28,7 @@ nav:
         - Generics: generics.md
     - Context: context.md
     - Network: 
+        # add echo https://echo.labstack.com/ https://github.com/labstack/echo
         - API: https_network/api.md
         - File Server: https_network/file_server.md
         - HTTP Request: https_network/request.md
@@ -45,6 +47,7 @@ nav:
     - Cobra CLI: cobra_cli/index.md
     - Projects: 
         - Get Address: projects/get_br_zipcode.md
+    # Add Tecnicas: olhar o curso!
     - Patterns: 
         - Dependency Injection:
             - Wire: di/wire.md
