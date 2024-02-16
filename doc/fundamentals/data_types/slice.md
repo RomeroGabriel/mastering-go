@@ -101,6 +101,17 @@ Slices also have a `length and capacity` (the maximum number of elements it can 
 
 ## Two-dimensional Slices
 
+Because slices are variable-length, it is possible to have each inner slice be a different length.
+
+!!! example
+
+    ```bash title="run command"
+    $ go run src/fundamentals/data_types/2d-slices.go
+    ```
+    ```go
+    --8<-- "src/fundamentals/data_types/2d-slices.go"
+    ```
+
 ## References
 
 - [Effective Go - Slices](https://go.dev/doc/effective_go#slices)
