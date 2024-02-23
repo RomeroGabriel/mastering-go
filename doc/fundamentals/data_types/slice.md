@@ -112,6 +112,10 @@ Because slices are variable-length, it is possible to have each inner slice be a
     --8<-- "src/fundamentals/data_types/2d-slices.go"
     ```
 
+## Go's Package for Slices
+
+Package slices defines various functions useful with slices of any type. [Link here](https://pkg.go.dev/slices).
+
 ## References
 
 - [Effective Go - Slices](https://go.dev/doc/effective_go#slices)
