@@ -1,6 +1,6 @@
 # Slice
 
-In Go, a slice is a `more versatile and dynamic alternative to arrays`. **Slices are like views into an underlying array**, allowing you to work with a portion of an **`array without specifying a fixed size`**. Slices hold references to an underlying array, and **`if you assign one slice to another, both refer to the same array`**.
+In Go, a slice is a `more versatile and dynamic alternative to arrays`. **Slices are like views into an underlying array**, allowing you to work with a portion of an **`array without specifying a fixed size`**. Slices are **`reference types`**, that hold references to an underlying array, and **`if you assign one slice to another, both refer to the same array`**.
 
 !!! example
 
