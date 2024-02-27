@@ -19,7 +19,9 @@ In Go, `variables and constants are strongly typed`. To declare a constant, you 
     --8<-- "src/fundamentals/vars/basic.go"
     ```
 
-!!! example "Checking Default Infered Types"
+## Checking Default Infered Types
+
+!!! example
 
     ```bash title="run command"
     $ go run src/fundamentals/vars/infer_types.go
