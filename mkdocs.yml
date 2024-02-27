@@ -13,13 +13,16 @@ nav:
             - Array: fundamentals/data_types/array.md
             - Slice: fundamentals/data_types/slice.md # Add comments about slices package https://pkg.go.dev/slices
             - Maps: fundamentals/data_types/maps.md
+            - Strings/Runes: fundamentals/data_types/strings.md
             # string https://pkg.go.dev/strings
             # rune
             # Pointers
-        - Logic and Control Structures: basics/control_flow.md
+        - Control Structures: 
+            - Basic: basics/control_flow.md
         # Add more examples
         - Functions:
             - Basic: functions/index.md
+            # Methods: Pointers vs. Values
             ## High-Order Functions,Closures, First-class function
         - Handle Files: basics/handle_files.md
         - Packages, Modules and Workspaces: basics/packages.md
