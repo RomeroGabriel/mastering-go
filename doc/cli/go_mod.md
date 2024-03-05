@@ -1,4 +1,4 @@
-# go mod
+# Go Modules
 
 `go mod` is a command in the Go programming language that `manages module dependencies` for Go projects. Introduced in Go 1.11, Go Modules aimed to improve the experience of developing Go applications by simplifying dependency management.
 

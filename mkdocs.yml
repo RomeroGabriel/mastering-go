@@ -4,22 +4,31 @@ docs_dir: "doc"
 nav:
     - Home:
         - index.md
-    - CLI Commands:
+    - Tooling:
         - cli/general.md
-        - go mod: cli/go_mod.md
+        - Modules: cli/go_mod.md
+        # go fmt
+        # go vet
     - Fundamentals:
         - Variables and Constants Declaration: fundamentals/vars.md
         - Data Types:
-            - Array: fundamentals/data_types/array.md
-            - Slice: fundamentals/data_types/slice.md # Add comments about slices package https://pkg.go.dev/slices
-            - Maps: fundamentals/data_types/maps.md
+            # Byte
+            # Integers
+            # Float (?)
             - Strings/Runes: fundamentals/data_types/strings.md
-            # string https://pkg.go.dev/strings
-            # rune
+            - Array: fundamentals/data_types/array.md
+            - Slice: fundamentals/data_types/slice.md
+            - Maps: fundamentals/data_types/maps.md
             # Pointers
+            # Make function
+            # Type Casting (?)
+            # Type Inference (?)
         - Control Structures: 
             - Basic: basics/control_flow.md
-        # Add more examples
+            # for
+            # range
+            # switch
+        # Erros, Panic, Recover
         - Functions:
             - Basic: functions/index.md
             # Methods: Pointers vs. Values
