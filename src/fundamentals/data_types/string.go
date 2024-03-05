@@ -17,4 +17,9 @@ func main() {
 	strCopy := make([]byte, len(save))
 	copy(strCopy, save)
 	fmt.Println("Using copy bytes: ", string(strCopy))
+
+	rawStr := `Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc ac urna ex. Mauris eu dolor nec orci aliquam consectetur vitae ut sapien.
+	Quisque sed commodo dui. Cras pulvinar aliquet eleifend. Nulla dignissim arcu quis nunc facilisis dictum.
+Curabitur consequat, purus vel sodales dictum, dui metus lacinia lacus, in congue est.`
+	fmt.Println(rawStr)
 }

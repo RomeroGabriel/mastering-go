@@ -2,7 +2,7 @@
 
 In Go, `variables and constants are strongly typed`. To declare a constant, you use the `const` keyword, and for variables, you use `var`. Go can also `automatically infer variable types`, providing various syntaxes for declaring variables and constants, as shown below.
 
-!!! example "Simple vars example"
+??? example "Simple vars example"
 
     ```bash title="run command"
     $ go run src/fundamentals/vars/basic.go
@@ -21,7 +21,9 @@ In Go, `variables and constants are strongly typed`. To declare a constant, you 
 
 ## Checking Default Infered Types
 
-!!! example
+Go assigns a default zero value to any variable that is declared but not assigned a value. Having an explicit zero value makes code clearer and removes a source of bugs.
+
+??? example "Default Infered Types"
 
     ```bash title="run command"
     $ go run src/fundamentals/vars/infer_types.go
