@@ -11,14 +11,16 @@ nav:
         # go vet
     - Fundamentals:
         - Variables and Constants Declaration: fundamentals/vars.md
-        - Data Types:
-            # Byte
-            # Integers
-            # Float (?)
+        - Literals Types:
+            - fundamentals/literals.md
+            - Integers: fundamentals/literals/integers.md
+            - Floats: fundamentals/literals/floats.md
             - Strings/Runes: fundamentals/data_types/strings.md
+        - Composite Types:
             - Array: fundamentals/data_types/array.md
             - Slice: fundamentals/data_types/slice.md
             - Maps: fundamentals/data_types/maps.md
+            # Byte
             # Pointers
             # Make function
             # Type Casting (?)
