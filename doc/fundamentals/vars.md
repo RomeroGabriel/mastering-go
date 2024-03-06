@@ -1,8 +1,8 @@
-# Variables and Data Types
+# Variables and Constants
 
 In Go, `variables and constants are strongly typed`. To declare a constant, you use the `const` keyword, and for variables, you use `var`. Go can also `automatically infer variable types`, providing various syntaxes for declaring variables and constants, as shown below.
 
-??? example "Simple vars example"
+??? example "Simple Vars Example"
 
     ```bash title="run command"
     $ go run src/fundamentals/vars/basic.go
@@ -36,6 +36,41 @@ Go assigns a default zero value to any variable that is declared but not assigne
     ```go
     --8<-- "src/fundamentals/vars/infer_types.go"
     ```
+
+## Explict Type Conversion
+
+In Go, automatic type promotion between variables is not permitted. Whenever variable types do not align, explicit type conversion is necessary. Even when dealing with integers and floats of varying sizes, they must be converted to the same type before interaction. This approach ensures clarity regarding the intended data type.
+
+Since all type conversions in Go are explicit, `you cannot treat another Go type as a boolean`. Unlike some languages where a nonzero number or a nonempty string can be interpreted as true, `Go doesn't support such implicit conversions`. No other type can be directly converted to a boolean, `either implicitly or explicitly`. If there's a need to convert from another data type to boolean, it's necessary to use one of the `comparison operators explicitly`.
+
+??? example "Converting Types"
+
+    ```bash title="run command"
+    $ go run src/fundamentals/type_conversion.go
+    Example: Converting Int and Float
+    Sum1:  25.5
+    Sum2:  25
+
+    Example: Converting Int and Byte
+    Sum3:  110
+    Sum4:  110
+
+    Right way to compare string
+    Right way to compare int
+    ```
+    ```go
+    --8<-- "src/fundamentals/type_conversion.go"
+    ```
+
+## Beyond Constants
+
+In Go, `constants serve as identifiers for literals`, providing a means to assign meaningful names to values. These constants are restricted to holding values determinable by the compiler during compilation. Unlike some other languages, **`Go lacks built-in support for declaring values computed at runtime as immutable`**. Consequently, there are no immutable arrays, slices, maps, or structs in Go. Furthermore, there's no inherent mechanism to declare a field within a struct as immutable.
+
+!!! note "Resume"
+    1. Constant can only hold values determinable in compile-time
+    1. There are no ways to declare immutable values in runtime
+    1. Arrays, slices, maps, or structs are not immutable
+    1. No mechanism to declare struct fields as immutable
 
 <!-- ## Using type
 

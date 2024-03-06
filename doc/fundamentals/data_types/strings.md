@@ -1,4 +1,26 @@
-# Strings
+# Strings and Runes
+
+## Runes
+
+In Go, a rune is a data type used to **`represent a Unicode code point`**, which is a unique integer (which is an alias for the `int32` type) `value that corresponds to a character in the Unicode standard`. The Unicode standard assigns a unique code point to almost every character from every writing system in the world, making it suitable for working with text in various languages and scripts.
+
+### When to Use Runes
+
+You should use runes when you need to `work with individual characters in a string and handle text that includes characters from different languages`, including non-ASCII characters. Common use cases include text processing, manipulation, and validation. Using runes is an efficient way to handle text in Go because `it’s optimized for Unicode character encoding`. It ensures that you can accurately represent and manipulate characters from various languages.
+
+??? example "Simple example using Runes"
+
+    ```bash title="run command"
+    $ go run src/fundamentals/data_types/runes.go
+    Equal
+    H e l l o ,     世 界 
+    Hello,  世界
+    ```
+    ```go
+    --8<-- "src/fundamentals/data_types/runes.go"
+    ```
+
+## Strings
 
 In Go, a string is a sequence of one or more characters (letters, numbers, symbols) that can be either a constant or a variable. `Strings are made up of Unicode and are immutable sequences, meaning they cannot be changed once created`.
 
@@ -8,7 +30,7 @@ The internal structure of a string in Go is essentially a **`byte slice wrapper`
 
 `Raw strings` are delimited with backquotes (\`) and can contain any character except a backquote. There’s no escape character in a raw string literal, `all characters are included as is`. When using a raw string literal, you write in multiline.
 
-!!! example
+??? example "String Usages Example"
 
     ```bash title="run command"
     $ go run src/fundamentals/data_types/string.go
@@ -29,26 +51,6 @@ The internal structure of a string in Go is essentially a **`byte slice wrapper`
 ## Go's Package for String
 
 Package strings defines various functions useful with maps of any type. [Link here](https://pkg.go.dev/strings).
-
-## Runes
-
-In Go, a rune is a data type used to `represent a Unicode code point/character`, which is a unique integer (which is an alias for the int32 type) value that corresponds to a character in the Unicode standard. The Unicode standard assigns a unique code point to almost every character from every writing system in the world, making it suitable for working with text in various languages and scripts.
-
-### When to Use Runes
-
-You should use runes when you need to `work with individual characters in a string and handle text that includes characters from different languages`, including non-ASCII characters. Common use cases include text processing, manipulation, and validation. Using runes is an efficient way to handle text in Go because `it’s optimized for Unicode character encoding`. It ensures that you can accurately represent and manipulate characters from various languages.
-
-!!! example
-
-    ```bash title="run command"
-    $ go run src/fundamentals/data_types/runes.go
-    Equal
-    H e l l o ,     世 界 
-    Hello,  世界
-    ```
-    ```go
-    --8<-- "src/fundamentals/data_types/runes.go"
-    ```
 
 ## References
 
