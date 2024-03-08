@@ -5,7 +5,7 @@ In Go, `variables and constants are strongly typed`. To declare a constant, you 
 ??? example "Simple Vars Example"
 
     ```bash title="run command"
-    $ go run src/fundamentals/vars/basic.go
+    $ go run src/fundamentals/vars.go
     Starting basic variables
     Print A const:  I'm a constant
     Print B var:  false
@@ -16,7 +16,7 @@ In Go, `variables and constants are strongly typed`. To declare a constant, you 
     Short hand: B
     ```
     ```go
-    --8<-- "src/fundamentals/vars/basic.go"
+    --8<-- "src/fundamentals/vars.go"
     ```
 
 ## Checking Default Infered Types
@@ -26,7 +26,7 @@ Go assigns a default zero value to any variable that is declared but not assigne
 ??? example "Default Infered Types"
 
     ```bash title="run command"
-    $ go run src/fundamentals/vars/infer_types.go
+    $ go run src/fundamentals/infer_types.go
     bool: false
     int: 0
     string: 
@@ -34,7 +34,7 @@ Go assigns a default zero value to any variable that is declared but not assigne
     float64: 0
     ```
     ```go
-    --8<-- "src/fundamentals/vars/infer_types.go"
+    --8<-- "src/fundamentals/infer_types.go"
     ```
 
 ## Explict Type Conversion
