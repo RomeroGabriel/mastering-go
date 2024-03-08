@@ -11,13 +11,13 @@ You should use runes when you need to `work with individual characters in a stri
 ??? example "Simple example using Runes"
 
     ```bash title="run command"
-    $ go run src/fundamentals/data_types/runes.go
+    $ go run src/fundamentals/literals/runes.go
     Equal
     H e l l o ,     世 界 
     Hello,  世界
     ```
     ```go
-    --8<-- "src/fundamentals/data_types/runes.go"
+    --8<-- "src/fundamentals/literals/runes.go"
     ```
 
 ## Strings
@@ -33,7 +33,7 @@ The internal structure of a string in Go is essentially a **`byte slice wrapper`
 ??? example "String Usages Example"
 
     ```bash title="run command"
-    $ go run src/fundamentals/data_types/string.go
+    $ go run src/fundamentals/literals/string.go
     Memory allocated for str1:  0xc000014070
     Memory allocated for str2:  0xc000014080
     Even though both have the same value, the memory address is different.
@@ -45,7 +45,7 @@ The internal structure of a string in Go is essentially a **`byte slice wrapper`
     Curabitur consequat, purus vel sodales dictum, dui metus lacinia lacus, in congue est.
     ```
     ```go
-    --8<-- "src/fundamentals/data_types/string.go"
+    --8<-- "src/fundamentals/literals/string.go"
     ```
 
 ## Go's Package for String
