@@ -68,9 +68,25 @@ In Go, `constants serve as identifiers for literals`, providing a means to assig
 
 !!! note "Resume"
     1. Constant can only hold values determinable in compile-time
+        - Numeric Literals
+        - Boolean
+        - Strings/Runes
     1. There are no ways to declare immutable values in runtime
     1. Arrays, slices, maps, or structs are not immutable
     1. No mechanism to declare struct fields as immutable
+
+Constants in Go can be `typed` or `untyped`. An untyped constant behaves like a literal; it has no type but `defaults to a specific type` when no other type can be inferred. In contrast, a typed constant can only be assigned directly to a variable of its designated type. The decision to designate a constant as typed or untyped hinges on the rationale behind its declaration. Generally, `opting for an untyped constant provides greater flexibility`. However, `specific scenarios may necessitate the enforcement of a particular type for a constant`.
+
+??? example "Typed vs Untyped"
+    ```go
+    const x = 10
+    var y int = x
+    var z float64 = x
+    var d byte = x
+
+    const typedX int = 10
+    y = typedX
+    ```
 
 <!-- ## Using type
 

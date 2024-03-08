@@ -10,7 +10,7 @@ nav:
         # go fmt
         # go vet
     - Fundamentals:
-        - Variables and Constants Declaration: fundamentals/vars.md
+        - Variables and Constants: fundamentals/vars.md
         - Literals Types:
             - fundamentals/literals.md
             - Integers: fundamentals/literals/integers.md
