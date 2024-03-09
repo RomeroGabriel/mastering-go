@@ -1,8 +1,11 @@
 # Slice
 
-In Go, a slice is a `more versatile and dynamic alternative to arrays`. **Slices are like views into an underlying array**, allowing you to work with a portion of an **`array without specifying a fixed size`**. Slices are **`reference types`**, that hold references to an underlying array, and **`if you assign one slice to another, both refer to the same array`**.
+In Go, a slice is a `more versatile and dynamic alternative to arrays`. **Slices are like views into an underlying array**, allowing you to work with a portion of an **`array without specifying a fixed size`**. Slices are reference types, that hold references to an underlying array, and **`if you assign one slice to another, both refer to the same array`**. Different from [literal types](../literals.md#literals), the default value for slices is `nil`.
 
-!!! example
+!!! tip
+    Using `[...]` makes an array. Using `[]` makes a slice.
+
+??? example "Simple Use Cases"
 
     ```bash title="run command"
     $ go run src/fundamentals/data_types/slices.go
@@ -23,49 +26,47 @@ In Go, a slice is a `more versatile and dynamic alternative to arrays`. **Slices
     --8<-- "src/fundamentals/data_types/slices.go"
     ```
 
-## As Function Params
+## Compare Slices
 
-**`If a function takes a slice argument, changes it makes to the elements of the slice will be visible to the caller`**, analogous to passing a pointer to the underlying array.
+A slice `isn't comparable`, resulting in a compile-time error when using `==` or `!=` with a slice. The only thing you can compare a slice with using `==` is `nil`. However, starting from Go version `1.21`, the [slices](#gos-package-for-slices) package in the standard library provides two functions for comparing slices. The `slices.Equal` function accepts two slices as input parameters and returns true if both slices have the `same length and all their elements are equal`. The `slices.EqualFunc` function offers the flexibility to pass a `custom comparison function`, allowing comparisons without the need for slice elements to be directly comparable.
 
-!!! example
+!!! note "Elements in `slices.Equal`"
+    Notably, this function mandates that the elements of the slice must be comparable.
 
-    ```bash title="run command"
-    $ go run src/fundamentals/data_types/slices_params.go
-    Inital mySlice:  [1 2 3 4]
-    Memory allocated for mySlice: 0xc000010018
-    Memory allocated for data: 0xc000010048
-    After call func Slice:  [90 2 3 4]
-    Notice that append elements didn't change mySlice, just change value in index
-    ```
-    ```go
-    --8<-- "src/fundamentals/data_types/slices_params.go"
-    ```
+## Operations - len, append, cap
 
-## Slicing a Slice
+!!! info
+    Slices are one of the supported types by the [len](../built_in/functions.md#len) function.
 
-Same thing that [slice an array](array.md#slicing-an-array).
+The `cap` function, short for capacity, is used to `determine the capacity` of [slices](../composite/slice.md#slice) and [arrays](../composite/array.md#array) in Go. For slices, it **`returns the maximum number of elements that the slice can hold without resizing the underlying array`**. For arrays, it returns the length of the array.
 
-## Operations
+The `append` function is used to `add elements to slices dynamically`. It takes a slice and one or more elements as input and `returns a new slice` containing the original elements plus the additional ones. If the capacity of the original slice is sufficient to accommodate the new elements, `append modifies the existing slice in place`. Otherwise, it creates a new underlying array with increased capacity and copies the elements over.
 
-!!! example
+??? example "Using len, append and cap"
 
     ```bash title="run command"
-    $ go run src/fundamentals/data_types/slices_operations.go
+    $ go run src/fundamentals/composite/slices_operations.go
     Initial mySlice:  [10 20 30 40 50 60]
+    len and cap:  6 6
+
+    Starting using append:
     Appending an element --------->
     mySliceAdded:  [10 20 30 40 50 60 70]
+    len and cap:  7 12
     mySlice without changes:  [10 20 30 40 50 60]
+    len and cap:  6 6
 
     Removing an element --------->
     mySlice after remove index 3:  [10 20 30 50 60]
+    len and cap:  5 6
     mySliceAdded:  [10 20 30 40 50 60 70]
 
     Insert at index --------->
-    mySlice after remove:  [10 20 30 40 50 1000 60 70]
-    mySliceAdded:  [10 20 30 40 50 1000 60 70]
+    mySliceAdded after insert 1000 at index 5:  [10 20 30 40 50 1000 60 70]
+    len and cap:  8 12
     ```
     ```go
-    --8<-- "src/fundamentals/data_types/slices_operations.go"
+    --8<-- "src/fundamentals/composite/slices_operations.go"
     ```
 
 ## Memory Allocation
@@ -98,6 +99,28 @@ Slices also have a `length and capacity` (the maximum number of elements it can 
     ```
 
     When added 70 in the example above, notice that the `slice's capacity increases to 12 instead of 7`.
+
+## As Function Params
+
+**`If a function takes a slice argument, changes it makes to the elements of the slice will be visible to the caller`**, analogous to passing a pointer to the underlying array.
+
+!!! example
+
+    ```bash title="run command"
+    $ go run src/fundamentals/data_types/slices_params.go
+    Inital mySlice:  [1 2 3 4]
+    Memory allocated for mySlice: 0xc000010018
+    Memory allocated for data: 0xc000010048
+    After call func Slice:  [90 2 3 4]
+    Notice that append elements didn't change mySlice, just change value in index
+    ```
+    ```go
+    --8<-- "src/fundamentals/data_types/slices_params.go"
+    ```
+
+## Slicing a Slice
+
+Same thing that [slice an array](array.md#slicing-an-array).
 
 ## Two-dimensional Slices
 

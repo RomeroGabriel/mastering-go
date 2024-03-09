@@ -25,24 +25,26 @@ nav:
             # Make function
             # Type Casting (?)
             # Type Inference (?)
+        - Built-In:
+            - Functions: fundamentals/built_in/functions.md
         - Control Structures: 
             - Basic: basics/control_flow.md
             # for
             # range
             # switch
         # Erros, Panic, Recover
-        - Functions:
-            - Basic: functions/index.md
+        - Handle Files: basics/handle_files.md
+    - Functions:
+        - Basic: functions/index.md
             # Methods: Pointers vs. Values
             ## High-Order Functions,Closures, First-class function
-        - Handle Files: basics/handle_files.md
-        - Packages, Modules and Workspaces: basics/packages.md
-        - Structs:
+    - Packages, Modules and Workspaces: basics/packages.md
+    - Structs:
             # add TYPE section for var here
-            - Basic: structs/structs.md
-            - Interface: structs/interface.md
-        - Pointers: pointers.md
-        - Generics: generics.md
+        - Basic: structs/structs.md
+        - Interface: structs/interface.md
+    - Pointers: pointers.md
+    - Generics: generics.md
     - Context: context.md
     - Network: 
         # add echo https://echo.labstack.com/ https://github.com/labstack/echo
