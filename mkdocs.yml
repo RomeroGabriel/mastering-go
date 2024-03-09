@@ -17,9 +17,9 @@ nav:
             - Floats: fundamentals/literals/floats.md
             - Strings/Runes: fundamentals/literals/strings.md
         - Composite Types:
-            - Array: fundamentals/data_types/array.md
-            - Slice: fundamentals/data_types/slice.md
-            - Maps: fundamentals/data_types/maps.md
+            - Array: fundamentals/composite/array.md
+            - Slice: fundamentals/composite/slice.md
+            - Maps: fundamentals/composite/maps.md
             # Byte
             # Pointers
             # Make function

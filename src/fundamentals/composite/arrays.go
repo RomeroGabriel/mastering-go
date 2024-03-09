@@ -18,11 +18,9 @@ func main() {
 	fmt.Println("It's possible to change index value in array: ", myArray)
 	fmt.Println()
 
-	initArray := [3]string{"apple", "banana", "cherry"}
-	for i, value := range initArray {
-		fmt.Printf("Value stored in %d index is %v\n", i, value)
-	}
+	secondArray := [...]int{0, 600, 20}
+	fmt.Println("myArray == secondArray? ", myArray == secondArray)
 
-	firstValue := initArray[1:]
-	fmt.Println(firstValue)
+	var otherDeclaration = [12]int{1, 5: 4, 6, 10: 100, 15}
+	fmt.Println("Other Declaration:", otherDeclaration)
 }
