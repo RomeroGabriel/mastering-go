@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../control_flow/">
+        <link rel="prev" href="../floats/">
       
       
-        <link rel="next" href="../../functions/">
+        <link rel="next" href="../../composite/array/">
       
       
-      <link rel="icon" href="../../images/go-logo.png">
+      <link rel="icon" href="../../../images/go-logo.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
     
     
       
-        <title>Handle Files - Mastering Go</title>
+        <title>Strings/Runes - Mastering Go</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#handle-files" class="md-skip">
+        <a href="#strings-and-runes" class="md-skip">
           Skip to content
         </a>
       
@@ -86,9 +86,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Mastering Go" class="md-header__button md-logo" aria-label="Mastering Go" data-md-component="logo">
+    <a href="../../.." title="Mastering Go" class="md-header__button md-logo" aria-label="Mastering Go" data-md-component="logo">
       
-  <img src="../../images/go-logo.png" alt="logo">
+  <img src="../../../images/go-logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Handle Files
+              Strings/Runes
             
           </span>
         </div>
@@ -170,7 +170,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../.." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -190,7 +190,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../cli/general/" class="md-tabs__link">
+        <a href="../../../cli/general/" class="md-tabs__link">
           
   
     
@@ -212,7 +212,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../fundamentals/vars/" class="md-tabs__link">
+        <a href="../../vars/" class="md-tabs__link">
           
   
     
@@ -232,7 +232,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../functions/" class="md-tabs__link">
+        <a href="../../../functions/" class="md-tabs__link">
           
   
     
@@ -250,7 +250,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../packages/" class="md-tabs__link">
+      <a href="../../../basics/packages/" class="md-tabs__link">
         
   
     
@@ -269,7 +269,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../structs/structs/" class="md-tabs__link">
+        <a href="../../../structs/structs/" class="md-tabs__link">
           
   
     
@@ -287,7 +287,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../pointers/" class="md-tabs__link">
+      <a href="../../../pointers/" class="md-tabs__link">
         
   
     
@@ -304,7 +304,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../generics/" class="md-tabs__link">
+      <a href="../../../generics/" class="md-tabs__link">
         
   
     
@@ -321,7 +321,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../context/" class="md-tabs__link">
+      <a href="../../../context/" class="md-tabs__link">
         
   
     
@@ -340,7 +340,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../https_network/api/" class="md-tabs__link">
+        <a href="../../../https_network/api/" class="md-tabs__link">
           
   
     
@@ -360,7 +360,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../multithreading/go_routines/" class="md-tabs__link">
+        <a href="../../../multithreading/go_routines/" class="md-tabs__link">
           
   
     
@@ -378,7 +378,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../testing/" class="md-tabs__link">
+      <a href="../../../testing/" class="md-tabs__link">
         
   
     
@@ -397,7 +397,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../db/basic/" class="md-tabs__link">
+        <a href="../../../db/basic/" class="md-tabs__link">
           
   
     
@@ -415,7 +415,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../cobra_cli/" class="md-tabs__link">
+      <a href="../../../cobra_cli/" class="md-tabs__link">
         
   
     
@@ -434,7 +434,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../projects/get_br_zipcode/" class="md-tabs__link">
+        <a href="../../../projects/get_br_zipcode/" class="md-tabs__link">
           
   
     
@@ -460,7 +460,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../di/wire/" class="md-tabs__link">
+        <a href="../../../di/wire/" class="md-tabs__link">
           
   
     
@@ -506,9 +506,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Mastering Go" class="md-nav__button md-logo" aria-label="Mastering Go" data-md-component="logo">
+    <a href="../../.." title="Mastering Go" class="md-nav__button md-logo" aria-label="Mastering Go" data-md-component="logo">
       
-  <img src="../../images/go-logo.png" alt="logo">
+  <img src="../../../images/go-logo.png" alt="logo">
 
     </a>
     Mastering Go
@@ -548,7 +548,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../.." class="md-nav__link ">
+            <a href="../../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -631,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cli/general/" class="md-nav__link">
+      <a href="../../../cli/general/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -652,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cli/go_mod/" class="md-nav__link">
+      <a href="../../../cli/go_mod/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -739,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fundamentals/vars/" class="md-nav__link">
+      <a href="../../vars/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -757,8 +757,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -781,13 +783,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
@@ -801,7 +801,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             Literals Types
@@ -815,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fundamentals/literals/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -836,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fundamentals/literals/integers/" class="md-nav__link">
+      <a href="../integers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -857,7 +857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fundamentals/literals/floats/" class="md-nav__link">
+      <a href="../floats/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -875,10 +875,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../fundamentals/literals/strings/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Strings/Runes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -887,6 +907,77 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#runes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Runes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-runes" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Runes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gos-package-for-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      Go's Package for String
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -960,7 +1051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fundamentals/composite/array/" class="md-nav__link">
+      <a href="../../composite/array/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -981,7 +1072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fundamentals/composite/slice/" class="md-nav__link">
+      <a href="../../composite/slice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1002,7 +1093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fundamentals/composite/maps/" class="md-nav__link">
+      <a href="../../composite/maps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1080,7 +1171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fundamentals/built_in/functions/" class="md-nav__link">
+      <a href="../../built_in/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1158,7 +1249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../control_flow/" class="md-nav__link">
+      <a href="../../../basics/control_flow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1184,30 +1275,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Handle Files
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../basics/handle_files/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1216,77 +1287,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create a File
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#write-into-a-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Write into a File
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Write into a File">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#file-permission-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      File Permission Number
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reading-a-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reading a File
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#delete-a-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete a File
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1331,7 +1331,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../functions/" class="md-nav__link ">
+            <a href="../../../functions/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1366,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../packages/" class="md-nav__link">
+      <a href="../../../basics/packages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1434,7 +1434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../structs/structs/" class="md-nav__link">
+      <a href="../../../structs/structs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1455,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../structs/interface/" class="md-nav__link">
+      <a href="../../../structs/interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1483,7 +1483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pointers/" class="md-nav__link">
+      <a href="../../../pointers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1503,7 +1503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../generics/" class="md-nav__link">
+      <a href="../../../generics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1523,7 +1523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../context/" class="md-nav__link">
+      <a href="../../../context/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1597,7 +1597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../https_network/api/" class="md-nav__link">
+      <a href="../../../https_network/api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1618,7 +1618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../https_network/file_server/" class="md-nav__link">
+      <a href="../../../https_network/file_server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1639,7 +1639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../https_network/request/" class="md-nav__link">
+      <a href="../../../https_network/request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1660,7 +1660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../https_network/json/" class="md-nav__link">
+      <a href="../../../https_network/json/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1681,7 +1681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../https_network/templates/" class="md-nav__link">
+      <a href="../../../https_network/templates/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1761,7 +1761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../multithreading/go_routines/" class="md-nav__link">
+      <a href="../../../multithreading/go_routines/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1782,7 +1782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../multithreading/race_condition/" class="md-nav__link">
+      <a href="../../../multithreading/race_condition/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1803,7 +1803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../multithreading/channels/" class="md-nav__link">
+      <a href="../../../multithreading/channels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1824,7 +1824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../multithreading/select/" class="md-nav__link">
+      <a href="../../../multithreading/select/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1852,7 +1852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../testing/" class="md-nav__link">
+      <a href="../../../testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1922,7 +1922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/basic/" class="md-nav__link">
+      <a href="../../../db/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1943,7 +1943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/migrations/" class="md-nav__link">
+      <a href="../../../db/migrations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1964,7 +1964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../db/sqlx/" class="md-nav__link">
+      <a href="../../../db/sqlx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1992,7 +1992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cobra_cli/" class="md-nav__link">
+      <a href="../../../cobra_cli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2058,7 +2058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projects/get_br_zipcode/" class="md-nav__link">
+      <a href="../../../projects/get_br_zipcode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2178,7 +2178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../di/wire/" class="md-nav__link">
+      <a href="../../../di/wire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2222,143 +2222,92 @@
                   
 
 
-<h1 id="handle-files">Handle Files</h1>
-<h2 id="create-a-file">Create a File</h2>
-<p>To create a file, you can use the <code>os.Create</code> function along with the defer statement to close the file after writing to it.</p>
+<h1 id="strings-and-runes">Strings and Runes</h1>
+<h2 id="runes">Runes</h2>
+<p>In Go, a rune is a data type used to <strong><code>represent a Unicode code point</code></strong>, which is a unique integer (which is an alias for the <code>int32</code> type) <code>value that corresponds to a character in the Unicode standard</code>. The Unicode standard assigns a unique code point to almost every character from every writing system in the world, making it suitable for working with text in various languages and scripts.</p>
+<h3 id="when-to-use-runes">When to Use Runes</h3>
+<p>You should use runes when you need to <code>work with individual characters in a string and handle text that includes characters from different languages</code>, including non-ASCII characters. Common use cases include text processing, manipulation, and validation. Using runes is an efficient way to handle text in Go because <code>it’s optimized for Unicode character encoding</code>. It ensures that you can accurately represent and manipulate characters from various languages.</p>
 <details class="example">
-<summary>Example</summary>
-<p><div class="language-bash highlight"><span class="filename">run command</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>go<span class="w"> </span>run<span class="w"> </span>src/handle_files/create_file.go
+<summary>Simple example using Runes</summary>
+<p><div class="language-bash highlight"><span class="filename">run command</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>go<span class="w"> </span>run<span class="w"> </span>src/fundamentals/literals/runes.go
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Equal
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>H<span class="w"> </span>e<span class="w"> </span>l<span class="w"> </span>l<span class="w"> </span>o<span class="w"> </span>,<span class="w">     </span>世<span class="w"> </span>界<span class="w"> </span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Hello,<span class="w">  </span>世界
 </span></code></pre></div>
 <div class="language-go highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="s">&quot;os&quot;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">)</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="nx">file</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Create</span><span class="p">(</span><span class="s">&quot;src/handle_files/example.txt&quot;</span><span class="p">)</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="k">return</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">}</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">r1</span><span class="w"> </span><span class="kt">rune</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nx">r2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">r1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">r2</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Equal&quot;</span><span class="p">)</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Not equal&quot;</span><span class="p">)</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="nx">str</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;Hello,  世界&quot;</span><span class="w"> </span><span class="c1">// The string contains both ASCII and non-ASCII characters.</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="nx">runes</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nb">rune</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">runes</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%c &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">)</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">()</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">runes</span><span class="p">))</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="p">}</span>
 </span></code></pre></div></p>
 </details>
-<h2 id="write-into-a-file">Write into a File</h2>
-<p>Open the file in <code>append mode</code> and write to it using the <code>os.OpenFile</code> function.</p>
+<h2 id="strings">Strings</h2>
+<p>In Go, a string is a sequence of one or more characters (letters, numbers, symbols) that can be either a constant or a variable. <code>Strings are made up of Unicode and are immutable sequences, meaning they cannot be changed once created</code>.</p>
+<p>Strings in Go are <code>similar to byte slices</code> in that they can be used in operations that work with byte slices. This means you can use functions like <strong><code>copy</code></strong> and <strong><code>append</code></strong> with strings.</p>
+<p>The internal structure of a string in Go is essentially a <strong><code>byte slice wrapper</code></strong>. A string is <code>represented as a struct with two fields</code>: <strong>elements</strong>, which points to the underlying bytes, and <strong>len</strong>, which stores the number of bytes. This internal representation is crucial for understanding how strings are manipulated and stored in memory.</p>
+<p><code>Raw strings</code> are delimited with backquotes (`) and can contain any character except a backquote. There’s no escape character in a raw string literal, <code>all characters are included as is</code>. When using a raw string literal, you write in multiline.</p>
 <details class="example">
-<summary>Example</summary>
-<p><div class="language-bash highlight"><span class="filename">run command</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>go<span class="w"> </span>run<span class="w"> </span>src/handle_files/write_file.go
+<summary>String Usages Example</summary>
+<p><div class="language-bash highlight"><span class="filename">run command</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>go<span class="w"> </span>run<span class="w"> </span>src/fundamentals/literals/string.go
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Memory<span class="w"> </span>allocated<span class="w"> </span><span class="k">for</span><span class="w"> </span>str1:<span class="w">  </span>0xc000014070
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Memory<span class="w"> </span>allocated<span class="w"> </span><span class="k">for</span><span class="w"> </span>str2:<span class="w">  </span>0xc000014080
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Even<span class="w"> </span>though<span class="w"> </span>both<span class="w"> </span>have<span class="w"> </span>the<span class="w"> </span>same<span class="w"> </span>value,<span class="w"> </span>the<span class="w"> </span>memory<span class="w"> </span>address<span class="w"> </span>is<span class="w"> </span>different.
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Using<span class="w"> </span>append<span class="w"> </span>bytes:<span class="w">  </span>Salve<span class="w"> </span>o<span class="w"> </span>Corinthians
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>Using<span class="w"> </span>copy<span class="w"> </span>bytes:<span class="w">  </span>Salve<span class="w"> </span>o
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>Lorem<span class="w"> </span>ipsum<span class="w"> </span>dolor<span class="w"> </span>sit<span class="w"> </span>amet,<span class="w"> </span>consectetur<span class="w"> </span>adipiscing<span class="w"> </span>elit.Nunc<span class="w"> </span>ac<span class="w"> </span>urna<span class="w"> </span>ex.<span class="w"> </span>Mauris<span class="w"> </span>eu<span class="w"> </span>dolor<span class="w"> </span>nec<span class="w"> </span>orci<span class="w"> </span>aliquam<span class="w"> </span>consectetur<span class="w"> </span>vitae<span class="w"> </span>ut<span class="w"> </span>sapien.
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span>Quisque<span class="w"> </span>sed<span class="w"> </span>commodo<span class="w"> </span>dui.<span class="w"> </span>Cras<span class="w"> </span>pulvinar<span class="w"> </span>aliquet<span class="w"> </span>eleifend.<span class="w"> </span>Nulla<span class="w"> </span>dignissim<span class="w"> </span>arcu<span class="w"> </span>quis<span class="w"> </span>nunc<span class="w"> </span>facilisis<span class="w"> </span>dictum.
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>Curabitur<span class="w"> </span>consequat,<span class="w"> </span>purus<span class="w"> </span>vel<span class="w"> </span>sodales<span class="w"> </span>dictum,<span class="w"> </span>dui<span class="w"> </span>metus<span class="w"> </span>lacinia<span class="w"> </span>lacus,<span class="w"> </span><span class="k">in</span><span class="w"> </span>congue<span class="w"> </span>est.
 </span></code></pre></div>
 <div class="language-go highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="s">&quot;os&quot;</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">)</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="nx">file</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">OpenFile</span><span class="p">(</span><span class="s">&quot;src/handle_files/example.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">O_APPEND</span><span class="o">|</span><span class="nx">os</span><span class="p">.</span><span class="nx">O_WRONLY</span><span class="p">,</span><span class="w"> </span><span class="mo">0644</span><span class="p">)</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="k">return</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="nx">size</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span><span class="nx">WriteString</span><span class="p">(</span><span class="s">&quot;\nWriting a string into the file\n&quot;</span><span class="p">)</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="k">return</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Size written into file: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">size</span><span class="p">)</span>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">    </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span><span class="nx">Write</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&quot;Using bytes to write&quot;</span><span class="p">))</span>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="p">}</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nx">str1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;Corinthians&quot;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nx">str2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;Corinthians&quot;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Memory allocated for str1: &quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">str1</span><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Memory allocated for str2: &quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">str2</span><span class="p">)</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Even though both have the same value, the memory address is different.&quot;</span><span class="p">)</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">()</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="nx">save</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&quot;Salve o &quot;</span><span class="p">)</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="nx">saveStr1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">save</span><span class="p">,</span><span class="w"> </span><span class="nx">str1</span><span class="o">...</span><span class="p">)</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Using append bytes: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">string</span><span class="p">(</span><span class="nx">saveStr1</span><span class="p">))</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="nx">strCopy</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">([]</span><span class="kt">byte</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">save</span><span class="p">))</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span><span class="nb">copy</span><span class="p">(</span><span class="nx">strCopy</span><span class="p">,</span><span class="w"> </span><span class="nx">save</span><span class="p">)</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Using copy bytes: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">string</span><span class="p">(</span><span class="nx">strCopy</span><span class="p">))</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">    </span><span class="nx">rawStr</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">`Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc ac urna ex. Mauris eu dolor nec orci aliquam consectetur vitae ut sapien.</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="s">    Quisque sed commodo dui. Cras pulvinar aliquet eleifend. Nulla dignissim arcu quis nunc facilisis dictum.</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="s">Curabitur consequat, purus vel sodales dictum, dui metus lacinia lacus, in congue est.`</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">rawStr</span><span class="p">)</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="p">}</span>
 </span></code></pre></div></p>
 </details>
-<h3 id="file-permission-number">File Permission Number</h3>
-<p>In the <code>os.OpenFile</code> function, the <code>perm argument is used to specify the file permission when creating or opening a file</code>. It is an integer value that represents the file mode and permission bits. The typical file permission values used in Unix-like systems are represented in octal notation. <code>The permission mode is composed of three digits, each of which represents the permissions for different user groups</code>.</p>
-<ol>
-<li><code>Owner Permissions</code>: The first digit represents the permissions for the file owne.</li>
-<li><code>Group Permissions</code>: The second digit represents the permissions for the group that the file belongs to.</li>
-<li><code>Other Permissions</code>: The third digit represents the permissions for everyone else (other users).</li>
-</ol>
-<p>The digits in the mode are a sum of permission bits:</p>
-<ol>
-<li><code>4: Read (r)</code></li>
-<li><code>2: Write (w)</code></li>
-<li><code>1: Execute (x)</code></li>
-</ol>
-<p>And calculate the permissions numbers:</p>
-<ol>
-<li><code>6 (4 + 2) means read and write permissions (rw)</code>.</li>
-<li><code>4 (only 4) means read-only (r).</code>.</li>
-<li><code>7 (4 + 2 + 1) means read, write, and execute permissions (rwx).</code>.</li>
-</ol>
-<details class="example">
-<summary>Example</summary>
-<ol>
-<li><code>0644</code>: Owner has read and write (6), group and others have read-only (4).</li>
-<li><code>0755</code>: Owner has read, write, and execute (7), group and others have read and execute (5).</li>
-<li><code>0600</code>: Owner has read and write (6), no permissions for group and others.</li>
-</ol>
-</details>
-<h2 id="reading-a-file">Reading a File</h2>
-<p>To read from a file, you can use the <code>os.Open</code> function along with a <code>Scanner from the bufio package</code>.</p>
-<details class="example">
-<summary>Example</summary>
-<p><div class="language-bash highlight"><span class="filename">run command</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>go<span class="w"> </span>run<span class="w"> </span>src/handle_files/read_file.go
-</span></code></pre></div>
-<div class="language-go highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="s">&quot;bufio&quot;</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="s">&quot;os&quot;</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">)</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="nx">file</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Open</span><span class="p">(</span><span class="s">&quot;src/handle_files/example.txt&quot;</span><span class="p">)</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">        </span><span class="k">return</span>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">    </span><span class="nx">scanner</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">bufio</span><span class="p">.</span><span class="nx">NewScanner</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span>
-</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">scanner</span><span class="p">.</span><span class="nx">Scan</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">scanner</span><span class="p">.</span><span class="nx">Text</span><span class="p">())</span>
-</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="p">}</span>
-</span></code></pre></div>
-<div class="language-bash highlight"><span class="filename">output</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Writing<span class="w"> </span>a<span class="w"> </span>string<span class="w"> </span>into<span class="w"> </span>the<span class="w"> </span>file
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Using<span class="w"> </span>bytes<span class="w"> </span>to<span class="w"> </span>write
-</span></code></pre></div></p>
-</details>
-<h2 id="delete-a-file">Delete a File</h2>
-<p>To delete a file, you can use the <code>os.Remove</code> function.</p>
-<details class="example">
-<summary>Example</summary>
-<p><div class="language-bash highlight"><span class="filename">run command</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>go<span class="w"> </span>run<span class="w"> </span>src/handle_files/delete_file.go
-</span></code></pre></div>
-<div class="language-go highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="s">&quot;os&quot;</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">)</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Remove</span><span class="p">(</span><span class="s">&quot;src/handle_files/example.txt&quot;</span><span class="p">)</span>
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">        </span><span class="k">return</span>
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;File deleted successfully.&quot;</span><span class="p">)</span>
-</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="p">}</span>
-</span></code></pre></div></p>
-</details>
+<h2 id="gos-package-for-string">Go's Package for String</h2>
+<p>Package strings defines various functions useful with maps of any type. <a href="https://pkg.go.dev/strings">Link here</a>.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://go.dev/blog/strings">Strings, bytes, runes and characters in Go</a></li>
+</ul>
 
 
 
@@ -2411,10 +2360,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tabs.instant", "navigation.sections", "navigation.path", "navigation.indexes", "navigation.top", "navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tabs.instant", "navigation.sections", "navigation.path", "navigation.indexes", "navigation.top", "navigation.expand", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
     
   </body>
