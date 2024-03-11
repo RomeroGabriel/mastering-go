@@ -33,13 +33,15 @@ A slice `isn't comparable`, resulting in a compile-time error when using `==` or
 !!! note "Elements in `slices.Equal`"
     Notably, this function mandates that the elements of the slice must be comparable.
 
-## Operations - len, append, cap
+## Operations - len, append, cap, clear
 
 Slices are one of the supported types by the [len](../built_in/functions.md#len) function. The length of a slice is the `number of consecutive memory locations` that have been assigned a value.
 
 The `cap` function, short for capacity, is used to `determine the capacity` of [slices](../composite/slice.md#slice) and [arrays](../composite/array.md#array) in Go. For slices, it **`returns the maximum number of elements that the slice can hold without resizing the underlying array`**. For arrays, it returns the length of the array.
 
 The `append` function is used to `add elements to slices dynamically`. It takes a slice and one or more elements as input and `returns a new slice` containing the original elements plus the additional ones. If the capacity of the original slice is sufficient to accommodate the new elements, `append modifies the existing slice in place`. Otherwise, it creates a new underlying array with increased capacity and copies the elements over.
+
+Go 1.21 added a `clear` function that takes in a slice and `sets all of the slice’s elements to their zero value`. The length of the slice remains unchanged.
 
 !!! tip
     Check out the [Memory Allocation Section](#memory-allocation) to understand what happens when a slice's capacity is insufficient.
@@ -66,6 +68,7 @@ The `append` function is used to `add elements to slices dynamically`. It takes 
     Insert at index --------->
     mySliceAdded after insert 1000 at index 5:  [10 20 30 40 50 1000 60 70]
     len and cap:  8 12
+    mySliceAdded after clear:  [0 0 0 0 0 0 0 0] 8
     ```
     ```go
     --8<-- "src/fundamentals/composite/slices_operations.go"

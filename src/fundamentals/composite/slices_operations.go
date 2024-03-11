@@ -33,4 +33,7 @@ func main() {
 		append([]int{1000}, mySliceAdded[index:]...)...) // Insert value at index
 	fmt.Println("mySliceAdded after insert 1000 at index 5: ", mySliceAdded)
 	fmt.Println("len and cap: ", len(mySliceAdded), cap(mySliceAdded))
+
+	clear(mySliceAdded)
+	fmt.Println("mySliceAdded after clear: ", mySliceAdded, len(mySliceAdded))
 }
