@@ -1,6 +1,6 @@
 # Slice
 
-In Go, a slice is a `more versatile and dynamic alternative to arrays`. **Slices are like views into an underlying array**, allowing you to work with a portion of an **`array without specifying a fixed size`**. Slices are reference types, that hold references to an underlying array, and **`if you assign one slice to another, both refer to the same array`**. Different from [literal types](../literals.md#literals), the default value for slices is `nil`.
+In Go, a slice is a `more versatile and dynamic alternative to arrays`. **Slices are like views into an underlying array**, allowing you to work with a portion of an **`array without specifying a fixed size`**. Slices are reference types, that hold references to an underlying array, and **`if you assign one slice to another, both refer to the same array`**. Different from [literal types](../literals.md#literals), the default value for slices is `nil`. Each element in a slice is **`assigned to consecutive memory locations`**, which makes it quick to read or write these values.
 
 !!! tip
     Using `[...]` makes an array. Using `[]` makes a slice.
@@ -35,12 +35,14 @@ A slice `isn't comparable`, resulting in a compile-time error when using `==` or
 
 ## Operations - len, append, cap
 
-!!! info
-    Slices are one of the supported types by the [len](../built_in/functions.md#len) function.
+Slices are one of the supported types by the [len](../built_in/functions.md#len) function. The length of a slice is the `number of consecutive memory locations` that have been assigned a value.
 
 The `cap` function, short for capacity, is used to `determine the capacity` of [slices](../composite/slice.md#slice) and [arrays](../composite/array.md#array) in Go. For slices, it **`returns the maximum number of elements that the slice can hold without resizing the underlying array`**. For arrays, it returns the length of the array.
 
 The `append` function is used to `add elements to slices dynamically`. It takes a slice and one or more elements as input and `returns a new slice` containing the original elements plus the additional ones. If the capacity of the original slice is sufficient to accommodate the new elements, `append modifies the existing slice in place`. Otherwise, it creates a new underlying array with increased capacity and copies the elements over.
+
+!!! tip
+    Check out the [Memory Allocation Section](#memory-allocation) to understand what happens when a slice's capacity is insufficient.
 
 ??? example "Using len, append and cap"
 
@@ -73,32 +75,32 @@ The `append` function is used to `add elements to slices dynamically`. It takes 
 
 Remember that slices are based on arrays, so they can change in size dynamically. `If the underlying array runs out of capacity, a new larger array is allocated, and the data is copied over`.
 
-!!! danger "When a slice needs more memory..."
-    **`When a slice needs more capacity, Go doubles the original size. In the case of very large slices, this can consume more memory than necessary`**.
+When a slice runs out of capacity, `it involves allocating new memory and copying the existing data from the old memory to the new`. This process also necessitates garbage collection for the old memory. To optimize this operation, the Go runtime typically increases the slice's capacity more than just one element when it runs out of space. **`For slices with a capacity less than 256, the capacity is doubled`**. For larger slices, the growth rate is adjusted to **`(current_capacity + 768)/4`**, aiming for a 25% growth rate. This approach ensures that the growth rate gradually decreases as the slice's capacity increases, resulting in a more efficient memory management strategy.
 
-Doubling the capacity of the underlying array allows for more elements to be added in the future without frequent reallocations.
+This allows for more elements to be added in the future without frequent reallocations.
+
+!!! danger "When a slice needs more memory..."
+    **`In the case of very large slices, this can consume more memory than necessary`**.
 
 !!! tip
     When you anticipate working with a large slice, it's a **`good practice to initialize the slice with a size closer to the maximum you expect to use to minimize unnecessary memory consumption`**.
 
-Slices also have a `length and capacity` (the maximum number of elements it can hold without reallocation). Use the `len()` and `cap()` functions to get these values.
-
-!!! example
+??? example "Seeing slice changing capacity"
 
     ```bash title="run command"
     $ go run src/fundamentals/data_types/slices_memory.go
     mySlice: len=6 cap=6 [10 20 30 40 50 60]
     noneValue: len=0 cap=6 []
     firstFour: len=4 cap=6 [10 20 30 40]
-    last_two: len=4 cap=4 [30 40 50 60]
+
     mySlice with 70:  [10 20 30 40 50 60 70]
     mySlice: len=7 cap=12 [10 20 30 40 50 60 70]
+    firstFour: len=4 cap=6 [10 20 30 40]
+    noneValue: len=0 cap=6 []
     ```
     ```go
     --8<-- "src/fundamentals/data_types/slices_memory.go"
     ```
-
-    When added 70 in the example above, notice that the `slice's capacity increases to 12 instead of 7`.
 
 ## As Function Params
 
