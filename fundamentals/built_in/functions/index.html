@@ -1134,6 +1134,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#make" class="md-nav__link">
+    <span class="md-ellipsis">
+      make
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2183,6 +2201,20 @@
 <h1 id="built-in-functions">Built-In Functions</h1>
 <h2 id="len">len</h2>
 <p>The <code>len</code> function returns the length of various types in Go, including <a href="../../composite/array/#array">arrays</a>, <a href="../../composite/slice/#slice">slices</a>, <a href="../../composite/maps/#maps">maps</a>, <a href="../../literals/strings/#strings">strings</a>, and <a href="../../../multithreading/channels/#channels">channels</a>. For arrays, slices, and strings, it returns the number of elements or bytes, while for maps, it returns the number of key-value pairs. For channels, it returns the number of elements currently in the channel buffer.</p>
+<h2 id="make">make</h2>
+<p>The <code>make</code> built-in function allocates and initializes an object of type <a href="../../composite/slice/#slice">slices</a>, <a href="../../composite/maps/#maps">maps</a>, or <a href="../../../multithreading/channels/#channels">chan</a>. The first argument is a type, not a value. Make's return type is the same as the type of its argument, not a pointer to it.</p>
+<details class="note">
+<summary>For each type possible</summary>
+<ol>
+<li>Slice: The size specifies the <code>length</code>. The capacity of the slice is equal to its length. A second integer argument may be provided to specify a different capacity; it must be no smaller than the length. For example, make([]int, 0, 10) allocates an underlying array of size 10 and returns a slice of length 0 and capacity 10 that is backed by this underlying array.</li>
+<li>Map: An empty map is allocated with enough space to hold the specified number of elements. The size may be omitted, in which case a small starting size is allocated.</li>
+<li>Channel: The channel's buffer is initialized with the specified buffer capacity. If zero, or the size is omitted, the channel is unbuffered.</li>
+</ol>
+</details>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://pkg.go.dev/builtin">Go Builtin</a></li>
+</ul>
 
 
 
