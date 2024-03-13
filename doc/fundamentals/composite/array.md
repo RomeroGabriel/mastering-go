@@ -99,7 +99,9 @@ To simplify slice handling, you should either **`never use append with a subslic
 
 If you have an array and you want to convert it to a slice, you don't actually need to do anything special. A slice is just a reference to an underlying array, along with a length. `So, when you pass an array to a function expecting a slice, Go automatically converts the array to a slice that covers the entire array`.
 
-Converting a slice back to an array is a bit trickier because `slices can be shorter or longer than arrays`. **`If you know the size of the array you want to convert to, you can create a new array and copy the elements from the slice into it`**.
+When you convert a slice to an array, the data in the slice is copied to `new memory`. Consequently, **`changes made to the slice do not impact the array, and vice versa`**. It's essential to `specify the size of the array during compilation`. While the array's size can be smaller than the slice's size, attempting to specify a larger size to will result in a `runtime panic if the array's size exceeds the slice's length (not capacity).`
+
+Alternatively, you can utilize type conversion to `transform a slice into a pointer to an array`. Once a slice is converted to an array pointer, the storage is shared between the two. `Any modifications made to one will reflect in the other`.
 
 ??? example "Array to Slice"
 
@@ -107,21 +109,24 @@ Converting a slice back to an array is a bit trickier because `slices can be sho
     $ go run src/fundamentals/composite/arrays_convert.go
     printing s:  [1 2 3]
     type of s:  []int
-    Slice to Array [1 2 3]
+    ...
     ```
-    ```go hl_lines="14-15" linenums="1"
+    ```go hl_lines="19-20" linenums="1"
     --8<-- "src/fundamentals/composite/arrays_convert.go"
     ```
 
-??? example "Slice to Array knowing the Size"
+??? example "Slice to Array"
 
     ```bash title="run command"
     $ go run src/fundamentals/composite/arrays_convert.go
-    printing s:  [1 2 3]
-    type of s:  []int
+    ...
     Slice to Array [1 2 3]
+    [10 2 3 4]
+    [1 2 3 4]
+    [1 2]
+    panic: runtime error: cannot convert slice with length 4 to array or pointer to array with length 5
     ```
-    ```go hl_lines="17-20" linenums="1"
+    ```go hl_lines="22-34" linenums="1"
     --8<-- "src/fundamentals/composite/arrays_convert.go"
     ```
 
