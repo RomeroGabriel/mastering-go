@@ -49,7 +49,7 @@ If you want to pass an array to a function and have the function modify the orig
 In Go, slicing an array you `create a new` [slices](../vars.md#slices) that references a portion of the original array. There are several ways to slice an array, depending on the range of indices you specify. The index format follows this pattern: **`a[start:stop]`**.
 
 !!! Danger "Change the original array"
-    Remember that slicing does not create a new array. **`It creates a new slice header that points to the same underlying array. Modifying the elements of the new slice will affect the original array`**, but changing the length of the new slice (e.g., appending elements) will not affect the original array unless you explicitly make a copy of the array or slice.
+    Remember that slicing does not create a new array/slice. **`It creates a new slice header that points to the same underlying array. Both slices/arrays share the same memory, and changes to one are reflected in the other.`**. Avoid modifying slices after they have been sliced or if they were produced by slicing. Check out [How to Work with Subslice](#how-to-work-with-subslice).
 
 ??? example "Slicing Use Cases"
 
@@ -69,6 +69,30 @@ In Go, slicing an array you `create a new` [slices](../vars.md#slices) that refe
     ```
     ```go
     --8<-- "src/fundamentals/composite/arrays_slicing.go"
+    ```
+
+### How to Work with Subslice
+
+To simplify slice handling, you should either **`never use append with a subslice`** or ensure that append operations do not overwrite existing data by employing a *complete slice expression*. This approach explicitly `delineates the shared memory extent between the parent slice and the subslice`. A complete slice expression comprises three parts, with the third part denoting the final position within the parent slice's capacity that remains accessible to the subslice. To calculate the subslice's capacity, subtract the starting offset from this value.
+
+!!! tip
+    If you need to create a slice that’s independent of the original, , see [Copying a Slice](slice.md#copying-a-slice).
+
+??? example "Complete Slice Expression"
+
+    ```bash title="run command"
+    $ go run src/fundamentals/composite/full_slice_expr.go
+    x: [a b c d] 5 4
+    y: [a b] 2 2
+    z: [c d] 2 2
+
+    x: [a b c d x] 5 5
+    y: [a b i j k] 5 5
+    z: [c d y] 4 3
+
+    ```
+    ```go
+    --8<-- "src/fundamentals/composite/full_slice_expr.go"
     ```
 
 ## Convert Array -> Slice and Array <- Slice
