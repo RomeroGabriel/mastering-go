@@ -50,7 +50,7 @@ The internal structure of a string in Go is essentially a **`byte slice wrapper`
 
 ## Go's Package for String
 
-Package strings defines various functions useful with maps of any type. [Link here](https://pkg.go.dev/strings).
+Package strings defines various functions useful with strings. [Link here](https://pkg.go.dev/strings).
 
 ## References
 
