@@ -1,28 +1,5 @@
 # Slice
 
-## Using make
-
-The [make](../built_in/functions.md#make) function allows you to create an empty slice that already has a `length or capacity specified`. When creating a slice using `make`, all elements are initialized to the default value of the slice's type.
-
-One common beginner mistake is to try to populate those initial elements using append. Is this case, the value passed to append is placed at the end of the slice.
-
-!!! danger "When capacity is lower than length"
-    You can also specify an initial capacity with make. However, **`never specify a capacity that’s less than the length`**! It is a compile-time error to do so with a constant or numeric literal. If you use a variable to specify a capacity that’s smaller than the length, your program will `panic at runtime`.
-
-??? example "How to use make with slice"
-
-    ```bash title="run command"
-    $ go run src/fundamentals/data_types/slice_make.go
-    Notice that the value 10 is placed in the end:  [0 20 0 0 0 10]
-
-    Creating slice is len 0 but with cap--->
-    Notice that now value 10 is placed in the begin:  [10] 1 5
-    [10 1 2 3 4]
-    ```
-    ```go
-    --8<-- "src/fundamentals/data_types/slice_make.go"
-    ```
-
 In Go, a slice is a `more versatile and dynamic alternative to arrays`. **Slices are like views into an underlying array**, allowing you to work with a portion of an **`array without specifying a fixed size`**. Slices are reference types, that hold references to an underlying array, and **`if you assign one slice to another, both refer to the same array`**. Different from [literal types](../literals.md#literals), the default value for slices is `nil`. Each element in a slice is **`assigned to consecutive memory locations`**, which makes it quick to read or write these values.
 
 !!! tip
@@ -47,6 +24,29 @@ In Go, a slice is a `more versatile and dynamic alternative to arrays`. **Slices
     ```
     ```go
     --8<-- "src/fundamentals/data_types/slices.go"
+    ```
+
+## Using make
+
+The [make](../built_in/functions.md#make) function allows you to create an empty slice that already has a `length or capacity specified`. When creating a slice using `make`, all elements are initialized to the default value of the slice's type.
+
+One common beginner mistake is to try to populate those initial elements using append. Is this case, the value passed to append is placed at the end of the slice.
+
+!!! danger "When capacity is lower than length"
+    You can also specify an initial capacity with make. However, **`never specify a capacity that’s less than the length`**! It is a compile-time error to do so with a constant or numeric literal. If you use a variable to specify a capacity that’s smaller than the length, your program will `panic at runtime`.
+
+??? example "How to use make with slice"
+
+    ```bash title="run command"
+    $ go run src/fundamentals/data_types/slice_make.go
+    Notice that the value 10 is placed in the end:  [0 20 0 0 0 10]
+
+    Creating slice is len 0 but with cap--->
+    Notice that now value 10 is placed in the begin:  [10] 1 5
+    [10 1 2 3 4]
+    ```
+    ```go
+    --8<-- "src/fundamentals/data_types/slice_make.go"
     ```
 
 ## Compare Slices
