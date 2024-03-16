@@ -18,9 +18,9 @@ func main() {
 		fmt.Println("Key1 exists: ", value)
 	}
 	if value, ok := myMap["key5"]; ok {
-		fmt.Println("Key1 exists: ", value)
+		fmt.Println("Key5 exists: ", value)
 	} else {
-		fmt.Println("key5 does not exist")
+		fmt.Println("Key5 does not exist")
 	}
 	fmt.Println()
 	delete(myMap, "key1")
@@ -31,4 +31,6 @@ func main() {
 	for key, value := range myMap {
 		fmt.Printf("Key: %s, Value: %d\n", key, value)
 	}
+	clear(myMap)
+	fmt.Println(myMap)
 }

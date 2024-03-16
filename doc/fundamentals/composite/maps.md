@@ -54,7 +54,7 @@ In Go, the comma-ok idiom comes into play when you need to `distinguish between 
 
 **`If a function takes a map argument, changes it makes to the elements of the slice will be visible to the caller`**, analogous to passing a pointer to the underlying array.
 
-!!! example
+??? example "Changing a Map Param"
 
     ```bash title="run command"
     $ go run src/fundamentals/data_types/maps_params.go
@@ -67,9 +67,13 @@ In Go, the comma-ok idiom comes into play when you need to `distinguish between 
     --8<-- "src/fundamentals/data_types/maps_params.go"
     ```
 
-## Operations
+## Operations - delete, clear
 
-!!! example
+The `delete` built-in function deletes the element with the specified `key (m[key])` from the map. If m is nil or there is no such element, nothing happens.
+
+Go 1.21 added a `clear` function that takes in a map and `deletes all entries`, resulting in an `empty map`.
+
+??? example "Playing with Map"
 
     ```bash title="run command"
     $ go run src/fundamentals/data_types/maps_operations.go
@@ -82,9 +86,10 @@ In Go, the comma-ok idiom comes into play when you need to `distinguish between 
 
     After delete key1 (exist) and key5 (not exist):  map[key2:2 key3:3 key4:4]
     Len of myMap:  3
+    Key: key4, Value: 4
     Key: key2, Value: 2
     Key: key3, Value: 3
-    Key: key4, Value: 4
+    map[]
     ```
     ```go
     --8<-- "src/fundamentals/data_types/maps_operations.go"
