@@ -35,6 +35,21 @@ You have the option to utilize a `var` declaration to initialize a `map variable
 
 ## The Ok Idiom
 
+In Go, the comma-ok idiom comes into play when you need to `distinguish between retrieving a value and receiving the zero value, as well as identifying a key not in the map`. Instead of assigning the result of a map read to a single variable, the comma-ok idiom involves assigning the outcomes of a map read to two variables. The first variable captures the `value associated with the key`, while the second variable, commonly named *ok*, is a `boolean indicator`. When *ok* is true, it signifies the `presence of the key in the map`. Conversely, when *ok* is false, it denotes the `absence of the key`.
+
+??? example "Using Ok Idiom"
+
+    ```bash title="run command"
+    $ go run src/fundamentals/composite/maps_ok.go
+    1 true
+    2 true
+    Key3 not exists in data:  0 false
+    3 true
+    ```
+    ```go
+    --8<-- "src/fundamentals/composite/maps_ok.go"
+    ```
+
 ## As Function Params
 
 **`If a function takes a map argument, changes it makes to the elements of the slice will be visible to the caller`**, analogous to passing a pointer to the underlying array.
