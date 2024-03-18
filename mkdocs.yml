@@ -20,11 +20,10 @@ nav:
             - Array: fundamentals/composite/array.md
             - Slice: fundamentals/composite/slice.md
             - Maps: fundamentals/composite/maps.md
+            - Structs: structs/structs.md
             # Byte
             # Pointers
             # Make function
-            # Type Casting (?)
-            # Type Inference (?)
         - Built-In:
             - Functions: fundamentals/built_in/functions.md
         - Control Structures: 
@@ -39,10 +38,7 @@ nav:
             # Methods: Pointers vs. Values
             ## High-Order Functions,Closures, First-class function
     - Packages, Modules and Workspaces: basics/packages.md
-    - Structs:
-            # add TYPE section for var here
-        - Basic: structs/structs.md
-        - Interface: structs/interface.md
+    - Interface: structs/interface.md
     - Pointers: pointers.md
     - Generics: generics.md
     - Context: context.md

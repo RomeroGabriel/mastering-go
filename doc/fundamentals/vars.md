@@ -87,19 +87,3 @@ Constants in Go can be `typed` or `untyped`. An untyped constant behaves like a 
     const typedX int = 10
     y = typedX
     ```
-
-<!-- ## Using type
-
-In Go the `type` keyword is used to `define custom data types`. These custom types can be based on existing types, making it a versatile feature in the language.
-
-??? example "Using type"
-
-    ```bash title="run command"
-    go run variables/using_type.go
-    ```
-    ```go
-    --8<-- "src/variables/using_type.go"
-    ```
-    ```bash title="output"
-    custom_id value: e96d759e-dc59-4394-9feb-79c8bf4130c9
-    ``` -->
