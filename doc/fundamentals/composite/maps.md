@@ -50,6 +50,10 @@ In Go, the comma-ok idiom comes into play when you need to `distinguish between 
     --8<-- "src/fundamentals/composite/maps_ok.go"
     ```
 
+## Compare Maps
+
+A map `isn't comparable`, resulting in a compile-time error when using `==` or `!=` with another map. The only thing you can compare a slice with using `==` is `nil`. However, starting from Go version `1.21`, the [maps](#gos-package-for-maps) package in the standard library provides two functions for comparing slices. The `maps.Equal` function accepts two maps as input parameters and returns true if both two maps contain the same key/value pairs. The `maps.EqualFunc` function offers the flexibility to pass a `custom comparison function`.
+
 ## As Function Params
 
 **`If a function takes a map argument, changes it makes to the elements of the slice will be visible to the caller`**, analogous to passing a pointer to the underlying array.
