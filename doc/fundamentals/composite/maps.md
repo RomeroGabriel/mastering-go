@@ -99,6 +99,24 @@ Go 1.21 added a `clear` function that takes in a map and `deletes all entries`, 
     --8<-- "src/fundamentals/data_types/maps_operations.go"
     ```
 
+## Maps as Sets
+
+Verifying whether an element exists in a slice becomes progressively `slower as you add more elements to the slice`. Since a map operates based on a hash table, you can employ a `map to emulate certain features of a set`. In this approach, utilize the map's key to represent the type you intend to incorporate into the set, with a boolean or an empty struct serving as the value. Should you require set functionalities such as union, intersection, and subtraction, you have the option to either develop your own implementation or leverage one of the numerous third-party libraries offering such capabilities.
+
+!!! tip "Using a Empty Struct as Value"
+    Some people opt to utilize `struct{}` as the value when utilizing a map to emulate a set. The reason that an **empty struct consumes zero bytes**, whereas a boolean occupies one byte. However, employing struct{} may introduce clumsiness into your code. It necessitates a less intuitive assignment approach and mandates the `use of the comma-ok idiom for checking value presence in the set`. Unless you're dealing with exceedingly large sets, the difference in memory consumption is unlikely to be substantial enough to offset the drawbacks.
+
+??? example "Maps as Set"
+
+    ```bash title="run command"
+    $ go run src/fundamentals/data_types/maps_as_sets.go
+    10 is in the set
+    8 is in the set
+    ```
+    ```go
+    --8<-- "src/fundamentals/data_types/maps_as_sets.go"
+    ```
+
 ## Go's Package for Maps
 
 Package maps defines various functions useful with maps of any type. [Link here](https://pkg.go.dev/golang.org/x/exp/maps).
