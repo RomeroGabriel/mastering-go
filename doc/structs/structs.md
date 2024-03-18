@@ -1,38 +1,47 @@
 # Structs
 
-In Go, `structs are composite data types used to group together variables (fields) under a single data structure`. They are similar to classes in other languages, but `Go doesn't have classes in the traditional sense`.
+In Go, `structs are composite data types used to group together variables (fields) under a single data structure`. They are similar to classes in other languages, but `Go doesn't have classes in the traditional sense`. You define a struct using the `type` keyword, followed by the `name of the struct` and a set of field declarations within curly braces. To `create an instance` of a struct, you can use the `struct's name followed by curly braces and provide values for its fields`.
 
-You define a struct using the `type` keyword, followed by the `name of the struct` and a set of field declarations within curly braces. To `create an instance` of a struct, you can use the `struct's name followed by curly braces and provide values for its fields`.
+After declaring a struct type, you can define variables of that type either using the `var` keyword or employing the `:=` syntax. In the absence of a value assigned to the variable, it assumes the `zero value corresponding to the struct type`. A zero-value struct entails `each field being set to its respective zero value`. There is no difference between assigning an empty struct literal and not assigning a value at all. Both scenarios result in initializing all fields within the struct to their zero values.
 
-??? example
+??? example "Initialization and Zero-Values for Structs"
 
     ```bash title="run command"
-    go run structs/basic.go
+    $ go run src/structs/basic.go
+    { 0}
+    { 0}
+    Both empty structs are equal?  true
+    Create object person, from Person struct: {Gabriel 100}
+    Created using field order: {Gabriel2 200}
     ```
     ```go
     --8<-- "src/structs/basic.go"
     ```
-    ```bash title="output"
-    Create object person, from Person struct: {Gabriel 100}
-    ```
 
 ## Anonymous Structs
 
-Anonymous Structs are structs without a defined name, often used for `temporary data structures`.
+Anonymous Structs are structs without a defined name, often used for `temporary data structures`. Anonymous structs prove useful in a two typical scenarios. Firstly, when `translating external` data into a struct or vice versa, such as dealing with JSON or Protocol Buffers. This process is commonly referred to as unmarshaling and marshaling data, respectively.
 
-??? example
+??? example "Using Anonymous Structs"
 
     ```bash title="run command"
-    go run structs/anonymous.go
+    $ go run src/structs/anonymous.go
+    Vector: {10 20}
+    X : 10
+    Y : 20
+    Person: {Yuri Alberto 123}
+    Name : Yuri Alberto
+    Age : 123
     ```
     ```go
     --8<-- "src/structs/anonymous.go"
     ```
-    ```bash title="output"
-    Create object from an anonymous structs : {10 20}
-    X : 10
-    Y : 20
-    ```
+
+## Compare Structs
+
+The comparability of a struct depends on its fields. `Structs composed entirely of comparable types are comparable`, while those containing slice, map, function, and channel fields are not.
+
+Go lacks a mechanism that allow overriding to redefine equality, thereby enabling the use of == and != with incomparable structs. However, developers have the option to craft `custom functions for comparing structs as an alternative approach`.
 
 ## Composing Structs
 
