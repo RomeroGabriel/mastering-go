@@ -4,13 +4,14 @@ docs_dir: "doc"
 nav:
     - Home:
         - index.md
-    - Tooling:
+    - CLI Tooling:
         - cli/general.md
         - Modules: cli/go_mod.md
         # go fmt
         # go vet
     - Fundamentals:
         - Variables and Constants: fundamentals/vars.md
+        - Code Blocks: fundamentals/blocks.md
         - Literals Types:
             - fundamentals/literals.md
             - Integers: fundamentals/literals/integers.md
@@ -32,7 +33,7 @@ nav:
             # range
             # switch
         # Erros, Panic, Recover
-        - Handle Files: basics/handle_files.md
+        - Files Handle: basics/handle_files.md
     - Functions:
         - Basic: functions/index.md
             # Methods: Pointers vs. Values
