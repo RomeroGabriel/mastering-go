@@ -18,35 +18,86 @@ One notable distinction between if statements in Go and those in other programmi
 
 ## for
 
-??? example
+In Go for is the **`only looping`** keyword in the language. The for loop can be used in four formats:
 
-    ```bash title="run command"
-    go run src/control_flow/for.go
-    ```
-    ```go title="src/control_flow/for.go"
-    --8<-- "src/control_flow/for.go"
-    ```
-    ```bash title="output"
-    Basic for type 1:  0
-    Basic for type 1:  1
-    Basic for type 1:  2
-    Basic for type 1:  3
-    Basic for type 1:  4
-    *********
-    Basic for type 2:  2
-    Basic for type 2:  3
-    Basic for type 2:  4
-    *********
-    arr for, index:  0 value  1
-    arr for, index:  1 value  2
-    arr for, index:  2 value  3
-    arr for, index:  3 value  4
-    arr for, index:  4 value  5
-    *********
-    map for, key:  a value  1
-    map for, key:  b value  2
-    map for, key:  c value  3
-    ```
+!!! note "A Complete For"
+    The if statement has three parts, separated by semicolons: `initialization`, `comparison`, and `increment`. Go allows you to `leave out one or more of the three parts` of the for statement.
+
+    ??? example "Ways to Create a Complete For"
+
+        ```go
+        for i := 0; i <= 9; i ++ {
+            fmt.Println(i)
+        }
+
+        for i := 0; i <= 9; {
+            fmt.Println(i)
+            i++
+        }
+        
+        i := 0
+        for ; i <=9; i++ {
+            fmt.Println(i)
+        }
+        ```
+
+!!! note "A Condition-Only For"
+    It's a for loop with just the `comparison` part.
+
+    ??? example "Just Comparison for"
+
+        ```go
+        i := 1
+        for i < 100 {
+            fmt.Println(i)
+            i++
+        }
+        ```
+
+!!! note "An infinite For"
+    A for loop without any part.
+
+    ??? example "A infinite for"
+
+        ```go
+        for {
+            fmt.Println("Hello")
+        }
+        ```
+
+!!! note "For-Range"
+    A for loop `iterating over elements in some of Go’s built-in types`. With this for, the first `variable is the position` in the data structure being iterated. Each time the for-range loop iterates with the variable data, it `copies the value` from the original variable to the value variable. `Modifying the value variable will not modify the value in the compound type`.
+
+    ??? example "Iterating over built-in types"
+
+        ```go
+        data := []int{1, 2, 3, 4, 5, 6, 7}
+        for i, v := range data {
+            fmt.Println(i, v)
+        }
+        for _, v := range data {
+            fmt.Println(v)
+        }
+
+        // Just the keys
+        dicData := map[string]int{"Key1": 1, "Key2": 2}
+        for k := range uniqueNames {
+            fmt.Println(k)
+        }
+
+        for k, v := range m {
+            fmt.Println(k, v)
+        }
+
+        strData := "hello"
+        for i, r := range strData {
+            fmt.Println(i, r, string(r))
+        }
+        ```
+
+### break and continue keywords
+
+In Go, `break` and `continue` keywords exist and behave similarly to other languages like C, and JavaScript. The `break` stops the loop, while the `continue` skips to the next iteration.
 
 ## switch
 
