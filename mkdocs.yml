@@ -27,8 +27,7 @@ nav:
             # Make function
         - Built-In:
             - Functions: fundamentals/built_in/functions.md
-        - Control Structures: 
-            - Basic: basics/control_flow.md
+        - Control Structures: basics/control_flow.md
             # for
             # range
             # switch
