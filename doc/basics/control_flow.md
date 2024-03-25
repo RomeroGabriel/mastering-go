@@ -1,6 +1,20 @@
 # Control Flow
 
-Listing the fundamental and commonly used control flow structures in Go.
+## if
+
+One notable distinction between if statements in Go and those in other programming languages is the capability to `declare variables scoped exclusively to the condition and both the if and else blocks`. This feature enables the creation of `variables accessible only within their intended scope`, enhancing code clarity and reducing potential side effects. Upon concluding the series of if/else statements, the variable's scope does not exist anymore, producing a `compilation error`.
+
+??? example "Variable Spoce to If"
+
+    ```go
+    if n := rand.Intn(10); n == 0 {
+        fmt.Println("That's too low")
+    } else if n > 5 {
+        fmt.Println("That's too big:", n)
+    } else {
+        fmt.Println("That's a good number:", n)
+    }
+    ```
 
 ## for
 
