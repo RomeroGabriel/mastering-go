@@ -48,6 +48,29 @@ The internal structure of a string in Go is essentially a **`byte slice wrapper`
     --8<-- "src/fundamentals/literals/string.go"
     ```
 
+### Iterating Over Strings
+
+When iterating over string, Go has a special behavior with a [for-range](../../basics/control_flow.md#for) that it iterates over the [runes](#runes), not the bytes. When encountering a `multibyte rune in the string`, it converts the UTF-8 representation into a single `32-bit number` and assigns it to the value. If the byte doesn't fit into a UTF-8 value, the Unicode replacement character (hex value) is returned so.
+
+Use a for-range to `access the runes in a string in order`. The first variable will be the number of bytes from the beginning of the string, and the second variable will be a rune.
+
+??? example "Iterating String with Special Rune"
+
+    ```bash title="run command"
+    $ go run src/fundamentals/literals/string_loop.go
+    0 112 p
+    1 105 i
+    2 95 _
+    3 960 π
+    5 33 !
+
+    Notice that the index 4 was skipped and 960 in index 3 is bigger than a byte.
+    Reason: π is a special char
+    ```
+    ```go
+    --8<-- "src/fundamentals/literals/string_loop.go"
+    ```
+
 ## Go's Package for String
 
 Package strings defines various functions useful with strings. [Link here](https://pkg.go.dev/strings).
