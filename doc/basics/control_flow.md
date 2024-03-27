@@ -123,14 +123,23 @@ Labels in Go are used in `nested for loops and want to skip over an iteration of
 
 ## switch
 
-??? example
+Switch statements also have `scoped variables exclusively to the block condition`. Also, it's possible to `combine multiple matches with commas`. There are `empty cases` that mean nothing happens. You can switch on `any type that can be compared with ==`. Go supports **blank switches** that allow to `use any boolean comparison for each case`.
+
+??? example "Using Switch"
 
     ```bash title="run command"
-    go run src/control_flow/switch.go
+    $ go run src/control_flow/switch.go
+    Monday :(
+    IT'S FRIDAY FINALLY!
+    Today is  Tuesday
+    Is not a day
+
+    Now blank switch:
+    Monday is a short day!
+    Friday is a short day!
+    Tuesday is a long day!
+    Corinthians is not a day!
     ```
     ```go title="src/control_flow/switch.go"
     --8<-- "src/control_flow/switch.go"
-    ```
-    ```bash title="output"
-    Today is Monday.
     ```
