@@ -99,6 +99,28 @@ In Go for is the **`only looping`** keyword in the language. The for loop can be
 
 In Go, `break` and `continue` keywords exist and behave similarly to other languages like C, and JavaScript. The `break` stops the loop, while the `continue` skips to the next iteration.
 
+### Labeling For Statements
+
+Labels in Go are used in `nested for loops and want to skip over an iteration of an outer loop`. Labels are indented to the same level as the surrounding function. Labels are always indented to the same level as the braces for the block.
+
+??? example "Using Labels"
+
+    ```bash title="run command"
+    go run src/control_flow/labels.go
+    Start sample:  hello
+    h
+    e
+    l
+    Start sample:  apple_π!
+    a
+    p
+    p
+    l
+    ```
+    ```go
+    --8<-- "src/control_flow/labels.go"
+    ```
+
 ## switch
 
 ??? example
