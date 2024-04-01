@@ -22,21 +22,20 @@ nav:
             - Slice: fundamentals/composite/slice.md
             - Maps: fundamentals/composite/maps.md
             - Structs: structs/structs.md
-            # Byte
             # Pointers
-            # Make function
         - Built-In:
             - Functions: fundamentals/built_in/functions.md
         - Control Structures: basics/control_flow.md
-            # for
-            # range
-            # switch
         # Erros, Panic, Recover
         - Files Handle: basics/handle_files.md
     - Functions:
-        - Basic: functions/index.md
+        - functions/basic_func.md
+        - Functions as Values: functions/func_as_value.md
+        - Defer: functions/defer.md
+        - Closures: functions/closures.md
             # Methods: Pointers vs. Values
             ## High-Order Functions,Closures, First-class function
+    - Errors: errors/error_basic.md
     - Packages, Modules and Workspaces: basics/packages.md
     - Interface: structs/interface.md
     - Pointers: pointers.md
