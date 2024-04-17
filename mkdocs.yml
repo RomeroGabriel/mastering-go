@@ -30,7 +30,7 @@ nav:
         - Files Handle: basics/handle_files.md
     - Functions:
         - functions/basic_func.md
-        - Functions as Values: functions/func_as_value.md
+        - Deeper in Functions: functions/func_as_value.md
         - Defer: functions/defer.md
         - Closures: functions/closures.md
             # Methods: Pointers vs. Values
