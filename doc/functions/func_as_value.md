@@ -7,14 +7,14 @@ Functions in Go are `values`. The function type is composed of the func keyword 
 ??? example "Using Func Type Variables"
 
     ```bash title="run command"
-    $ go run src/function/value_func.go.go
+    $ go run src/function/value_func.go
     TEST1 A PARAM:  CALLING funcSignature
     RESULT:  10
     TEST2 b PARAM:  CALLING AGAIN funcSignature
     RESULT:  200
     ```
     ```go
-    --8<-- "src/function/value_func.go.go"
+    --8<-- "src/function/value_func.go"
     ```
 
 ## Function Type Declarations

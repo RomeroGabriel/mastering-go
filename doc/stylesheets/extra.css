@@ -1,0 +1,64 @@
+.md-container {
+    background-color: #0f3f86;
+}
+
+.md-typeset h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.md-typeset h2 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.md-typeset h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+strong {
+    font-weight: 900;
+    font-size: 1.0rem;
+}
+
+.md-typeset code {
+    font-weight: 900;
+    font-size: .95em;
+}
+
+.md-typeset details.example, .md-typeset .admonition.example {
+    border-color: #ffcb00;
+}
+
+.md-typeset summary, .md-typeset .admonition-title {
+    background-color: #000000c2 !important;
+}
+
+.md-typeset .example > summary::before, .md-typeset .example > summary::after {
+    background-color: #ffcb00;
+}
+
+.md-typeset .example > .admonition-title::before, .md-typeset .example > .admonition-title::after {
+    background-color: #ffcb00;   
+}
+
+.md-nav--secondary .md-nav__title {
+    font-weight: 900;
+    font-size: .8rem;
+    background: none;
+    box-shadow: none;
+    color: #fff;
+}
+
+.md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
+    font-weight: 900;
+    font-size: .8rem;
+    background: none;
+    box-shadow: none;
+    color: #fff;
+}
+
+.md-nav__item--section > .md-nav__link:not(.md-nav__container) {
+    color: #fff;
+}
