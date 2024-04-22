@@ -32,7 +32,6 @@ nav:
         - functions/basic_func.md
         - Deeper in Functions: functions/func_as_value.md
         - Defer: functions/defer.md
-        - Closures: functions/closures.md
             # Methods: Pointers vs. Values
             ## High-Order Functions,Closures, First-class function
     - Errors: errors/error_basic.md
@@ -71,6 +70,8 @@ theme:
   language: en
   logo: images/go-logo.png
   favicon: images/go-logo.png
+  font:
+    text: Noto Sans SemiBold 600 
   palette:
       scheme: slate
       primary: black
