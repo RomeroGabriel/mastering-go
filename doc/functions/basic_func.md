@@ -51,8 +51,6 @@ Go allows you to define `functions that can accept a variable number of argument
     --8<-- "src/function/func_variadic.go"
     ```
 
-### Functions as Parameters
-
 ## Return
 
 Functions can `return zero or more values`.
@@ -99,5 +97,3 @@ However, besides that return values can be created, `it is not necessary to use 
     ```go
     --8<-- "src/function/return_named.go"
     ```
-
-### Returning Functions

@@ -3,9 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	defer fmt.Println("World")
-
-	fmt.Println("Hello")
-
-	defer fmt.Println("Hi, testttting")
+	data := 10
+	defer func(v int) {
+		fmt.Println("1º: ", v)
+	}(data)
+	data = 20
+	defer func(v int) {
+		fmt.Println("2º: ", v)
+	}(data)
+	data = 30
+	fmt.Println("Exiting: ", data)
 }
