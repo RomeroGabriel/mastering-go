@@ -16,6 +16,9 @@ Functions can take zero or more parameters and are declared with their type. `Wh
 
 When you pass `parameters to a function, they are typically passed by copy`. This means that a copy of the value is made, and `any changes you make to the parameter within the function do not affect the original value outside of the function`. To change the parameters passed, use [pointers](../pointers.md#pointers) and [pointers receivers](../structs/structs.md#pointer-receivers).
 
+!!! warning "Maps and Slices are different..."
+    Maps and Slices are both implemented with [pointers](../pointers.md#pointers). This works for parameters or struct fields of map and slice type. Changes made to a map are reflected, for slices, you can modify any element but can't lengthen the slice.
+
 ??? example "Checking Mutations on Params"
 
     ```bash title="run command"
