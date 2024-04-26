@@ -32,6 +32,29 @@ When you pass `parameters to a function, they are typically passed by copy`. Thi
     --8<-- "src/function/basic.go"
     ```
 
+### Pointers Params
+
+When a pointer is passed to a function, the function receives a `copy of the pointer`. However, this `pointer still points to the original data`, which means that the original data can be changed. Using pointers as parameters has some implications.
+
+!!! note "First Implication"
+    `When passing a nil pointer to a function, making the value non-nil is impossible`. Since Go is call-by-value, it's not possible to change the memory address. It's possible to reassign the value only if a value is already assigned to the pointer.
+
+!!! note "Second Implication"
+    If you want the change of the memory pointed by a pointer parameter to persistent after exiting the function, it's necessary to dereference the pointer and set the value. `Changing the pointer, the copy is changed and not the original`.
+
+    Dereferencing puts the new value in the memory location pointed to by both the original and the copy.
+
+    ??? example "Change the Memory of Pointer Parameter"
+
+        ```bash title="run command"
+        $ go run src/function/pointer_param.go
+        10
+        20
+        ```
+        ```go
+        --8<-- "src/function/pointer_param.go"
+        ```
+
 ### Named and Optional Parameters
 
 Go `doesn't have support` for named and optional parameters. To simulate named and optional parameters, it's necessary to `create a struct with the desired parameters` and pass the struct to the function.

@@ -29,6 +29,16 @@ The `&` is the address operator that `returns the address where the value is sto
 
 The `*` is the indirection operator that `returns the value pointed`. Using this operator is called **dereferencing**.
 
+## Mutability with Pointers
+
+!!! quote "[MIT’s course on Software Construction](http://web.mit.edu/6.031/www/fa20/classes/08-immutability/)"
+    Using mutable objects is just fine if you are using them entirely locally within a method, and with only one reference to the object.
+
+The ability to choose between value and pointer parameter types helps in the Go's lack of support for immutability types. In Go, using pointers indicates that a parameter is mutable.
+
+!!! note
+    [Go is a call-by-value language](functions/basic_func.md#call-by-value).
+
 ---
 
 `They are used to reference values rather than holding the values themselves`. It allows you to `indirectly access and modify the value of the variable` it points to. Pointers are represented using the `*` symbol.
