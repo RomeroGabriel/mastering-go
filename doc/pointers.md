@@ -29,6 +29,21 @@ The `&` is the address operator that `returns the address where the value is sto
 
 The `*` is the indirection operator that `returns the value pointed`. Using this operator is called **dereferencing**.
 
+### Check Out
+
+??? example
+
+    ```bash title="run command"
+    $ go run src/structs/pointers.go
+    Value of x:  42
+    Value that ptr point to:  42
+    Memory address of ptr:  0xc0000120f0
+    Updated value of x:  100
+    ```
+    ```go
+    --8<-- "src/structs/pointers.go"
+    ```
+
 ## Mutability with Pointers
 
 !!! quote "[MIT’s course on Software Construction](http://web.mit.edu/6.031/www/fa20/classes/08-immutability/)"
@@ -39,23 +54,34 @@ The ability to choose between value and pointer parameter types helps in the Go'
 !!! note
     [Go is a call-by-value language](functions/basic_func.md#call-by-value).
 
----
+## Use Pointers with Wisdom
 
-`They are used to reference values rather than holding the values themselves`. It allows you to `indirectly access and modify the value of the variable` it points to. Pointers are represented using the `*` symbol.
+Pointers can make it harder to understand data flow and can create extra work for the garbage collector. Instead of receiving a struct pointer to populate the struct, `have the function instantiate, and return the struct`.
 
-To `access the value that a pointer points to`, you can use the `*` symbol again. This is called `dereferencing the pointer`. The `&` operator is `used to obtain the memory address of a variable`. This memory address is also known as a pointer.
-
-!!! example
-
-    ```bash title="run command"
-    go run src/structs/pointers.go
-    ```
+??? example "Creating a Struct Obj"
     ```go
-    --8<-- "src/structs/pointers.go"
+    func BadMakeFoo(f *Foo) error {
+        f.Field1 = "Hi"
+        f.Field2 = 20
+        return nil
+    }
+    func GoodMakeFoo() (Foo, error) {
+        f := Foo{
+            Field1 = "Hi",
+            Field2 = 20,
+        }
+        return f, nil
+    }
     ```
-    ```bash title="output"
-    Value of x:  42
-    Value that ptr point to:  42
-    Memory address of ptr:  0xc0000120f0
-    Updated value of x:  100
-    ```
+
+`The only time you should use pointer parameters to modify a variable is when the function expects an interface`, such as the [JSON Unmarshal](https://pkg.go.dev/encoding/json#Unmarshal) function with an any parameter, where any must be a pointer.
+
+Use a pointer type as a return type only if there is a state within the data that needs to be modified.
+
+## Pointers Performance
+
+`The time to pass a pointer into a function is constant for all data structures` since the size of a pointer is the same for all data types. Passing a value into a function takes longer as the data gets larger.
+
+Returning is a little different. For data structures smaller than 10 Mb, returning pointers is slower than returning a value. For data structures larger than that, the performance advantage flips.
+
+Besides these behaviors, these are very short times. `For the vast majority of cases, the difference won't affect the program's performance. In case of passing Mb of data between functions, consider using a pointer even if the data is meant to be immutable`.

@@ -85,6 +85,8 @@ In Go, `structs can have methods associated with them`. These methods are `funct
 
 ### Pointer Receivers
 
+Check out: [Use Pointers with Wisdom](../pointers.md#use-pointers-with-wisdom).
+
 `Pointer receivers can modify the state of the struct directly`. Using a pointer receiver allows you to `change the state` of an instance directly. When you pass a struct to a function, you're essentially `passing a copy of the struct`. Using pointers, you can `pass a reference to the struct`, allowing the function to modify the original data.
 
 ??? example
