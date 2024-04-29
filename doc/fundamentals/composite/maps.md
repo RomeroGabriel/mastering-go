@@ -1,6 +1,9 @@
 # Maps
 
-Maps in Go are a data structure used to store **`key-value pairs`** that implements a *hash table* data structure. The map type is written as **`map[keyType]valueType`**. **`The zero value for a map is nil`**.
+!!! info "Default Value"
+    The zero value for a map is `nil`.
+
+Maps in Go are a data structure used to store `key-value pairs` that implements a *hash table* data structure. The map type is written as `map[keyType]valueType`. Maps are `reference type` like [pointers](../../pointers.md#pointers) and [slices](slice.md#slice).
 
 ??? info "Hash Table"
     Hash tables are a type of data structure in which the address/ index value of the data element is generated from a hash function. This enables very fast data access as the index value behaves as a key for the data value.
@@ -11,8 +14,6 @@ The `key can be of any can be any comparable type`, such as integers, floating p
 
 !!! warning "Key types not supported"
     Slices and Maps cannot be used as map keys, because equality is not defined on them.
-
-Maps are **`reference types`**, that hold references to an underlying **hash table**. **`If you pass a map to a function or assign it to another variable, both refer to the same data structure`**. Maps are reference type like `pointers` or `slices` to initialize a map, use the built in make function. Just like slices, `maps automatically grow as you add key-value pairs to them`.
 
 ## Declaration
 
@@ -54,9 +55,11 @@ In Go, the comma-ok idiom comes into play when you need to `distinguish between 
 
 A map `isn't comparable`, resulting in a compile-time error when using `==` or `!=` with another map. The only thing you can compare a slice with using `==` is `nil`. However, starting from Go version `1.21`, the [maps](#gos-package-for-maps) package in the standard library provides two functions for comparing slices. The `maps.Equal` function accepts two maps as input parameters and returns true if both two maps contain the same key/value pairs. The `maps.EqualFunc` function offers the flexibility to pass a `custom comparison function`.
 
-## As Function Params
+## As Function Params and Return Values
 
-**`If a function takes a map argument, changes it makes to the elements of the slice will be visible to the caller`**, analogous to passing a pointer to the underlying array.
+`If a function takes a map argument, changes it makes to the elements of the slice will be visible to the caller`, analogous to passing a pointer to the underlying array. Passing a map to a function means that you are `copying a pointer`.
+
+Maps as input parameters or return values `should be used carefully`. Beyond the `mutability problem`, on an API-design level, `maps are bad because nothing is explicit about the values held by the variable`, the only way to know the data meaning is to walk through the code. When possible, use a struct instead of a map.
 
 ??? example "Changing a Map Param"
 

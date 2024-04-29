@@ -22,7 +22,7 @@ nav:
             - Slice: fundamentals/composite/slice.md
             - Maps: fundamentals/composite/maps.md
             - Structs: structs/structs.md
-            # Pointers
+            - Pointers: pointers.md
         - Built-In:
             - Functions: fundamentals/built_in/functions.md
         - Control Structures: basics/control_flow.md
@@ -37,7 +37,6 @@ nav:
     - Errors: errors/error_basic.md
     - Packages, Modules and Workspaces: basics/packages.md
     - Interface: structs/interface.md
-    - Pointers: pointers.md
     - Generics: generics.md
     - Context: context.md
     - Network: 

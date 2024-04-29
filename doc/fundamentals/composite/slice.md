@@ -1,6 +1,11 @@
 # Slice
 
-In Go, a slice is a `more versatile and dynamic alternative to arrays`. **Slices are like views into an underlying array**, allowing you to work with a portion of an **`array without specifying a fixed size`**. Slices are reference types, that hold references to an underlying array, and **`if you assign one slice to another, both refer to the same array`**. Different from [literal types](../literals.md#literals), the default value for slices is `nil`. Each element in a slice is **`assigned to consecutive memory locations`**, which makes it quick to read or write these values.
+!!! info "Default Value"
+    The zero value for a slice is `nil`.
+
+In Go, a slice is a more versatile and dynamic alternative to arrays. **Slices are like views into an underlying array**, allowing you to work with a portion of an `array without specifying a fixed size`. Slices are reference types, that hold references to an underlying array, and `if you assign one slice to another, both refer to the same array`. Each element in a slice is `assigned to consecutive memory locations`, which makes it quick to read or write these values.
+
+Slices are `reference type` like [pointers](../../pointers.md#pointers) and [maps](maps.md#maps).
 
 !!! tip
     Using `[...]` makes an array. Using `[]` makes a slice.
@@ -162,7 +167,11 @@ The function `copies as many values as it can from source to destination`, limit
 
 ## As Function Params
 
-**`If a function takes a slice argument, changes it makes to the elements of the slice will be visible to the caller`**, analogous to passing a pointer to the underlying array.
+`If a function takes a slice argument, changes it makes to the elements of the slice will be visible to the caller`, analogous to passing a pointer to the underlying array.  Passing a slice to a function means that you are `copying a pointer`.
+
+Slices as input parameters or return values `should be used carefully`. Beyond the `mutability problem`, using `append to change the length isn't reflected in the original variable`. A slice is implemented as a struct with three fields: `two int fields for length and capacity, and a pointer to a block of memory`. Slices passed to a function can have their contents modified but the slice can't be resized.
+
+When a slice is copied, all these fields are copied, so `changing the values pointed reflects the original and the copied slice, but the length changes just for the copy`. The Go runtime prevents the original slice from seeing those new values since they are beyond the length of the original.
 
 ??? example "Slice Params"
 
