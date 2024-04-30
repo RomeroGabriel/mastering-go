@@ -85,3 +85,9 @@ Use a pointer type as a return type only if there is a state within the data tha
 Returning is a little different. For data structures smaller than 10 Mb, returning pointers is slower than returning a value. For data structures larger than that, the performance advantage flips.
 
 Besides these behaviors, these are very short times. `For the vast majority of cases, the difference won't affect the program's performance. In case of passing Mb of data between functions, consider using a pointer even if the data is meant to be immutable`.
+
+### Less Pointers, Less Work for Garbage Collector
+
+The `heap` is the memory managed by the garbage collector. `Any data that is stored on the heap is valid as long as it can be traced back to a pointer type on a stack`.
+
+Go encourages the use of pointers sparingly because of the garbage collector. `Storage memory on the stack guarantees less work for the garbage collector heap`.

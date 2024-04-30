@@ -17,8 +17,8 @@ nav:
             - Integers: fundamentals/literals/integers.md
             - Floats: fundamentals/literals/floats.md
             - Strings/Runes: fundamentals/literals/strings.md
-        - Composite Types:
             - Array: fundamentals/composite/array.md
+        - Composite Types:
             - Slice: fundamentals/composite/slice.md
             - Maps: fundamentals/composite/maps.md
             - Structs: structs/structs.md
