@@ -7,11 +7,11 @@ nav:
     - CLI Tooling:
         - cli/general.md
         - Modules: cli/go_mod.md
-        # go fmt
-        # go vet
     - Fundamentals:
         - Variables and Constants: fundamentals/vars.md
         - Code Blocks: fundamentals/blocks.md
+        - Control Structures: basics/control_flow.md
+        - Files Handle: basics/handle_files.md
         - Literals Types:
             - fundamentals/literals.md
             - Integers: fundamentals/literals/integers.md
@@ -23,19 +23,15 @@ nav:
             - Maps: fundamentals/composite/maps.md
             - Structs: structs/structs.md
             - Pointers: pointers.md
+        - Functions:
+            - functions/basic_func.md
+            - Deeper in Functions: functions/func_as_value.md
+            - Defer: functions/defer.md
         - Built-In:
             - Functions: fundamentals/built_in/functions.md
-        - Control Structures: basics/control_flow.md
         # Erros, Panic, Recover
-        - Files Handle: basics/handle_files.md
-    - Functions:
-        - functions/basic_func.md
-        - Deeper in Functions: functions/func_as_value.md
-        - Defer: functions/defer.md
-            # Methods: Pointers vs. Values
-            ## High-Order Functions,Closures, First-class function
     - Errors: errors/error_basic.md
-    - Packages, Modules and Workspaces: basics/packages.md
+    - Packages & Modules: basics/packages.md
     - Interface: structs/interface.md
     - Generics: generics.md
     - Context: context.md
