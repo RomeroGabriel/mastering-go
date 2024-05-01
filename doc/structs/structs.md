@@ -71,52 +71,45 @@ In Go, you can `embed one struct within another`, creating a composition of stru
 
 In Go, `structs can have methods associated with them`. These methods are `functions that operate on instances of the struct`, and they enable you to define behavior specific to the struct type.
 
-??? example
+Methods can be `defined just at the package block level`, while functions can be defined inside any block. Methods names `cannot be overloaded` also, and the methods must be declared in the `same package as their associated type`, it's not possible to add methods to types you don't control.
+
+??? example "Simple Example of Methods"
 
     ```bash title="run command"
-    go run structs/methods.go
+    $ go run structs/methods.go
+    Area: 78.5
     ```
     ```go
     --8<-- "src/structs/methods.go"
     ```
-    ```bash title="output"
-    Area: 78.5
-    ```
 
-### Pointer Receivers
+### Pointer Receivers vs Value Receivers
 
 Check out: [Use Pointers with Wisdom](../pointers.md#use-pointers-with-wisdom).
 
-`Pointer receivers can modify the state of the struct directly`. Using a pointer receiver allows you to `change the state` of an instance directly. When you pass a struct to a function, you're essentially `passing a copy of the struct`. Using pointers, you can `pass a reference to the struct`, allowing the function to modify the original data.
+`Pointer receivers can modify the state of the struct directly`. Using a pointer receiver allows you to `change the state` of an instance directly. When using value receivers, you're essentially `passing a copy of the struct`. Using pointers, you can `pass a reference to the struct`, allowing the function to modify the original data.
 
-??? example
+??? example "Using Pointer and Value Receivers"
 
     ```bash title="run command"
-    go run structs/methods_pointer.go
-    ```
-    ```go
-    --8<-- "src/structs/methods_pointer.go"
-    ```
-    ```bash title="output"
+    $ go run structs/methods_pointer.go
     Area: 78.5
     Circle change? {5}
     Area: 78.5
     Circle change? {100}
+    ```
+    ```go
+    --8<-- "src/structs/methods_pointer.go"
     ```
 
 ### Pointers Constructors
 
 In Go, when you create a constructor function for a struct, `it typically returns a reference to the newly created struct`. With this technique, `any modification made to the reference returned by the constructor will affect all places that use that reference. This can be quite powerful, especially when managing resources like database connections`.
 
-??? example
+??? example "A Simple Pointer Constructor"
 
     ```bash title="run command"
-    go run structs/constructor_pointer.go
-    ```
-    ```go
-    --8<-- "src/structs/constructor_pointer.go"
-    ```
-    ```bash title="output"
+    $ go run structs/constructor_pointer.go
     Query 1 executed **nice connection!*** true
     Query 2 executed **nice connection!*** true
     Query 3 executed **nice connection!*** true
@@ -124,6 +117,9 @@ In Go, when you create a constructor function for a struct, `it typically return
     Query 1 executed **nice connection!*** true
     Query 2 executed **nice connection!*** false
     Query 3 executed **nice connection!*** false
+    ```
+    ```go
+    --8<-- "src/structs/constructor_pointer.go"
     ```
 
 ## Structs Tags
