@@ -45,27 +45,24 @@ Go lacks a mechanism that allow overriding to redefine equality, thereby enablin
 
 ## Composing Structs
 
-In Go, you can `embed one struct within another`, creating a composition of structs. This is `similar to inheritance` in other languages.
+**Go doesn't support inheritance** since the language encourages code reuse by `composition` and `promotion`. Structs can have `embedded fields`, that's fields without names assigned. Any fields or methods declared on an `embedded field are promoted to the containing struct and can be invoked directly`. Any type can be embedded.
 
-??? example
+For fields or methods with the `same name between structs`, it's necessary to use the embedded field's name.
+
+??? example "Compose Structs and Consuming"
 
     ```bash title="run command"
-    go run structs/composing.go
+    $ go run src/structs/composing.go
+    Person Name: Gabriel, Age: 20, and Team: Corinthians
+    Team Name: Corinthians, Location: São Paulo
+    São Paulo
     ```
     ```go
     --8<-- "src/structs/composing.go"
     ```
-    ```bash title="output"
-    Person: {Gabriel 100 {Corinthians} {Knicks}}
-    Person name: Gabriel, Clube: {Corinthians}
-    Person name: Gabriel, Clube: Corinthians
-    Person name: Gabriel, Clube: Corinthians
-    Person name: Gabriel, Clube: {Knicks}
-    Person name: Gabriel, Clube: Corinthians
-    ```
-??? tip "Composing x Property, and Accessing Properties"
-    In the given example, it's evident that the `Person struct is composed of a Team` and `has a property named PersonTeam of type Team`. The key distinction here is that when using the abbreviation `person.TeamName`, it returns the value of the composition, not the property.
-    In Go, `you can directly access the properties of a composed struct`.
+
+!!! warning
+    Embedding is not inheritance, it's a different feature that Go supports.
 
 ## Struct Methods
 
