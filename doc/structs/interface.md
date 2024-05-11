@@ -28,3 +28,19 @@ In Go, interfaces specify what callers need. The client code defines the interfa
 
 ## Embedding Interfaces
 
+!!! example
+
+    ```go
+    type Reader interface {
+        Read(p []byte) (n int, err error)
+    }
+
+    type Closer interface {
+        Close() (err error)
+    }
+
+    type ReadCloser interface {
+        Reader
+        Closer
+    }
+    ```
