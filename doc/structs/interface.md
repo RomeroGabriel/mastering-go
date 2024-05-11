@@ -44,3 +44,32 @@ In Go, interfaces specify what callers need. The client code defines the interfa
         Closer
     }
     ```
+
+## How Interfaces are Implemented, Nil Interfaces and Comparable
+
+Interfaces are implemented as a `struct with two pointer fields`. One pointer is for the `value` and one is for the `type` of the value. `Both type and value must be nil for an interface to be considered nil`.
+
+Interfaces are `comparable` and two instances of an interface type are `equal only if their types and their values are equal`. However, if comparing two instances of an interface that the types aren't comparable like a slice, this will trigger a panic at runtime.
+
+!!! warning "Comparing Interfaces"
+    Be careful when using `==` or `!=` with interfaces or using an `interface as a map key`, since it's easy to generate panic in runtime if the type is not comparable.
+
+??? example "Comparing Interfaces"
+
+    ```bash title="run command"
+    $ go run src/interface_compare.go
+    true
+    false
+    false
+    panic: runtime error: comparing uncomparable type main.DoubleIntSlice
+
+    goroutine 1 [running]:
+    main.DoublerCompare(...)
+        /home/romerin/Projects/mastering-go/src/interface_compare.go:10
+    main.main()
+        /home/romerin/Projects/mastering-go/src/interface_compare.go:35 +0x190
+    exit status 2
+    ```
+    ```go
+    --8<-- "src/interface_compare.go"
+    ```
