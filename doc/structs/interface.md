@@ -85,8 +85,46 @@ Interfaces are `comparable` and two instances of an interface type are `equal on
 
 Type assertions provide one way to `check if a variable of an interface type has a specific concrete type or if the concrete type implements another interface`. Since Go is very careful about concrete types, even if two types share an underlying type, a type assertion must match the type of the value stored in the interface.
 
-If a type assertion gets wrong, the code panics. To avoid that, it's possible to use the `comma ok idiom`.
+If a type assertion gets wrong, the code panics. To avoid that, it's possible to use the `comma ok idiom`. All types of assertions are `checked at runtime`, so any error that can happen will be at runtime with panic if the comma ok idiom is not used.
+
+??? example "Using type assertion"
+
+    ```bash title="run command"
+    $ go run src/interface/type_assertion.go
+    21
+    Error
+    ```
+    ```go
+    --8<-- "src/interface/type_assertion.go"
+    ```
 
 ### Type Assertion vs Type Conversion
 
+Type assertion and type conversion are **not the same thing**. `Conversions change a value to a new type, while assertions reveal the type of the value stored in the interface`. Type assertions work only with interfaces while type conversions work with concrete types and interfaces.
+
 ## Type Switches
+
+Type switches provide another way to check if an interface could be one of `multiple possible types`. It's possible to assign the variable being checked to another variable valid only within the switch or shadowing the variable. The type of the new variable depends on which case matches.
+
+??? example "Using type switch"
+
+    ```go
+    func doThings(i any) {
+        switch j := i.(type) {
+        case nil:
+        // j is any
+        case int:
+        // j is of type int
+        case MyInt:
+        // j is of type MyInt
+        case io.Reader:
+        // j is of type io.Reader
+        case string:
+        // j is a string
+        case bool, rune:
+        // i is either a bool or rune, so j is of type any
+        default:
+        // no idea what i is, so j is of type any
+        }
+        }
+    ```
