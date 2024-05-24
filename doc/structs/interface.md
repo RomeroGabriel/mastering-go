@@ -10,12 +10,12 @@ To declare an interface, you list the method signatures that types must implemen
 ??? example "Declaring and Using Interfaces"
 
     ```bash title="run command"
-    $ go run structs/interfaces.go
+    $ go run src/interface/interfaces.go
     Area: 78.50
     Area: 24.00
     ```
     ```go
-    --8<-- "src/structs/interfaces.go"
+    --8<-- "src/interface/interfaces.go"
     ```
 
 ## Interfaces Are Type-Safe Duck Typing
@@ -45,6 +45,13 @@ In Go, interfaces specify what callers need. The client code defines the interfa
     }
     ```
 
+## Performance
+
+As discussed in [Less Pointers, Less Work for Garbage Collector](../pointers.md#less-pointers-less-work-for-garbage-collector), reducing heap allocations improves performance by reducing the amount of work for the garbage collector. Using structs avoids heap allocation, and `invoking a function with parameters of interface types triggers heap allocation for each interface parameter`.
+
+!!! tip "About Performance"
+    Figuring out the trade-off between better abstraction and better performance should be done over the life of your program.
+
 ## How Interfaces are Implemented, Nil Interfaces and Comparable
 
 Interfaces are implemented as a `struct with two pointer fields`. One pointer is for the `value` and one is for the `type` of the value. `Both type and value must be nil for an interface to be considered nil`.
@@ -57,7 +64,7 @@ Interfaces are `comparable` and two instances of an interface type are `equal on
 ??? example "Comparing Interfaces"
 
     ```bash title="run command"
-    $ go run src/interface_compare.go
+    $ go run src/interface/interface_compare.go
     true
     false
     false
@@ -71,5 +78,15 @@ Interfaces are `comparable` and two instances of an interface type are `equal on
     exit status 2
     ```
     ```go
-    --8<-- "src/interface_compare.go"
+    --8<-- "src/interface/interface_compare.go"
     ```
+
+## Type Assertions
+
+Type assertions provide one way to `check if a variable of an interface type has a specific concrete type or if the concrete type implements another interface`. Since Go is very careful about concrete types, even if two types share an underlying type, a type assertion must match the type of the value stored in the interface.
+
+If a type assertion gets wrong, the code panics. To avoid that, it's possible to use the `comma ok idiom`.
+
+### Type Assertion vs Type Conversion
+
+## Type Switches

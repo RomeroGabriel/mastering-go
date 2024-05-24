@@ -91,3 +91,6 @@ Besides these behaviors, these are very short times. `For the vast majority of c
 The `heap` is the memory managed by the garbage collector. `Any data that is stored on the heap is valid as long as it can be traced back to a pointer type on a stack`.
 
 Go encourages the use of pointers sparingly because of the garbage collector. `Storage memory on the stack guarantees less work for the garbage collector heap`.
+
+!!! tip "About Performance"
+    Figuring out the trade-off between better abstraction and better performance should be done over the life of your program.

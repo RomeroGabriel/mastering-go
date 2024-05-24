@@ -23,6 +23,7 @@ nav:
             - Maps: fundamentals/composite/maps.md
             - Structs: structs/structs.md
             - Pointers: pointers.md
+            - Interfaces: structs/interface.md
         - Functions:
             - functions/basic_func.md
             - Deeper in Functions: functions/func_as_value.md
@@ -32,7 +33,6 @@ nav:
         # Erros, Panic, Recover
     - Errors: errors/error_basic.md
     - Packages & Modules: basics/packages.md
-    - Interface: structs/interface.md
     - Generics: generics.md
     - Context: context.md
     - Network: 
