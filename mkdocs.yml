@@ -21,8 +21,8 @@ nav:
         - Composite Types:
             - Slice: fundamentals/composite/slice.md
             - Maps: fundamentals/composite/maps.md
-            - Structs: structs/structs.md
             - Pointers: pointers.md
+            - Structs: structs/structs.md
             - Interfaces: structs/interface.md
         - Functions:
             - functions/basic_func.md
