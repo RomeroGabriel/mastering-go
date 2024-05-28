@@ -28,10 +28,11 @@ nav:
             - functions/basic_func.md
             - Deeper in Functions: functions/func_as_value.md
             - Defer: functions/defer.md
+        - Error:
+            - errors/error_basic.md
         - Built-In:
             - Functions: fundamentals/built_in/functions.md
         # Erros, Panic, Recover
-    - Errors: errors/error_basic.md
     - Packages & Modules: basics/packages.md
     - Generics: generics.md
     - Context: context.md
@@ -52,13 +53,13 @@ nav:
         - Basic: db/basic.md
         - Migrations: db/migrations.md
         - SQLX Library: db/sqlx.md
-    - Cobra CLI: cobra_cli/index.md
-    - Projects: 
-        - Get Address: projects/get_br_zipcode.md
+    # - Cobra CLI: cobra_cli/index.md
+    # - Projects: 
+    #     - Get Address: projects/get_br_zipcode.md
     # Add Tecnicas: olhar o curso!
     - Patterns: 
         - Dependency Injection:
-            - Wire: di/wire.md
+            - Wire: patterns/di/wire.md
 
 theme:
   name: material
