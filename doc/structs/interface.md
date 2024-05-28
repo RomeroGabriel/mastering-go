@@ -217,3 +217,23 @@ Using type assertions and type switches can be used to check `if the concrete ty
         // function continues...
     }
     ```
+
+## Interfaces and Function Params
+
+Go encourages the usage of small interfaces but functions in Go are first-class concepts. Both approaches can be used since an interface of only one method could replace a parameter of a function type.
+
+`If it's a simple function, then a parameter of a function type is a good choice`. However, if the function is likely to `depend on many other functions or other states that are not specified in its input parameters`, use an interface parameter with a defined function.
+
+### Use Case Example - HTTP Handler
+
+The HTTP Handler interface is defined in this way:
+
+!!! example
+
+    ```go
+    type Handler interface{
+        ServerHTTP(http.ResponseWriter, *http.Request)
+    }
+    ```
+
+The `ServerHTTP` function allows `functions to implement the interface`. Any function with the same signature then the ServerHTTP function can be used as http.Handler. This allows the implementation of HTTP handlers using functions, methods, or closures.
