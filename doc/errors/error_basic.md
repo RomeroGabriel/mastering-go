@@ -100,7 +100,7 @@ To wrap an error with a custom error type, the custom error type `needs to imple
 
 ### Example - Wrapping and Unwrapping Errors
 
-??? example "A Simple Returned Error"
+??? example
 
     ```bash
     $ go run src/errors/wrap-error.go
@@ -112,3 +112,22 @@ To wrap an error with a custom error type, the custom error type `needs to imple
     ```go
     --8<-- "src/errors/wrap-error.go"
     ```
+
+### Wrapping Multiple Errors
+
+It's possible to use `errors.Join` to merge multiple errors into a `single error`. Another way to merge errors is to pass `multiple %w verbs to fmt.Errorf`.
+
+??? example
+
+    ```bash
+    $ go run src/errors/wrap-multi-error.go
+    field FirstName cannot be empty
+    save Corinthians please
+    field Email cannot be empty
+    first: Corinthians please stop, second: AAAAAAA, third: third error
+    ```
+    ```go
+    --8<-- "src/errors/wrap-multi-error.go"
+    ```
+
+## Is and As Functions
