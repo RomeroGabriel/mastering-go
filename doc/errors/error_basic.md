@@ -73,11 +73,42 @@ Always use `error` as the return type for the error return value in the function
 
 ??? example "A Simple Returned Error"
 
-    ```bash
-    $ go run src/errors/user-defined.go
-    Result: 5
-    Error: division by zero
-    ```
     ```go
     --8<-- "src/errors/user-defined.go"
+    ```
+
+## Wrapping Errors
+
+When an error is preserved while adding information, it is called `wrapping the error`. When there is a series of wrapped errors, it is called an `error tree`.
+
+The `fmt.Errorf` function wraps errors using the special verb `%w`. The created error string `formatted the string including the formatted string of another error` which contains the original error as well.
+
+The convention is to write `: %w at the end of the error format` string and the error wrapped the last parameter passed to `fmt.Errorf`.
+
+To create a new error that `contains the message from another error, but don’t want to wrap it`, use fmt.Errorf to create an error but use the `%v` verb instead of %w.
+
+### Unwrapping Errors
+
+The `Unwrap` function in the `errors` package provides a function for `unwrapping errors`. You pass an error, and it `returns the wrapped error if there is one`, if there isn't, nil is returned.
+
+!!! warning
+    This function is not recommended to check error types, let this to `errors.Is` and `errors.As` functions. It's not usually used `errors.Unwrap` directly.
+
+### Wrapping Custom Error Types
+
+To wrap an error with a custom error type, the custom error type `needs to implement the method Unwrap`. This method takes in no parameters and returns an error.
+
+### Example - Wrapping and Unwrapping Errors
+
+??? example "A Simple Returned Error"
+
+    ```bash
+    $ go run src/errors/wrap-error.go
+    login error
+    fake error
+    error in main: login error
+    login error
+    ```
+    ```go
+    --8<-- "src/errors/wrap-error.go"
     ```

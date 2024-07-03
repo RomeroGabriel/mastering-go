@@ -12,7 +12,10 @@ func (se StatusErr) Error() string {
 
 func ValidateSomethingAndFails(data string) (bool, error) {
 	if len(data) == 0 {
-
+		return false, StatusErr{
+			Status:  1,
+			Message: "big mistake",
+		}
 	}
-	return false, nil
+	return true, nil
 }
